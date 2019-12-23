@@ -1,0 +1,269 @@
+﻿h1.star {
+	text-align: center;
+	padding-top: 10px;
+	color:#388220
+}
+
+.star {
+	text-align: center;
+}
+
+#url-form {
+	margin-bottom: 1em;
+}
+
+#url-form input {
+	width: 15em;
+}
+
+#url-list,
+#url-list li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#url-list li:after {
+	content: ", ";
+}
+
+#url-list li:last-child:after {
+	content: "";
+}
+
+#url-list li a,
+#url-list li a:visited {
+	color: white;
+}
+
+#url-list li a:hover {
+	color: #C76410;
+}
+
+
+table#elements{
+	border: 0;
+	width: 0;
+	border-collapse: collapse;
+	clear: left;
+	margin: 1em 0 3em;
+}
+
+table#elements td,
+table#elements .element {
+	width: 4em;
+	height: 4em;
+	padding: 0;
+	margin: 0;
+}
+
+table#elements td {
+	padding: 2px;
+}
+
+/* Icon */
+
+ul#legend .icon,
+table#elements td .icon {
+	background: white url('../Images/background.png') bottom left repeat-x;
+	color: black;
+	cursor: pointer;
+	display: block;
+	font-size: 0.9em;
+	line-height: 4.44em;
+	width: 4.44em;
+	height: 4.44em;
+	margin: 0;
+	opacity: 0.8;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
+
+table#elementsr .active .icon,
+table#elements td:hover .icon {
+	left: -1px;
+	opacity: 1 !important;
+	padding: 1px;
+	top: -1px;
+	z-index: 100;
+	box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+	-o-box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+}
+table#elementsr .active .icon .occurences,
+table#elements td:hover .icon .occurences {
+	display: block;
+}
+
+table#elements .icon .occurences {
+	position: absolute;
+	top: 4px;
+	right: 6px;
+	line-height: 1em;
+	font-size: 0.9em;
+	opacity: 0.7;
+	display: none;
+}
+
+/* Info Box */
+
+table#elements td .info {
+	background: white !important;
+	color: black;
+	display: none;
+	margin: 0 2px;
+	min-height: 5em;
+	padding: 0.75em;
+	position: absolute;
+	margin-top: 4.5em;
+	width: 20em;
+	z-index: 200;
+	border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+	-o-box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 0 8px 2px;
+}
+
+table#elements td .info h3 {
+	color: black;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	font-size: 1.6em;
+}
+
+table#elements td .info p {
+	margin-bottom: 0.75em;
+}
+
+table#elements td .info a:active,
+table#elements td .info a:hover {
+	color: #FF8215;
+}
+
+table#elements td .info *:last-child {
+	margin-bottom: 0;
+}
+
+
+table#elements td .links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+table#elements td .links li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+table#elements td .links li:after {
+	content: ", ";
+}
+
+table#elements td .links li:last-child:after {
+	content: "";
+}
+
+/* Legend */
+
+ul#legend {
+	margin: 0;
+	padding: 10px 10px 10px 40px;
+	list-style: none;
+	height: 40px;
+	background-color: #FFF;
+	border: 1px solid #D2D2D2;
+	-webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#legend li {
+	float: left;
+	width: 20%;
+	padding: 0.125em 0;
+	color: #666;
+}
+
+ul#legend .icon {
+	height: 1.5em;
+	width: 1.5em;
+	display: inline-block;
+	margin: 0 0.5em;
+	vertical-align: middle;
+}
+
+/* Colours */
+
+ul#legend .root .icon,
+table#elements .root .icon,
+table#elements .root .info {
+	background-color: #A7DEC9;
+}
+
+ul#legend .document .icon,
+table#elements .document .icon,
+table#elements .document .info {
+	background-color: rgb(120, 140, 255);
+}
+
+ul#legend .text .icon,
+table#elements .text .icon,
+table#elements .text .info {
+	background-color: rgb(255, 255, 100);
+}
+
+ul#legend .grouping .icon,
+table#elements .grouping .icon,
+table#elements .grouping .info {
+	background-color: rgb(255, 150, 80);
+}
+
+ul#legend .form .icon,
+table#elements .form .icon,
+table#elements .form .info {
+	background-color: rgb(100, 255, 100);
+}
+
+ul#legend .sections .icon,
+table#elements .sections .icon,
+table#elements .sections .info {
+	background-color: rgb(160, 175, 255);
+}
+
+ul#legend .interative .icon,
+table#elements .interative .icon,
+table#elements .interative .info {
+	background-color: rgb(0, 150, 255);
+}
+
+ul#legend .table .icon,
+table#elements .table .icon,
+table#elements .table .info {
+	background-color: #F2B19A;
+}
+
+ul#legend .embedding .icon,
+table#elements .embedding .icon,
+table#elements .embedding .info {
+	background-color: rgb(255, 150, 255);
+}
+
+/* Other */
+#domains {
+	margin-top: 2em;
+	text-align: center;
+	font-size: 0.9em;
+}

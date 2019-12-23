@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录的表单实例</title>
+</head>
+<body>
+    <div>
+        <form action="action.html" method="post">
+            <div>
+                <label for="user_phone">手机号码：</label>
+                <input id="user_phone" name="user_phone" type="text" pattern="^1[358]\d{9}" placeholder="大陆手机号码">
+            </div>
+            <br>
+            <div>
+                密码：<input name="password" type="password" placeholder="密码只能填写6位">
+            </div>
+            <br>
+            <div>
+                <input name="remember_me" checked type="checkbox">记住我
+            </div>
+            <br>
+            <div>
+                <input name="gender" checked type="radio" value="nan"> 男
+                <input name="gender" type="radio" value="nv"> 女
+            </div>
+            <br>
+            <div>
+                <div>爱好</div>
+                <input name="hobby[]" type="checkbox" value="hobby1">篮球
+                <input name="hobby[]" type="checkbox" value="hobby2">足球
+                <input checked name="hobby[]" type="checkbox" value="hobby3">旅游
+                <input checked name="hobby[]" type="checkbox" value="hobby4">挖掘机
+            </div>
+            <br>
+            <div>
+                <div>班级</div>
+                <select name="class" id="">
+                    <option value="class1">班级一</option>
+                    <option value="class2">班级二</option>
+                    <option selected="selected" value="class3">班级三</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <div>个人简介</div>
+                <textarea name="profile" id="" cols="60" rows="5">textarea设置默认值</textarea>
+            </div>
+            <br>
+            <div>
+                <div>个人图片</div>
+                <input name="user_img" type="file">
+            </div>
+            <br>
+            <div>
+                <div>邮箱</div>
+                <input name="email" type="email">
+            </div>
+            <div>
+                <div>网址</div>
+                <input name="url" type="url">
+            </div>
+            <div>
+                <div>年龄</div>
+                <input name="age" type="number" min="0" max="150" step="12">
+            </div>
+            <div>
+                <div>滑块</div>
+                <input name="range1" type="range" min="2" max="150" step="30">
+            </div>
+            <div>
+                <div>搜索</div>
+                <input name="search11" type="search">
+            </div>
+            <br>
+            <div>
+                <div>隐藏域</div>
+                <input type="hidden" value="666" name="userid">
+            </div>
+            <div>
+                <input type="submit" value="登录">
+                <input type="reset" value="重置">
+                <input type="button" value="普通按钮">
+                <input type="image" src="../img/btn.jpg" style="width: 100px;">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

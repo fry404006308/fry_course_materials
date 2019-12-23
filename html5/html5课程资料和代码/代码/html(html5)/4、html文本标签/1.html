@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html文本标签小实例</title>
+</head>
+<body>
+<!--ins-->
+这题的答案是 <ins>B</ins>
+<hr><br>
+
+<!--u-->
+下划线对应的单词是 <u>underliine</u>
+<hr><br>
+
+<!--表示下划线-->
+<span style="text-decoration: underline;">表示下划线</span>
+<hr><br>
+
+<!--del-->
+<del>删除</del><br>
+原价：<del>998</del> <span style="color: red;">388</span><br>
+<span style="text-decoration: line-through;">css实现删除效果</span>
+<hr><br>
+
+<!--small-->
+<div style="font-size: 20px;">
+    <span>20px的字</span>
+    <small>小一号的字
+        <small>再小一号的字</small>
+    </small>
+</div>
+<hr><br>
+
+
+
+<!--strong-->
+<i>i的效果</i><br>
+<b>b的效果</b><br>
+<strong>strong的效果</strong><br>
+<em>em的效果</em><br>
+<br>
+<span style="font-weight: 600;">css设置加粗</span><br>
+<span style="font-style: italic;">css设置倾斜</span><br>
+
+<hr><br>
+
+<!--pre-->
+<pre>
+    心里的花，我想要带你回家
+在那深夜酒吧，哪管它是真是假
+请你尽情摇摆，忘记钟意的他
+你是最迷人噶，你知道吗
+
+来左边儿跟我一起画个龙
+在你右边儿画一道彩虹
+来左边儿跟我一起画彩虹
+在你右边儿再画个龙
+</pre>
+
+<hr><br>
+
+<!--code-->
+<code>
+    <pre>
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        say() {
+            console.log('我是'+this.name);
+        }
+    }
+    class Bird extends Animal {
+        constructor(name, age) {
+            super(name);
+            this.age = age;
+        }
+        fly() {
+            console.log('我是'+this.name+','+this.age+'岁,我在自由自在的飞翔！');
+        }
+    }
+    let animal1=new Animal('大动物');
+    animal1.say();
+    let monkey=new Bird('飞猴',15);
+    monkey.fly();
+    </pre>
+</code>
+<hr><br>
+
+<!--sup-->
+5<sup>3</sup><br>
+<hr><br>
+
+<!--sub-->
+X<sub>2</sub><br>
+<hr><br>
+
+<!--blockquote-->
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 50 years, WWF has been protecting the future of nature. The worlds leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+</blockquote>
+<hr><br>
+
+心里的花，我想要带你回家 <br>
+在那深夜酒吧，哪管它是真是假<br>
+请你尽情摇摆，忘记钟意的他<br>
+你是最迷人噶，你知道吗<br>
+<br>
+来左边儿跟我一起画个龙<br>
+在你右边儿画一道彩虹<br>
+来左边儿跟我一起画彩虹<br>
+在你右边儿再画个龙<br>
+
+</body>
+</html>

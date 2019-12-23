@@ -1,0 +1,120 @@
+﻿/* Layout */
+
+#header-wrapper,
+#content-wrapper,
+#footer {
+	width: 945px;
+	margin: 0 auto;
+}
+
+/* Fonts */
+
+@font-face {
+	font-family: "Temporarium";
+	src: url("/fonts/temporarium.otf");
+}
+
+/* Base Styling */
+
+body	{
+	font-family: 'Microsoft Yahei', Tahoma, Verdana, Arial, Sans-serif;
+	background-color: #F1F1F1;
+	background-image: url(../Images/bg.jpg);
+	background-repeat: repeat;
+}
+
+h1 {
+	font-size: 2.6em;
+}
+
+h1, h2, h3, h4, h5, h6, body {
+	color: white;
+}
+
+a:visited {
+	color: #c76410;
+}
+
+h2 a,
+h2 a:visited,
+#navigation a,
+#navigation a:visited,
+a,
+a:hover,
+a:active {
+	color: white;
+}
+
+#navigation a:hover,
+h2 a:hover,
+a {
+	text-decoration: none;
+	color: #ff8215;
+}
+
+#banner, 
+#navigation,
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Temporarium", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* Navigation */
+
+#header-wrapper {
+	margin-bottom: 1em;
+	border-bottom: 1px solid #2a2a2c;
+	border-top: 1px solid #2a2a2c;
+	border-bottom-color: rgba(255, 255, 255, 0.1);
+	border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+#header {
+	height: 90px;
+	width: 728px;
+	margin: 0 auto;
+
+}
+
+#header #banner {
+	display: inline-block;
+	width: 230px;
+	margin: 0 10px 0 0;
+	text-align: right;
+	font-size: 3.4em;
+}
+
+#header #banner a {
+	color: white;
+	padding: 0 0.1em;
+}
+
+#navigation {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	padding: 0 0.8em;
+}
+
+#navigation li {
+	display: inline;
+	margin: 0 0.5em 0 0;
+	font-size: 1.8em;
+}
+
+#navigation li a {
+	color: white;
+}
+
+
+
+footer {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.4);
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
