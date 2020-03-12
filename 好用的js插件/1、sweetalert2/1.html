@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sweetalert小实例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        .div1{
+            padding: 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="sweetalert2@9.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>-->
+</head>
+<body>
+    <div id="div1" class="div1">
+        <button id="btn1">客官，点我</button>
+    </div>
+    <script>
+        let btn1=document.getElementById('btn1');
+        btn1.onclick=function () {
+            Swal.fire({
+                icon: 'success',
+                title: '温馨提示',
+                text: '恭喜您，中了500w现金大奖!',
+                showCloseButton: false,
+                showClass: {
+                    popup: 'animated zoomInUp faster'
+                },
+                hideClass: {
+                    popup: 'animated zoomOut faster'
+                }
+            })
+        }
+    </script>
+</body>
+</html>

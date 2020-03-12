@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--1、生成html基本结构-->
+<!--
+英文状态下的感叹号! ==> 按tab键
+-->
+
+<!--
+2、id用#号键表示，class用.号表示
+-->
+<!--div#div1-->
+<div id="div1"></div>
+<div class="class1"></div>
+
+<!--
+3、emmet中没有内置的标签，所有的东西写好我们都可以按tab键来生成标签
+-->
+<!--fry-->
+<fry></fry>
+
+<!--
+4、emmet中如何表示层级关系
+emmet的语法和css选择器的语法很像
+
+>：子元素
++：表示同级
+^：表示上一级
+-->
+<div>
+    <table></table>
+</div>
+<!--ul+div-->
+<ul></ul>
+<div></div>
+<!--div>div.test^ul-->
+<div>
+    <div class="test"></div>
+</div>
+<ul></ul>
+<!--这个^符号可以用多次，每一次的话相当于往上面爬一级-->
+<!--div>div>div>div^^^table-->
+<div>
+    <div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<table></table>
+<!--div>div>div>div^^table-->
+<div>
+    <div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+    <table></table>
+</div>
+
+<!--
+5、Emmet中的重复 和变量
+*：重复
+$：变量
+$符号可以写多位，如果是两个$$，表示从01开始，
+如果是$$$，表示从001开始
+-->
+<div></div>
+<div></div>
+<div></div>
+<!--div.div$*3-->
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+<!--div.div$$*3-->
+<div class="div01"></div>
+<div class="div02"></div>
+<div class="div03"></div>
+
+<!--
+6、分组：英文状态下的括号来表示的
+-->
+<!--(div+ul)*3-->
+<div></div>
+<ul></ul>
+<div></div>
+<ul></ul>
+<div></div>
+<ul></ul>
+<!--(div>dl>(dt+dd)*3)+footer>p-->
+<div>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+</div>
+<footer>
+    <p></p>
+</footer>
+
+<!--
+7、属性：[]
+如果有多个属性，多个属性也是要写在一个中括号里面的，中间用空格隔开
+-->
+a[href='https://fanrenyi.com']
+<a href="https://fanrenyi.com"></a>
+a[href='https://fanrenyi.com' title='fry']
+<a href="https://fanrenyi.com" title="fry"></a>
+<a href="https://fanrenyi.com" title="fry"></a>
+
+<!--
+8、标签里面的文字：英文状态下的 大括号 {}
+{}也是可以和$符号以及乘号配合使用
+-->
+div{123}
+<div>123</div>
+div{我是第$$个div}*3
+<div>我是第01个div</div>
+<div>我是第02个div</div>
+<div>我是第03个div</div>
+
+<!--
+9、隐式标签
+a、就是如果在最外面，如果没有写标签名，默认就是div
+例如.test
+b、子标签默认已知的情况下
+ul>.test$*3 比如ul(ol)下面只能是li
+table，tbody，thead，tfoot下面的tr
+select(optgrout)下面的option标签
+tr下面的td
+-->
+<div class="test"></div>
+<!--ul>.test-->
+<ul>
+    <li class="test"></li>
+</ul>
+ul>.test$*3
+<ul>
+    <li class="test1"></li>
+    <li class="test2"></li>
+    <li class="test3"></li>
+</ul>
+<table>
+    <tr class="test"></tr>
+    <tr>
+        <td class="test"></td>
+        <td class="test"></td>
+        <td class="test"></td>
+    </tr>
+</table>
+<select name="" id="">
+    <option value="" class="test"></option>
+</select>
+</body>
+</html>

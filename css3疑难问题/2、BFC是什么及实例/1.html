@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC是什么及实例</title>
+    <style>
+        .box1{
+            border: 5px solid red;
+            overflow: hidden;
+        }
+        p{
+            margin: 20px;
+        }
+        .p1{
+            background-color: orange;
+        }
+        .p2{
+            background-color: darkseagreen;
+        }
+        .bfc1{
+            overflow: hidden;
+        }
+        .float1{
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--2、利用bfc做两栏布局-->
+<!--原理：BFC的区域不会与float box重叠。-->
+<div class="float1">
+
+</div>
+
+<!--1、利用bfc避免margin重叠的例子-->
+<!--原理：Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。-->
+<div class="box1">
+    <p class="p1">p1</p>
+    <div class="bfc1">
+        <p class="p2">p2</p>
+    </div>
+</div>
+
+</body>
+</html>

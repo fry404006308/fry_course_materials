@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象介绍</title>
+</head>
+<body>
+<!--
+五种基本的数据类型
+Number 数字
+String 字符串
+Boolean 布尔值
+Null 空值
+Undefined 未定义的
+
+复杂的数据类型
+Object 对象
+
+在js中，除了五种基本的数据类型，其它都是对象
+
+五种基本的数据类型只能表示很单一的概念
+
+人
+人 名字  性别 年纪 等等
+var name='张三'
+var gender='男'
+var age=18
+
+对象：容器：这个容器里面可以装各种数据类型，并且把他们弄成一个整体
+
+js对象分类
+内建对象：内部已经创建好的对象，es
+es里面已经创建好的对象，所有的es的实现都可以使用的对象
+比如说：Math，Number,String,Function....
+
+宿主对象：表示js运行环境提供的对象，浏览器呀
+比如console，document,window等等
+
+自定义对象：我们自己定义的对象
+
+-->
+<script>
+    var a=Math.sqrt(9);
+    window.alert(a);
+
+    // var name='张三'
+    // var gender='男'
+    // var age=18
+
+    var human=new Object();
+    human.name='张三';
+    human.gender='男';
+    human.age=18;
+
+    console.log(human);
+
+</script>
+</body>
+</html>

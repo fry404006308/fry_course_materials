@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        /*元素选择器*/
+        p{
+            color: red;
+        }
+        /*伪元素选择器*/
+        p::before{
+            content: 'p:before---';
+            color: blue;
+        }
+        p::after{
+            content: '----p::after';
+            color: orange;
+        }
+        a:before{
+            content: 'a:before---';
+            color: blue;
+        }
+        /*div:first-letter{*/
+        /*    font-size: 30px;*/
+        /*    color: red;*/
+        /*}*/
+        div:first-line{
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+<!--
+p::before的作用就是在 p标签的前面增加一些内容，可以给这些增加的内容设置样式
+::after ： 就是在元素的后面增加一些内容，然后选中这些内容设置样式
+::first-letter  选中第一个字符，然后选中这些内容设置样式
+::first-line  选中第一行，然后选中这些内容设置样式
+
+
+也就是:before和:after中一般都要 有content属性，这个属性是给 他们设置内容的
+
+
+伪元素选择器 用单冒号(:)和双冒号(::)都可以，推荐使用双冒号，和伪类选择器做区分
+在css3以前，伪类和伪元素都是使用的单冒号(:)，只不过在css3的时候，w3c为了区分伪类和伪元素
+css3中的伪类就是单冒号(:)，伪元素就是双冒号(:)
+
+
+
+
+-->
+
+<p>p标签</p>
+<a href="">a标签</a>
+<div>伪元素选择器 用单冒号(:)和双冒号(::)都可以，推荐使用双冒号，和伪类选择器做区分
+    在css3以前，伪类和伪元素都是使用的单冒号(:)，只不过在css3的时候，w3c为了区分伪类和伪元素
+    css3中的伪类就是单冒号(:)，伪元素就是双冒号(:)</div>
+</body>
+</html>

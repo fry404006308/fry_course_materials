@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数介绍</title>
+</head>
+<body>
+<!--
+
+函数
+
+函数的语法
+function 函数名([参数1,参数2...]){
+    函数体：也就是完成我们需要功能的函数代码
+}
+
+我们写函数名的时候要见名知意，
+
+函数的使用
+函数名([参数1,参数2...])
+函数名()
+
+函数的作用
+函数的作用就是封装代码（功能），便于代码的复用，提高开发的效率，减少错误
+
+-->
+<script>
+    //需求：求三个数里面的最小的那个数
+    var a=13;
+    var b=50;
+    var c=31;
+    // if(a<b){
+    //     if(a<=c){
+    //         console.log(a);
+    //     }else{
+    //         console.log(c);
+    //     }
+    // }else{
+    //     if(b<=c){
+    //         console.log(b);
+    //     }else{
+    //         console.log(c);
+    //     }
+    // }
+    function minOfThree(x1,x2,x3) {
+        if(x1<x2){
+            if(x1<=x3){
+                console.log(x1);
+            }else{
+                console.log(x3);
+            }
+        }else{
+            if(x2<=x3){
+                console.log(x2);
+            }else{
+                console.log(x3);
+            }
+        }
+    }
+    minOfThree(a,b,c);
+
+    //我们要求 e，f，g三个数里面最小的那个
+    var e=12,f=15,g=20;
+    // if(e<f){
+    //     if(e<=g){
+    //         console.log(e);
+    //     }else{
+    //         console.log(g);
+    //     }
+    // }else{
+    //     if(f<=g){
+    //         console.log(f);
+    //     }else{
+    //         console.log(g);
+    //     }
+    // }
+    minOfThree(e,f,g);
+
+
+    //求 h，i，j三个数里面最小的
+
+
+    //
+    function hello() {
+        console.log('函数初体验！！');
+    }
+    hello();
+    hello();
+
+</script>
+</body>
+</html>

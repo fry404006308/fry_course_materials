@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if选择结构小实例</title>
+</head>
+<body>
+<!--
+判断一年是不是闰年
+
+prompt：接收用户输入的数据
+
+
+-->
+<script>
+    // var year=2008;
+    var year=prompt();
+    // var rule1=year%4==0&&year%100!=0;
+    // var rule2=year%400==0;
+    // if(rule1||rule2){
+    //     alert(year+'这一年是闰年');
+    // }else{
+    //     alert(year+'不是闰年年');
+    // }
+    if((year%4==0&&year%100!=0)||year%400==0){
+        alert(year+'这一年是闰年');
+    }else{
+        alert(year+'不是闰年年');
+    }
+</script>
+</body>
+</html>

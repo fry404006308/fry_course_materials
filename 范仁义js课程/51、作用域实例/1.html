@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域实例</title>
+</head>
+<body>
+<!--
+
+-->
+<script>
+    // var a = 123;
+    // function fun(){
+    //     alert(a); //123
+    // }
+    // fun();
+    //
+    // /*=========================================*/
+    //
+    // var a = 123;
+    // function fun(){
+    //     alert(a); //undefined
+    //     var a = 456;
+    // }
+    // fun();
+    // alert(a); //123
+    //
+    // /*=========================================*/
+    //
+    // var a = 123;
+    // function fun(){
+    //     alert(a); //123
+    //     a = 456;
+    // }
+    // fun();
+    // alert(a); //456
+    //
+    // /*=========================================*/
+    //
+    // var a = 123;
+    // function fun(a){
+    //     //var a;
+    //     alert(a); //undefined
+    //     a = 456;
+    // }
+    // fun();
+    // alert(a); //123
+    //
+    // /*=========================================*/
+    //
+    var a = 123;
+    function fun(a){
+        //var a;
+        //a=123;
+        alert(a); //123
+        a = 456;
+    }
+    fun(123);
+    alert(a); //123
+
+</script>
+</body>
+</html>

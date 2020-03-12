@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名函数</title>
+</head>
+<body>
+<!--
+匿名函数：没有名字的函数
+
+把匿名函数对象放进了一对小括号，避免报错
+
+匿名函数的调用：
+直接在匿名函数后面加上小括号，如果有参数，就写在小圆括号里面
+
+函数名本身代表的就是函数的 函数体
+
+
+
+-->
+<script>
+    // function fun1() {
+    //     console.log('你好');
+    // }
+    // fun1();
+    // console.log(fun1);
+
+    // (function () {
+    //     console.log('你好');
+    // })();
+
+    (function (a) {
+        console.log('你好');
+        console.log(a);
+    })(10);
+
+
+</script>
+</body>
+</html>

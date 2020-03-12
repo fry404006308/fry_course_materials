@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包缺点</title>
+</head>
+<body>
+<!--
+闭包缺点
+造成内存泄漏的问题
+
+如何解决
+将外部调用闭包的变量赋值为null
+
+-->
+<script>
+    function fn1() {
+        var a=10;
+        function fn2(){
+            console.log(++a);
+        }
+        return fn2;
+    }
+    var fn3=fn1();
+    console.log(fn3);
+    fn3();
+
+    fn3=null;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js数据类型之字符串</title>
+</head>
+<body>
+<!--
+js数据类型
+
+5中基本数据类型
+String：字符串
+Number：数字：整数和小数（浮点数）
+Boolean：布尔值：真和假
+Null：空值
+Undefined：未定义的
+
+引用数据类型
+Object：对象：（狭义的对象，数组array，函数function）
+
+字符串
+就是用引号（单引号和双引号都可以）引起来的内容
+
+如果字符串中引号需要嵌套的话，一般是双引号里面套单引号，或者单引号里面套双引号
+
+转义字符
+\" 就是告诉浏览器，只是作为一个"字符来解析的
+\' 单引号
+\\ \
+\n 换行
+\t 制表符
+
+
+了解
+字符串本身就是一个字符数组
+可以通过数组的方式获取里面的具体的字符
+以0开始
+
+-->
+<script>
+    var str='他说：\'我爱你，我的家！\'';
+    console.log(str);
+    console.log(typeof str);
+
+    var str1="abcd r\tet\"rer fd";
+    console.log(str1);
+    console.log(typeof str1);
+
+    var char1=str1[2];
+    console.log(char1);
+    console.log(typeof char1);
+</script>
+</body>
+</html>

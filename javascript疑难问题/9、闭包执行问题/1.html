@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包执行问题</title>
+</head>
+<body>
+<!--
+
+闭包在执行的时候，如果和外部函数一起执行，比如（ fn1()();），
+可能会造成外部函数局部变量被重新赋初值的情况，
+这样可能造成结果不是我们预期
+
+所以推荐大家调用匿名函数的方式是先执行外部函数，然后再执行内部函数
+var fn3=fn1();
+fn3();
+
+-->
+<script>
+    function fn1() {
+        var a=10;
+        function fn2(){
+            console.log(++a);
+        }
+        return fn2;
+    }
+
+    // var fn3=fn1();
+    // console.log(fn3);
+    // fn3(); //11
+    // console.log('两次函数执行之间');
+    // fn3(); //12
+    // fn3(); //13
+
+    fn1()(); //11
+    fn1()(); //11
+    fn1()(); //11
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+        a:link{
+            background-color: red;
+        }
+        a:hover{
+            color: #bbffaa;
+        }
+        a:active{
+            background-color: #ffff22;
+        }
+        a:visited{
+            background-color: #777777;
+        }
+        p:hover{
+            color: #bbffaa;
+        }
+        p:active{
+            background-color: #ffff22;
+        }
+        input:focus{
+            background-color: #ffff22;
+        }
+    </style>
+</head>
+<body>
+<!--
+伪类选择器
+
+伪类选择器 一般是使用冒号（英文状态下的）
+
+伪类选择器的一个实质 就是一个 交集选择器
+
+在chrome里面如何查看状态的样式代码：比如 :hover
+在styles里面的:hov（force element state） 里面，如果我们想看:hover，我们就选中:hover
+
+就是访问过和没有访问过是根据浏览器的历史记录来看的
+
+a:link：表示设置没有访问过的a标签的样式
+a:hover：表示鼠标移动到a标签上面的时候的一个状态
+a:active：表示鼠标点击a标签时候的样式
+a:visited：表示设置访问过了的a标签的样式
+
+:hover和:active也可以用在别的标签上面
+
+
+-->
+
+<a href="https://fanrenyi.com" target="_blank">https://fanrenyi.com</a>
+<br>
+<hr>
+<a href="https://baidu.com" target="_blank">https://baidu.com</a>
+<p>p标签</p>
+<br>
+<hr>
+<input type="text">
+</body>
+</html>

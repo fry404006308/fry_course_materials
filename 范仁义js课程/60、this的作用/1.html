@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this的作用</title>
+</head>
+<body>
+<!--
+this是代表函数（方法）所在的那个对象
+
+this用来替代对象
+-->
+<script>
+    var zhubajie={
+        name:'猪八戒',
+        age:4,
+        saoRao:function () {
+            console.log('我是'+this.name+'，我今年'+this.age+'岁，我骚扰了嫦娥！！');
+        }
+    };
+    zhubajie.saoRao();
+</script>
+</body>
+</html>

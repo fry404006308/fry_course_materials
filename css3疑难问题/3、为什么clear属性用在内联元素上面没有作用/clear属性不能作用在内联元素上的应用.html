@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clear属性不能作用在内联元素上的应用</title>
+    <style>
+        .box1{
+            width: 300px;
+            border: 5px solid red;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+        .box3{
+            clear: both;
+        }
+        /*用伪元素的方式解决浮动高度塌陷*/
+        .clearfix:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+        <!--新增标签的方式解决浮动高度塌陷-->
+        <!--<div class="box3"></div>-->
+    </div>
+</body>
+</html>

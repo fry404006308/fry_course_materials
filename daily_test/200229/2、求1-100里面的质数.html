@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //对2-100进行遍历
+    console.time('test');
+    for(var i=2;i<=10000;i++){
+        var is_zhishu=true;
+        for(var j=2;j<=parseInt(Math.sqrt(i));j++){
+            if(i%j==0){
+                is_zhishu=false;
+                break;
+            }
+        }
+        //if(is_zhishu) console.log(i);
+    }
+    console.timeEnd('test');
+</script>
+</body>
+</html>

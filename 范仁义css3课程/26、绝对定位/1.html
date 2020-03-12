@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: #605ca8;
+        }
+        .box2{
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box3{
+            background-color: #bfa;
+        }
+        .box2_parent{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: lightgray;
+            left: 200px;
+        }
+        .span1{
+            width: 100px;
+            height: 100px;
+            background-color: lemonchiffon;
+            position: absolute;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--
+绝对定位的特点
+1、绝对定位会脱离文档流
+2、当我们给绝对定位的元素只设置绝对定位而没有设置偏移量的时候，绝对定位的元素还是老老实实的待在原来的位置
+3、绝对定位是否是按照浏览器的窗口来定位的呢？？？不是的，
+绝对定位是相对于最近设置了定位属性的祖先元素来定位的，
+如果所有的祖先元素都没有定位，那么就是相对于浏览器窗口来定位的
+定位：不是static，可以是relative、fixed、absolute
+最近设置了定位属性的祖先元素：
+小技巧：
+我们做绝对定位的时候，我们一般会给这个绝对定位的元素的父亲元素来设置相对定位。
+这是为了表示我们的绝对定位是相对父元素来进行的
+因为相对于父元素定位的话我们可以很好的定位原点
+4、绝对定位可以使元素提升一个层级
+5、绝对定位会改变盒子的一个性质，会把盒子变成快元素，这个时候的块元素的宽高都是由内容撑开的
+6、无论是块状元素还是内联元素，都是可以设置绝对定位的
+
+绝对定位总结特点：
+1、脱离文档流
+2、绝对定位是相对于最近设置了定位属性的祖先元素来定位的，
+如果所有的祖先元素都没有定位，那么就是相对于浏览器窗口来定位的
+
+小技巧
+我们做绝对定位的时候，我们一般会给这个绝对定位的元素的父亲元素来设置相对定位。
+这是为了表示我们的绝对定位是相对父元素来进行的
+
+
+-->
+<div class="box box1">box1</div>
+<!--<div class="box2_parent">-->
+<!--    <div class="box box2">box2</div>-->
+<!--</div>-->
+<div class="box box2">box2</div>
+<div class="box box3">box3</div>
+<span class="span1">
+span1
+</span>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rem小实例</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+        div {
+            font-size: 4rem; /* 40px */
+            width: 20rem;  /* 200px */
+            height: 20rem;
+            border: solid 2px black;
+        }
+        p {
+            font-size: 2rem; /* 20px */
+            width: 10rem;
+            height: 10rem;
+            border: solid 1px blue;
+            color:blue ;
+        }
+        span {
+            font-size: 1.5rem;
+            width: 7rem;
+            height: 6rem;
+            border: solid 2px red;
+            display: block;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    父元素div
+    <p>
+        子元素p
+        <span>孙元素span</span>
+    </p>
+</div>
+</body>
+</html>

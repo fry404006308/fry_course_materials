@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层模型小实例</title>
+    <style>
+        .img_box{
+            width: 400px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 30px auto;
+            position: relative;
+        }
+        .img_item{
+            width: 400px;
+            height: 300px;
+        }
+        .author{
+            position:absolute;
+            left: 10px;
+            top: 10px;
+            background-color: orange;
+        }
+        .lesson_num{
+            position:absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #ff4f81;
+        }
+        .label {
+            display: inline;
+            padding: .2em .6em .3em;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25em;
+        }
+    </style>
+</head>
+<body>
+<div class="img_box">
+    <img class="img_item" src="../imgs/aa.gif" alt="">
+    <div class="info_box">
+        <div class="label author">范仁义</div>
+        <div class="label lesson_num">1课时</div>
+    </div>
+</div>
+</body>
+</html>

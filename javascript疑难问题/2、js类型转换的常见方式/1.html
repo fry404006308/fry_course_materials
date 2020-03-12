@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js类型转换的常见方式</title>
+</head>
+<body>
+<script>
+    /*
+    * 1、转换为字符串
+    * 用二元运算符 +（加号）（字符串的连接号）
+    * */
+    // var num1=123+'';
+    // var num1=true+'';
+    // console.log(num1);
+    // console.log(typeof num1);
+
+    /*
+    * 2、转化为数字
+    * 用一元运算符 +（正号）
+    *
+    * */
+    // var str1=+true;
+    // // var str1=+'1'+2+3;
+    // console.log(str1);
+    // console.log(typeof str1);
+
+    /*
+    * 3、转化为boolean类型
+    * 用两个取反符号，!!
+    * */
+    var str1=!!'123';
+    console.log(str1);
+    console.log(typeof str1);
+</script>
+</body>
+</html>

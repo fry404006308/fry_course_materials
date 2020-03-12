@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+</head>
+<body>
+<!--
+1、或：||：或者：两个里面只要满足一个就满足了
+两边都是false的情况下，才是false
+两边只要有true，结果就是true
+
+js中的或运算符是“短路”的或：
+就是如果第一个值是true，那么就不用去看第二个值了
+
+2、与：&&：并且：两个同时满足才满足
+js中的与运算符也是“短路”的与：
+当第一个是false的情况下，结果肯定是false，所以第二个就不用看了
+
+3、非：!：取反
+也就是true变成false，false变成true
+可以用!!来进行其它类型转换为boolean类型
+-->
+<script>
+    /*或运算符*/
+    // var a=true;
+    // var b=false;
+    // var ans=a||b;
+    // var ans=false||false;
+    // var ans=true||false;
+    // var ans=false||true;
+    // var ans=true||alert('aaa');
+    // console.log('ans='+ans);
+
+    /*与运算符*/
+    // var ans=false&&false;
+    // var ans=true&&true;
+    // var ans=false&&true;
+    // var ans=true&&false;
+    // console.log('ans='+ans);
+    // var hasChargeMoney=false;
+    // var noSkin=true;
+    // if(hasChargeMoney&&noSkin){
+    //     console.log('购买皮肤成功');
+    // }else{
+    //     console.log('购买皮肤失败');
+    // }
+    // var ans=true&&alert('aaa');
+
+    /*非运算符*/
+    var a=1;
+    // var b=!!a;
+    var b=Boolean(a);
+    console.log('b='+b);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js数据类型之Number类型</title>
+</head>
+<body>
+<!--
+Number 数字
+整数和小数（浮点数）
+
+科学计数法
+1.7e+3 =1.7*10^3=1700
+1.7e-3 =1.7*10^(-3)=1.7*0.001
+
+常量
+Number.MAX_VALUE  表示的是js中的最大的数
+1.7976931348623157e+308
+常量我们一般用全大写表示
+Number.MIN_VALUE 最小数
+
+Infinity 无限大
+-Infinity
+
+js的小数做计算的时候，可能会出现不精确的情况
+原因是什么：10进制里面，1/3是没有办法被准确的表示的，0.333333
+2机制里面，1/10也没有办法被准确表示，是一个无限循环小数
+
+解决方式：可以把小数先全部转化为整数，计算之后再转化为小数
+
+
+
+-->
+<script>
+    var num1=234;
+    console.log(num1);
+    console.log(typeof num1);
+    var num2=12.3;
+    console.log(num2);
+    console.log(typeof num2);
+    var num3='12.3';
+    console.log(num3);
+    console.log(typeof num3);
+
+    var num4=Number.MAX_VALUE;
+    console.log(num4);
+    console.log(typeof num4);
+    var num5=Number.MIN_VALUE;
+    console.log(num5);
+    console.log(typeof num5);
+
+    var num6=Number.MAX_VALUE*Number.MAX_VALUE;
+    console.log(num6);
+    console.log(typeof num6);
+
+    var num7=-Infinity;
+    console.log(num7);
+    console.log(typeof num7);
+
+    var num8=0.11+0.1;
+    console.log(num8);
+    console.log(typeof num8);
+
+</script>
+</body>
+</html>

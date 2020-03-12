@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Null和Undefined类型</title>
+</head>
+<body>
+<!--
+Null表示是空值
+Null这个数据类型里面只有一个值，就是null，
+这个null值表示的是一个空的对象
+typeof来返回null的时候，返回的是一个object
+
+Undefined这个类型也只有一个值，就是undefined，表示变量未定义
+表示变量声明了没有定义
+
+undefined 不是表示变量未定义，而是表示变量定义了没有赋值
+如果变量没有定义，那么会报错：
+-->
+
+<script>
+    var var1=null;
+    console.log(var1);
+    console.log(typeof var1);
+
+    var var2;
+    console.log(var2);
+    console.log(typeof var2);
+
+    // console.log(var3);
+    // console.log(typeof var3);
+</script>
+</body>
+</html>

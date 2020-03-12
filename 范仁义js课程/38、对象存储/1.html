@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象存储</title>
+</head>
+<body>
+<!--
+基本数据类型
+Number String Boolean Null Undefined
+
+引用数据类型
+对象
+
+
+数据的比较
+
+基本数据类型在进行数据比较的时候，是直接比较 值
+引用数据类型在进行比较的时候，是比较他们的地址，
+就算他们的值完全一样，地址不一样，相等性比较的结果也是false
+
+无论是基本数据类型，还是引用数据类型，都是比较的栈空间的值，而不是堆空间的值
+只不过对基本数据类型而言，栈空间的值就是 数据值
+而对引用数据类型而言，栈空间的值 就是 地址
+
+
+-->
+<script>
+    // var a=124;
+    // var b=a;
+    // a++;
+    // console.log('a='+a);
+    // console.log('b='+b);
+    //
+    // var obj1=new  Object();
+    // obj1.name='张三';
+    // var obj2=obj1;
+    // obj1.name='李四';
+    // console.log(obj1);
+    // console.log(obj2);
+
+    /*数据比较*/
+    var aa=12;
+    var bb=12;
+    console.log(aa==bb)
+
+    var obj3=new  Object();
+    obj3.name='张三';
+    var obj4=new  Object();
+    obj4.name='张三';
+    console.log(obj3);
+    console.log(obj4);
+    console.log(obj3==obj4);
+    var obj5=obj4;
+    obj5.name='李四';
+    console.log(obj5==obj4);
+</script>
+</body>
+</html>

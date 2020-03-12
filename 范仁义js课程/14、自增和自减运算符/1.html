@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自增和自减运算符</title>
+</head>
+<body>
+<!--
+自增运算符
+++
+相当于 给数+1
+++a 相当于 a=a+1;
+a++
+
+自增运算符是会改变变量的值的
+c=a+b
+
+a、如果是自己用，++a 和 a++ 是一样的
+b、如果是别人用，
+++a是先加再赋值
+a++是先赋值再加
+
+
+
+自减运算符
+
+var b=a--;
+var b=--a;
+
+
+
+--
+
+-->
+<script>
+    // var a=1;
+    // a++;
+    // a=a+1;
+    // ++a;
+    // a++;
+    // console.log('a='+a);
+
+    /*下面将a++和++a的区别*/
+    // b=a++;
+    //到这里的时候a的值已经是2了
+    // c=++a;
+    //c=a+1;
+    // console.log('a='+a);
+    // console.log('b='+b);
+    // console.log('c='+c);
+
+    /*自减运算符*/
+    // var a=10;
+    // var b=a--;
+    // var b=--a;
+    // --a;
+    // console.log('a='+a);
+    // console.log('b='+b);
+
+    var a=10;
+    //10+12+12
+    var b=a++ + ++a +a;
+    console.log('a='+a);
+    console.log('b='+b);
+
+</script>
+</body>
+</html>

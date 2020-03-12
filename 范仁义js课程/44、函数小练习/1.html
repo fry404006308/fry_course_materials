@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数小练习</title>
+</head>
+<body>
+<!--
+
+练习一：
+定义一个函数，可以根据半径计算一个圆的面积，并返回计算结果
+3.14*r*r
+
+
+练习二：
+写一个计算两点直线距离的函数
+
+
+-->
+<script>
+    function mianji(r) {
+        return 3.14*r*r;
+    }
+    console.log(mianji(10));
+    
+    function distance(x1,y1,x2,y2) {
+        return Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+    }
+    console.log(distance(1,1,2,2));
+</script>
+</body>
+</html>

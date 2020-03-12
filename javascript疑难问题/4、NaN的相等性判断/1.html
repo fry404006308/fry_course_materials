@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NaN的相等性判断</title>
+</head>
+<body>
+<script>
+    /*
+    * NaN和任何数都不相等，包括它本身
+    * isNaN()函数专门用来判断一个数是不是NaN
+    *
+    * */
+    var a=NaN;
+    var b=NaN;
+    var ans=a==b;
+    console.log('ans='+ans);
+    console.log(isNaN(a));
+    console.log(isNaN(b));
+    console.log(isNaN('hello'));
+    console.log(+'hello');
+</script>
+</body>
+</html>

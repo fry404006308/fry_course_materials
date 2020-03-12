@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询介绍</title>
+    <style>
+        @media screen and (min-width: 600px) {
+            p{
+                font-size: 50px;
+                color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+媒体查询
+媒体查询可以根据不同设备（比如屏幕、打印机等）、
+不同属性（比如视图的宽高、手机的横屏竖屏、屏幕的分辨率等）
+来自动的调整元素显示的样式，可以用作响应式布局。
+
+表示必须满足是屏幕且 屏幕宽度必须是600px，才对p标签应用下面样式
+@media screen and (width: 600px) {
+            p{
+                font-size: 50px;
+                color: lightblue;
+            }
+        }
+
+就是表示 必须是屏幕且  屏幕宽度小于等于600px 满足
+@media screen and (max-width: 600px) {}
+
+表示 必须是屏幕且  屏幕宽度大于等于600px 满足
+@media screen and (min-width: 600px){}
+
+-->
+<p>p标签</p>
+</body>
+</html>

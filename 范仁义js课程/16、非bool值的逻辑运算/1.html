@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>非bool值的逻辑运算</title>
+</head>
+<body>
+<!--
+非bool值在进行逻辑运算的时候
+会先转换成bool类型，进行运算，
+然后返回原来的值（也就是非boolean类型的值）
+
+运算到哪里，就返回哪里原来的值
+
+-->
+<script>
+    var a=NaN;
+    var b=2;
+    var ans=a&&b;
+    console.log(ans);
+
+
+</script>
+</body>
+</html>

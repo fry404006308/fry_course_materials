@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5、css的继承、层叠和特殊性</title>
+    <link rel="stylesheet" href="11.css">
+    <style>
+        #div1{
+            color: yellowgreen;
+            border: 1px solid #fd3333;
+        }
+        div{
+            color: yellow;
+        }
+        .div11{
+            color: blue;
+        }
+        p{
+            color: #fd3333;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="div1" class="div11" style="color: green;">
+    成功的花
+    <p>
+        成功的花, 人们只惊慕她现时的明艳! 然而当初她的芽儿, 浸透了奋斗的泪泉, 洒遍了牺牲的血雨!
+    </p>
+</div>
+</body>
+</html>

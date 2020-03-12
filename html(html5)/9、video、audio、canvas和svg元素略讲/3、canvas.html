@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas小实例</title>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600">
+    您浏览器暂不支持HTML5的canvas元素
+</canvas>
+<script type="text/javascript">
+    var canvas=document.getElementById('canvas');
+    var c=canvas.getContext('2d');
+    c.lineWidth=6;
+    c.strokeStyle="FFA500";
+    c.fillStyle="#FFA500";
+    c.moveTo(400,500)
+    c.arc(400,500,300,Math.PI*7/6,Math.PI*1.5,false)
+    //c.stroke();
+    c.beginPath();
+    c.moveTo(400,500);
+    c.arc(400,500,300,Math.PI*11/6,Math.PI*7/6,true);
+    //c.stroke();
+    c.fill()
+    c.beginPath();
+    c.fillStyle="#A9A9A0"
+    c.arc(400,500,150,Math.PI*7/6,Math.PI*1.5,false)
+    //c.stroke();
+    c.beginPath();
+    c.moveTo(400,500);
+    c.arc(400,500,150,Math.PI*11/6,Math.PI*7/6,true);
+    //c.stroke();
+    c.fill()
+    c.beginPath();
+    c.fillStyle="#000000";
+    c.font="55px 隶书"
+    c.fillText("纵",375,275);
+    c.beginPath();
+    c.strokeStyle="#800000";
+    c.lineWidth=2
+    c.font="55px 隶书"
+    c.strokeText("横",375,320);
+</script>
+</body>
+</html>

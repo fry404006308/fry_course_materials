@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环嵌套</title>
+</head>
+<body>
+<!--
+for(){
+  for(){
+
+  }
+}
+
+需求：
+* 1
+** 2
+*** 3
+**** 4
+***** 5
+
+简化问题：
+
+*****
+*****
+*****
+*****
+*****
+
+*****  i=0 j=5
+**** i=1 j=4
+*** i=2 j=3
+**
+*
+i+j=5
+j=5-i
+
+原理：
+i=0
+i+1=1
+
+i=1
+1<5
+j=0
+i+1=2
+
+i=2
+
+嵌套循环比较好的掌握方式
+弄清楚每一个循环的作用（实际意义）
+
+-->
+<script>
+//这个for循环相当于是控制行数
+// for(var i=0;i<5;i++){
+//     //内层循环是控制每一行*号的个数
+//     for(var j=0;j<i+1;j++){
+//         document.write('*');
+//     }
+//     document.write('<br>');
+//     // document.write('*****<br>');
+// }
+
+//下三角
+for(var i=0;i<5;i++){
+    //内层循环是控制每一行*号的个数
+    for(var j=0;j<5-i;j++){
+        document.write('*');
+    }
+    document.write('<br>');
+    // document.write('*****<br>');
+}
+
+
+</script>
+</body>
+</html>

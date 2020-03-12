@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景1（ background-image）</title>
+    <style>
+        .box1{
+            width: 800px;
+            height: 800px;
+            border: 1px solid red;
+            /*background-color: #ff4f81;*/
+            background-image: url("../imgs/c8_1.png");
+            background-repeat:repeat-y;
+        }
+    </style>
+</head>
+<body>
+<!--
+背景
+1、我们可以用background-color来给标签设置背景颜色
+
+2、background-image可以设置背景图片
+基本语法
+background-image: url(图片路径);
+
+a、当标签区域比图片小的时候，默认只显示图片的左上角
+b、当标签区域比图片区域大的时候，就是默认就会重复背景图片
+
+3、background-repeat 设置背景图像是否及如何重复。
+默认值，repeat
+no-repeat：不重复
+repeat-x
+repeat-y
+
+
+
+
+-->
+<div class="box1"></div>
+</body>
+</html>

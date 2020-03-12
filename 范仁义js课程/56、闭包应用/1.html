@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包应用</title>
+</head>
+<body>
+<!--
+
+-->
+<script>
+    //1、作为缓存.第二次使用对象时候，可以不用新建对象。单例模式的实现等等。
+    //规则：缓存里面如果没有的话，就新建对象到缓存，如果缓存里面有，就直接从缓存里面拿
+    //好处：创建对象比较耗费资源，用缓存的话，在缓存里面有对象的时候，
+    // 我就不必新建对象，这样就可以节约新建对象耗费的资源
+    // var Cache1=(function(){
+    //     var cache={};
+    //     return {
+    //         getObj:function(name){
+    //             if(name in cache){
+    //                 return cache[name];
+    //             }
+    //             var temp=new Object(name);
+    //             cache[name]=temp;
+    //             return temp;
+    //         }
+    //     }
+    // })();
+    // console.log(Cache1);
+    // console.log(Cache1.getObj('乔碧萝'));
+    // console.log(Cache1.getObj('凤姐'));
+    // console.log(Cache1.getObj('乔碧萝'));
+
+    //2、实现封装过程。封装对象中的变量不能直接访问，可以用提供的闭包来访问。
+    // private protected public
+    // 好处：避免非法访问，
+    var person=function(){
+        var name="no name!";
+        return {
+            getName:function(){
+                return name;
+            },
+            setName:function(value){
+                name=value;
+            }
+        }
+    }();
+    console.log(person);
+    console.log(person.getName());
+    person.setName('武松');
+    console.log(person.getName());
+    person.setName('老虎');
+    console.log(person.getName());
+
+
+</script>
+</body>
+</html>

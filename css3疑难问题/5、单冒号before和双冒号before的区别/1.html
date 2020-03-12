@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>:before和::before的区别</title>
+    <style>
+        p::first-letter{
+            color: orange;
+            font-size: 50px;
+        }
+        p::selection{
+            background-color: red;
+        }
+        a::before{
+            content: '222';
+        }
+        a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+:before和::before都可以起作用的原因
+单冒号(:)的写法是css3之前的伪元素选择器的写法，双冒号(::)是css3的伪元素选择器的写法
+
+w3c为什么要做这样的一个区别
+是为了和伪类选择器做区别，因为伪类选择器是用单冒号(:)的写法
+
+在css3以前，伪类选择器和伪元素选择器都是单冒号(:)的写法
+
+所以在css3中，官方为了区别伪类选择器和伪元素选择器
+就规定，伪类选择器用单冒号(:)的写法，伪元素选择器用双冒号(::)的写法
+
+注意：
+css3中的伪元素选择器是不能用单冒号(:)的写法
+
+推荐的写法：
+伪元素选择器一律用双冒号(::)的写法，
+伪类选择器的话一律用单冒号的写法
+
+
+-->
+<p>
+    所以在css3中，官方为了区别伪类选择器和伪元素选择器
+    就规定，伪类选择器用单冒号(:)的写法，伪元素选择器用双冒号(::)的写法
+</p>
+<a href="">a标签</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do-while循环</title>
+</head>
+<body>
+<!--
+do-while循环
+
+语法
+do{
+循环体的内容
+}while(条件语句);
+
+表示的 就是 我们先执行一次循环体里面的内容，然后进行条件判断
+如果条件为真，就继续执行
+
+do-while循环和while循环的区别
+while循环：先判断，后执行，可能一次也不执行
+do-while循环：先执行，后判断，至少执行一次
+
+
+
+-->
+<script>
+    /*while循环*/
+    // var i=1;
+    var i=11;
+    while(i<=10){
+        console.log(i+'：while');
+        i++;
+    }
+    // var i=1;
+    do{
+        console.log(i+'：do-while');
+        i++;
+    }while(i<=10);
+
+</script>
+</body>
+</html>

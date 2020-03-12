@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询属性</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        @media all and (min-device-width:768px) {
+            p{
+                font-size: 50px;
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+查询属性
+
+很多查询属性后可以加min和max前缀
+
+min前缀的话：
+min-width: 600px
+表示 大于等于600px生效
+max-width: 600px
+表示 小于等于600px生效
+
+常用查询属性
+1、width
+2、height
+3、orientation（方向）：横向（landscape）和纵向（portrait）
+
+横向 就是宽度大于高度
+纵向 就是高度大于宽度
+
+4、设备宽度（device-width）：
+5、device-height
+
+
+-->
+<p>p标签</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用var和不使用var声明变量的区别</title>
+</head>
+<body>
+<!--
+1、
+在函数里面，如果使用var关键字声明变量，这个变量就是局部变量，
+如果不使用var关键字，就是全局变量
+
+在函数外面，不管使用不使用var关键字，都是全局变量
+
+2、声明提前
+无论在函数里面还是在函数外面，使用var关键字都可以让变量声明提前，
+不使用var关键字就不可以
+
+
+-->
+<script>
+    //var c;
+    console.log('c='+c);
+    var c=14;
+    d=17;
+    function fun1() {
+        console.log(a);
+        var a=15;
+        b=13;
+        //console.log(a);
+        //console.log('b='+b);
+    }
+    fun1();
+    //console.log(a);
+    //console.log('b='+b);
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类和伪元素的区别</title>
+    <style>
+        /*
+        伪类不产生新的对象，只是在 DOM 中一个元素的不同状态
+        伪元素产生新对象，在 DOM 树中看不到
+        */
+
+        /*
+        伪类选择器本身就是一种状态，
+        :hover就是表示鼠标悬浮到元素上面时候的那种状态
+        :active就是表示鼠标点击到元素上面去的时候的那一种状态
+        */
+        a:hover{
+            color: orange;
+        }
+        a:active{
+            background-color: red;
+        }
+        /*
+        伪元素选择器表示的是会产生元素，但是不是真的标签，所以叫伪元素
+        */
+        p::before{
+            content: '这是p:before---';
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<a href="">a标签</a>
+<p>p标签</p>
+</body>
+</html>

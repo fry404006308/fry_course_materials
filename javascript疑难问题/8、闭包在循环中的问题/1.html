@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包在循环中的问题</title>
+</head>
+<body>
+<!--
+
+-->
+<script>
+    // function f1(){
+    //     var arr=[];
+    //     for(var i=0; i<5; i++){
+    //         arr[i]='元素'+i;
+    //     }
+    //     return arr;
+    // }
+    // console.log(f1());
+
+
+    /*
+    * 现象：数组里面的匿名函数的执行结果 都是  元素5
+    * 原因：匿名函数执行的时候，外层f1()函数已经执行完了，
+    * 循环中i的值是5，而匿名函数执行的时候找的i的值就是循环中i的值，
+    * 所以也是5
+    * */
+    // function f1(){
+    //     var arr=[];
+    //     for(var i=0; i<5; i++){
+    //         arr[i]=function () {
+    //             return '元素'+i;
+    //         };
+    //     }
+    //     return arr;
+    // }
+    // // console.log(f1());
+    // // console.log(f1()[0]);
+    // var arr1=f1();
+    // //arr1[0]();
+    // console.log(arr1[0]());
+    // console.log(arr1[1]());
+    // console.log(arr1[2]());
+    // console.log(arr1[3]());
+    // console.log(arr1[4]());
+
+    /*解决方法一：
+    * 让匿名函数立即执行
+    * */
+    // function f1(){
+    //     var arr=[];
+    //     for(var i=0; i<5; i++){
+    //         arr[i]=(function () {
+    //             return '元素'+i;
+    //         })();
+    //     }
+    //     return arr;
+    // }
+    // console.log(f1());
+
+    /*
+    * 解决方法二：
+    * 用闭包局部变量常驻内存的特点来保存中间值，
+    * */
+    function f1(){
+        var arr=[];
+        for(var i=0; i<5; i++){
+            arr[i]=(function (i) {
+                return function () {
+                    return '元素'+i;
+                };
+            })(i);
+        }
+        return arr;
+    }
+    console.log(f1());
+    console.log(f1()[0]);
+    var arr1=f1();
+    console.log(arr1[0]());
+    console.log(arr1[1]());
+    console.log(arr1[2]());
+    console.log(arr1[3]());
+    console.log(arr1[4]());
+</script>
+</body>
+</html>

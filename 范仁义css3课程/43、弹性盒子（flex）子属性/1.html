@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子（flex）子属性</title>
+    <style>
+        .flex_box{
+            /*width: 300px;*/
+            height: 300px;
+            background-color: lightblue;
+            display: flex;
+            align-items: flex-end;
+        }
+        .flex_box .item{
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        .item1{
+            /*flex:0 0 70px;*/
+            align-self: flex-start;
+        }
+        .item6{
+            /*order: 2;*/
+            /*flex-grow: 2;*/
+            /*flex-shrink: 2;*/
+            align-self: center;
+        }
+        .item7{
+            /*order: -1;*/
+            /*flex-grow: 2;*/
+            /*flex-shrink: 2;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+弹性盒子子元素属性
+
+1、order：设置子元素的顺序
+默认0
+从小到大排列
+可以是负值
+
+2、flex-grow：扩展量
+默认是0
+
+3、flex-shrink：收缩量
+宽度不够的情况下，这个属性才有用
+默认值是1
+
+4、flex-basis：设置基准量
+
+5、flex：flex-grow、flex-shrink、flex-basis的简写属性
+
+6、align-self：单独给子元素设置垂直排列方式
+
+
+-->
+<div class="flex_box">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+</div>
+
+</body>
+</html>

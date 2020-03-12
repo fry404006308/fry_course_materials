@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: #605ca8;
+        }
+        .box2{
+            background-color: red;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .box3{
+            background-color: #bfa;
+        }
+        .box2_parent{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: lightgray;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--
+固定定位的特点：
+固定定位是绝对定位的一种，也就是绝对定位的特性大多数固定定位都有
+
+固定定位和绝对定位的区别
+固定：固定在某个地方
+
+固定定位永远是相对于浏览器的窗口来定位的，相对于固定在浏览器的窗口的某个地方
+不会随着滚动条的滚动而发生滚动
+
+
+
+-->
+<div class="box box1">box1</div>
+<div class="box2_parent">
+    <div class="box box2">box2</div>
+</div>
+
+<div class="box box3">box3</div>
+</body>
+</html>

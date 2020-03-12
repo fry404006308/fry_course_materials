@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float导致的父容器高度坍塌</title>
+    <style>
+        .box1{
+            width: 300px;
+            border: 5px solid red;
+            overflow: auto;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: right;
+        }
+        .box3{
+            position: relative;
+            top: 250px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3">缺点</div>
+    </div>
+</body>
+</html>

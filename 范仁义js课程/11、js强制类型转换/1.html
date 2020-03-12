@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js强制类型转换</title>
+</head>
+<body>
+<script>
+/*
+* 1、其它类型转成Number类型（数字类型）
+*   主要记一个Number()函数
+* */
+// var str='123';
+// var str=Number('123');
+// var str=parseInt('123');
+// var str=parseFloat('123');
+// console.log(str);
+// console.log(typeof str);
+
+    // var bool1=true;
+    // console.log(bool1);
+    // console.log(typeof bool1);
+    // var num1=Number(bool1);
+    // console.log(num1);
+    // console.log(typeof num1);
+
+/*
+* 2、其它类型转string类型
+* 主要使用String()函数
+*
+* */
+// var var1=1234;
+// console.log(var1);
+// console.log(typeof var1);
+// // var str2=String(var1);
+// // var str2=var1+'';
+// var str2=var1.toString();
+// console.log(str2);
+// console.log(typeof str2);
+
+/*
+* 3、其它类型转Boolean类型
+* 主要记住Boolean()函数
+* */
+var var1=0;
+console.log(var1);
+console.log(typeof var1);
+var bool1=Boolean(var1);
+console.log(bool1);
+console.log(typeof bool1);
+
+
+</script>
+</body>
+</html>

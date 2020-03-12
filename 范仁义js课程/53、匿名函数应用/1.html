@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名函数应用</title>
+</head>
+<body>
+<!--
+
+-->
+<script>
+    /*1、函数表达式*/
+    // //将匿名函数赋值给变量fn。
+    // var fn=function(){
+    //     return "我是一只小小小小鸟，怎么飞也飞不高！"
+    // };
+    // //调用方式与调用普通函数一样
+    // console.log(fn);
+    // console.log(fn());//我是一只小小小小鸟，怎么飞也飞不高！
+    //
+    // /*2、对象*/
+    // var obj={
+    //     name:"孙悟空",
+    //     age:18,
+    //     fn:function(){
+    //         return "我叫"+this.name+"今年"+this.age+"岁了！";
+    //     }
+    // };
+    // console.log(obj.fn());//我叫孙悟空今年18岁了！
+
+    /*3、回调函数*/
+    // //定时器
+    // setInterval(function(){
+    //     console.log("我其实是一个回调函数，每次1秒钟会被执行一次");
+    // },1000);
+
+</script>
+
+<!--4、事件-->
+<!--<input type="button" value="点我啊！" id="sub">-->
+<!--<script>-->
+<!--    //获得按钮元素-->
+<!--    var sub=document.querySelector("#sub");-->
+<!--    //给按钮增加点击事件。-->
+<!--    sub.onclick=function(){-->
+<!--        alert("当点击按钮时会执行到我哦！");-->
+<!--    }-->
+<!--</script>-->
+
+<script>
+    /*5、返回值*/
+    //闭包
+    //将匿名函数作为返回值
+    // function fn(){
+    //     var aaaa=123;
+    //     //返回匿名函数
+    //     return function(){
+    //         console.log(aaaa);
+    //         return "孙悟空";
+    //     };
+    // }
+    // console.log(fn()());
+    // //调用匿名函数
+    // console.log(fn()());//孙悟空
+    // //或
+    // var box=fn();
+    // console.log(box());//孙悟空
+
+    // //手写new测试
+    // function newTest (constructFunction){
+    //     let obj = {};
+    //     obj.__proto__ = constructFunction.prototype;
+    //     return function(){
+    //         constructFunction.apply(obj,arguments);
+    //         return obj;
+    //     }
+    // }
+
+</script>
+
+<script>
+    /*6、模仿块级作用域*/
+    //块级作用域，有的地方称为私有作用域。JavaScript中是没有块级作用域的
+
+    // if(1==1){//条件成立，执行if代码块语句。
+    //     var a=12;//a为全局变量
+    // }
+    // console.log(a);//12
+    //
+    // for(var i=0;i<3;i++){
+    //     console.log(i);
+    // }
+    // console.log(i);//3
+
+
+    //理解执行的匿名函数来做块级作用域
+    // (function(){
+    //     //这里是我们的块级作用域（私有作用域）
+    //     var fff=123;
+    // })();
+    //console.log(fff);
+
+
+    // function fn(){
+    //     (function(){
+    //         var la="啦啦啦！";
+    //     })();
+    //     console.log(la);//报错---la is not defined
+    // }
+    // fn();
+</script>
+
+</body>
+</html>

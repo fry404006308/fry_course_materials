@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+<!--
+1、为什么在函数里面可以直接打印this
+因为浏览器（解析器）在调用函数的时候，
+会向函数的内部传递一个隐含的参数，这个参数就是this
+
+2、this是什么
+this：这个，这：指示代词
+this是代表函数（方法）所在的那个对象
+
+3、this的指向问题
+哪个对象调用方法，方法中的this就指向那个对象
+
+
+-->
+<script>
+    function f() {
+        //var a=10;
+        //console.log(a);
+        console.log(this);
+    }
+    //f();
+    //window.f();
+
+    var zhubajie={
+        name:'猪八戒',
+        age:16,
+        fun1:f
+    };
+    //zhubajie.fun1();
+
+    var sunwukong={
+        name:'孙悟空',
+        age:999,
+        fun1:f
+    };
+    sunwukong.fun1();
+</script>
+</body>
+</html>

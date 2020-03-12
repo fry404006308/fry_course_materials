@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格小实例</title>
+</head>
+<body>
+    <table border="1">
+        <colgroup span="1" style="background-color: red;">
+        </colgroup>
+        <colgroup span="3" style="">
+            <col span="1" style="background-color: aqua;">
+            <col span="1" style="background-color: green;">
+            <col span="1" style="background-color: blue;">
+        </colgroup>
+        <colgroup span="1" style="background-color: darkseagreen;">
+
+        </colgroup>
+        <caption>表格标题</caption>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>爱好</th>
+            <th>职业</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>西门无恨</td>
+            <td>55</td>
+            <td>演戏</td>
+            <td>南翔挖掘机</td>
+        </tr>
+        <tr>
+            <td colspan="2">单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td rowspan="3">单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="5">这是测试表格注释信息</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的参数</title>
+</head>
+<body>
+<!--
+实参：也就是使用时候传递给函数的实际的参数
+形参：形式上面的参数：函数里面的参数
+
+形参本质上就是在函数里面定义的变量，用于接收实参传递过来的值
+
+
+在函数调用的过程中，参数传递的实质就是：
+实参会一一对应的传递给形参，多余的实参会被忽略
+
+在传递参数的过程中，多余的参数会被舍弃
+
+形参如果没有接受到实参传递过来的值的情况下，形参的值是undefined，
+就相当于定义了变量没有被赋值
+
+-->
+<script>
+    //需求：求三个数里面的最小的那个数
+    var a=13;
+    var b=50;
+    var c=31;
+    function minOfThree(x1,x2,x3) {
+        console.log('x1= '+x1);
+        console.log('x2= '+x2);
+        console.log('x3= '+x3);
+        if(x1<x2){
+            if(x1<=x3){
+                console.log(x1);
+            }else{
+                console.log(x3);
+            }
+        }else{
+            if(x2<=x3){
+                console.log(x2);
+            }else{
+                console.log(x3);
+            }
+        }
+    }
+    //minOfThree(a,b,c);
+    //minOfThree(a,b,c,13);
+    //minOfThree();
+    minOfThree(a,b);
+</script>
+</body>
+</html>

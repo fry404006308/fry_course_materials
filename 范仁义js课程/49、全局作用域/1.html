@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局作用域</title>
+</head>
+<body>
+<!--
+1、
+什么是作用域：
+作用域一般是相对变量而言的，作用域表示变量的作用区域，也就是变量能发挥作用的范围
+
+2、
+作用域分类
+全局作用域：指在全局都能发挥作用的变量
+函数作用域：指只能在函数里面发挥作用的变量
+
+全局变量
+函数（局部）变量
+
+全局作用域 就是在整个页面 都能发挥作用
+
+3、
+什么样的变量 是全局变量
+
+就是在script标签里面的变量都是全局变量
+只要不是函数里面用var声明的变量，都是全局变量
+
+4、
+在js中，全局变量全部都是 window对象的属性
+全局的函数全部都是window对象的方法
+
+5、
+全局变量的生命周期
+和window一样，因为全局变量都是window对象的属性，
+在页面打开时创建，在页面关闭时销毁
+
+
+-->
+<script>
+    var a=10;
+    b=11;
+    //console.log(a);
+    function fun1() {
+        var c=12;
+        d=15;
+        console.log(c);
+        console.log(d);
+    }
+    fun1();
+</script>
+<script>
+    console.log(a);
+    console.log(b);
+</script>
+<a href="javascript:alert(a)">a</a>
+</body>
+</html>

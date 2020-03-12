@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名函数在框架中的应用</title>
+    <script src="jquery.js"></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+<!--
+jquery：对javascript进行封装的框架。我们可以很方便的进行dom的操作和ajax的操作。
+vue：做双向数据绑定的，相当于可以取消dom操作，特别适合做交互多的页面。
+requirejs：做前端的模块化的
+-->
+<script>
+    //理解执行的匿名函数来做块级作用域
+    //立即执行的匿名函数
+    // (function(a,fun1){
+    //     //这里是我们的块级作用域（私有作用域）
+    //     var fff=123;
+    //     console.log(a);
+    //     console.log(fun1);
+    //
+    //     if(a==10){
+    //         fun1(a);
+    //     }else{
+    //         console.log('a!=10');
+    //     }
+    // })(11,function (m) {
+    //     alert(m);
+    // });
+
+    (function(a,fun1){
+        //这里是我们的块级作用域（私有作用域）
+        var fff=123;
+        console.log(a);
+        console.log(fun1);
+
+        if(a==10){
+            fun1(a);
+        }else{
+            console.log('a!=10');
+        }
+    }(11,function (m) {
+        alert(m);
+    }));
+    //console.log(fff);
+</script>
+</body>
+</html>

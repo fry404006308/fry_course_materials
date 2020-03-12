@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的小实例</title>
+</head>
+<body>
+<!--
+大雄，学号001，性别男，语文成绩30分，数学成绩30分
+静香，学号002，性别女，语文成绩90分，数学成绩90分
+哆啦A梦，学号003，性别男，语文成绩100分，数学成绩80分
+...
+
+表示上述结构，并求出谁的语文成绩最好
+-->
+<script>
+    var daXiong={
+        name:'大雄',
+        gender:'男',
+        number:'001',
+        score:{
+            chinese:30,
+            math:30
+        }
+    };
+    var jingXiang={
+        name:'静香',
+        gender:'女',
+        number:'002',
+        score:{
+            chinese:90,
+            math:90
+        }
+    };
+    var aMeng={
+        name:'哆啦A梦',
+        gender:'男',
+        number:'003',
+        score:{
+            chinese:100,
+            math:80
+        }
+    };
+    if(daXiong.score.chinese>=jingXiang.score.chinese){
+        //说明大雄的语文成绩比较好，就让大雄和哆啦A梦比
+        if(daXiong.score.chinese>=aMeng.score.chinese){
+            console.log(daXiong);
+        }else{
+            console.log(aMeng);
+        }
+    }else{
+        //说明静香的语文成绩比较好，就让静香和哆啦A梦比
+        if(jingXiang.score.chinese>=aMeng.score.chinese){
+            console.log(jingXiang);
+        }else{
+            console.log(aMeng);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript代码执行时间的计算</title>
+</head>
+<body>
+<!--
+求 1-100里面所有的质数
+遍历的时候 2-100
+5 2-4
+18 2-17
+
+1*18
+3*9
+-------平方根
+9*3
+18*1
+
+9
+1*9
+3*3
+9*1
+
+24
+2
+4
+
+
+计算js代码执行的时间
+console.time('test');
+console.timeEnd('test');
+
+-->
+<script>
+console.time('test');
+for(var i=2;i<=10000;i++){
+    var is_zhishu=true;
+    for(var j=2;j<i;j++){
+        if(i%j==0){
+            is_zhishu=false;
+        }
+    }
+    //if(is_zhishu )console.log(i);
+}
+console.timeEnd('test');//test: 243.820068359375ms
+</script>
+
+<!--求质数的优化-->
+<!--<script>-->
+<!--    console.time('test');-->
+<!--    for(var i=2;i<=10000;i++){-->
+<!--        var is_zhishu=true;-->
+<!--        for(var j=2;j<=Math.sqrt(i);j++){-->
+<!--            if(i%j==0){-->
+<!--                is_zhishu=false;-->
+<!--                break;-->
+<!--            }-->
+<!--        }-->
+<!--        //if(is_zhishu )console.log(i);-->
+<!--    }-->
+<!--    console.timeEnd('test');//test: 5.151123046875ms-->
+<!--</script>-->
+</body>
+</html>

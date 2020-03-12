@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子（flex）属性</title>
+    <style>
+        .flex_box{
+            width: 100px;
+            height: 600px;
+            background-color: lightblue;
+            display: flex;
+            flex-wrap: wrap;
+            /*flex-wrap: wrap-reverse;*/
+            /*flex-direction: column-reverse;*/
+            /*flex-flow: wrap column;*/
+            /*flex-direction: row-reverse;*/
+            /*justify-content: space-around;*/
+            /*align-items: stretch;*/
+            align-content: stretch;
+        }
+        .flex_box .item{
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<!--
+display: flex;
+display: inline-flex;
+都是可以设置弹性盒子
+
+弹性容器
+弹性子元素：flex item
+
+本节课主要是讲给弹性容器设置属性
+
+flex-wrap：设置是否换行
+nowrap（默认值） | wrap | wrap-reverse
+flex-direction：设置方向
+row | row-reverse | column | column-reverse
+flex-flow：flex-wrap 和 flex-direction 的简写属性
+justify-content：设置子元素水平排列方式
+flex-start | flex-end | center | space-between | space-around
+align-items：设置子元素垂直方向排列方式
+flex-start | flex-end | center | baseline | stretch （相当于是默认值）
+align-content：设置 行 垂直方向的排列方式
+flex-start | flex-end | center | space-between | space-around | stretch （相当于是默认值）
+
+
+水平方向：主轴
+垂直方向：侧轴
+
+
+弹性布局可以做响应式布局
+
+
+
+-->
+<div class="flex_box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+</div>
+<!--<span>-->
+<!--    2312-->
+<!--</span>-->
+</body>
+</html>

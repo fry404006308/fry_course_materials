@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中如何调试代码</title>
+</head>
+<body>
+<!--
+调试代码
+
+1、添加断点
+2、刷新
+
+-->
+<script>
+    console.log('这是一个讲如何在js中调试代码的视频');
+    //需求：写一个函数：用来判断一个数是不是质数
+    function isZhiShu(number) {
+        for(var i=2;i<=Math.sqrt(number);i++){
+            if(number%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    //需求：输出1-100里面的所有质数
+    for (var i=2;i<=100;i++){
+        if(isZhiShu(i)){
+            console.log(i);
+        }
+    }
+</script>
+</body>
+</html>

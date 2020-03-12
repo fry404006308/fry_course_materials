@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景2（ background-position）</title>
+    <style>
+        .box1{
+            width: 800px;
+            height: 800px;
+            border: 1px solid red;
+            /*background-color: #ff4f81;*/
+            background-image: url("../imgs/c8_1.png");
+            background-repeat:no-repeat;
+            background-position: -200px;
+        }
+    </style>
+</head>
+<body>
+<!--
+background-position
+设置背景图像的位置（它是设置背景图像相对于标签区域的位置）
+如果属性值是 left right top bottom center这样的情况
+a、如果是两个值，前一个值代表水平方向，后一个值代表垂直方向
+b、如果是一个值，那么垂直方向的值默认是center
+
+属性值是百分比的情况
+第一个值是水平位置，第二个值是垂直。
+左上角是0％0％。右下角是100％100％。
+如果仅指定了一个值，其他值将是50％。
+
+xpos ypos
+不仅可以设置正值，也可以设置负值
+
+位置为负值的一个应用：
+当标签区域小于背景图片区域的时候，我们可以通过给background-position设置负值，
+从而让背景图片相对于标签区域负方向移动，从而得到 背景区域的部分图片
+
+
+-->
+<div class="box1"></div>
+</body>
+</html>

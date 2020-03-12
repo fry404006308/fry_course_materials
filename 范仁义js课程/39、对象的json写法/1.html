@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的json写法</title>
+</head>
+<body>
+<!--
+创建对象的另一种方式
+var zhubajie={};
+
+对象的json写法
+
+json
+javascript object notation
+javascript 对象 符号
+
+作用：
+通信：比如说后端和前端的通信，数据交互
+
+xml
+
+json 用的更加多
+
+json不仅在javascript里面有，在java，php等语言里面都有
+
+语法：
+{属性名:属性值,属性名:属性值,属性名:属性值,属性名:属性值}
+属性名:属性值：键值对
+键值对之间是用逗号分隔开的
+
+对象的话就用大括号表示
+
+
+注意点：
+1、属性名加不加引号都可以
+
+
+-->
+<script>
+    // var zhubajie=new Object();
+    // zhubajie.name='猪八戒';
+    // zhubajie.age=999;
+    // console.log(zhubajie);
+
+    // var zhubajie={};
+    // zhubajie.name='猪八戒';
+    // zhubajie.age=999;
+    // console.log(zhubajie);
+
+    var zhubajie={
+        'name':'猪八戒',
+        age:999,
+        pet:{
+            name:'哮天犬',
+            age:18
+        }
+    };
+    console.log(zhubajie);
+
+</script>
+</body>
+</html>

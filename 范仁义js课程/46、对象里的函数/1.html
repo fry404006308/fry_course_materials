@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象里的函数</title>
+</head>
+<body>
+<!--
+编程是为生活来服务的，是用来解决生活中的问题的
+
+编程里面的对象就是生活中的对象的抽象，
+
+生活中的对象不仅有属性，还有行为
+
+在js中，我们如何表示一个对象的行为
+用函数，叫方法
+
+对象里面的函数可以用来表示对象的行为
+
+
+
+函数(function)和方法(method)的区别（）
+函数和方法在js里面是一回事，都是表示封装代码（功能），便于代码的复用
+
+在对象的外面，和对象没有产生什么瓜葛的情况下我们就说成函数
+如果这个函数在对象里面，我们就把这个函数称为方法，这个方法就是表述对象的行为
+
+
+-->
+<script>
+    //普通的对象写法（包含对象的属性和方法）
+    var zhubajie=new Object();
+    zhubajie.name='猪八戒';
+    zhubajie.age=18;
+    zhubajie.saoRao=function () {
+        console.log('我是猪八戒，我骚扰了嫦娥，我被贬下了凡间。');
+    };
+    zhubajie.run=function(){
+        console.log('我在奔跑');
+    };
+    zhubajie.saoRao();
+    zhubajie.run();
+
+    //json
+    var zhubajie1={
+        name:'猪八戒',
+        age:'18',
+        saoRao:function () {
+            console.log('我是猪八戒，我骚扰了嫦娥，我被贬下了凡间。');
+        },
+        run:function(){
+            console.log('我在奔跑');
+        }
+    };
+    zhubajie1.saoRao();
+    zhubajie1.run();
+
+</script>
+</body>
+</html>

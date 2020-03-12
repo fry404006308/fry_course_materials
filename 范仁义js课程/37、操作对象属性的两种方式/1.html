@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作对象属性的两种方式</title>
+</head>
+<body>
+<!--
+点号：对象可以通过.号来操作属性
+对象名.属性名
+中括号[]：对象名[属性名]
+
+
+点号和中括号操作对象的两种区别
+特殊的属性名
+属性名可以是是一个变量
+中括号 可以 操作 特殊的属性名，比如说 zhubajie[123]
+相比于点号，中括号操作对象还有另外一个非常好用的功能，
+那就是 中括号里面的 属性名可以是是一个变量
+
+
+对象里面套对象
+对象就是一个 容器：这个容器里面是可以装其它的任意的数据类型的，
+对象里面还可以是一个对象
+容器里面也是可以放一个容器的
+
+
+判断某个属性是不是在一个对象里面
+in操作符： '属性名' in 对象
+如果 属性名在对象里面，就返回true，否则返回false
+
+-->
+<script>
+
+    var zhubajie=new Object();
+    zhubajie.name='猪八戒';
+    zhubajie.age=999;
+
+    //zhubajie.123='aaa';
+    zhubajie[123]='aaa';
+
+    var xiaoxiaogou=new Object();
+    xiaoxiaogou.age=3;
+
+
+    var xiaogougou=new Object();
+    xiaogougou.name='小狗狗';
+    xiaogougou.age=10;
+    xiaogougou.child=xiaoxiaogou;
+    zhubajie.xiaogougou=xiaogougou;
+
+
+
+
+    var a=123;
+
+    console.log(zhubajie);
+    //console.log(zhubajie.123);
+    console.log(zhubajie[123]);
+    console.log('zhubajie[a]: '+zhubajie[a]);
+    console.log(zhubajie.xiaogougou.age);
+    console.log(zhubajie.xiaogougou.child.age);
+
+    console.log('name' in zhubajie);
+    console.log('age' in zhubajie);
+    console.log('hello' in zhubajie);
+    console.log('xiaogougou' in zhubajie);
+
+    var name='name';
+    console.log(name in zhubajie);
+</script>
+</body>
+</html>

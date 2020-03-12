@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历对象中的所有属性</title>
+</head>
+<body>
+<!--
+怎么知道别人写的对象里面有哪些属性和方法
+for in
+    for (var i in zhubajie1){
+        console.log(i);
+        console.log(zhubajie1[i]);
+    }
+语法：
+for (var 变量名 in 对象){
+
+}
+对象属性名：变量名
+对象属性名对应的属性值：对象名[变量名]
+
+
+
+-->
+<script>
+    //json
+    var zhubajie1={
+        name:'猪八戒',
+        age:'18',
+        saoRao:function () {
+            console.log('我是猪八戒，我骚扰了嫦娥，我被贬下了凡间。');
+        },
+        run:function(){
+            console.log('我在奔跑');
+        }
+    };
+    zhubajie1.saoRao();
+    zhubajie1.run();
+
+    for (var i in zhubajie1){
+        console.log(i);
+        console.log(zhubajie1[i]);
+    }
+
+    for (var j in console){
+        console.log(j);
+        console.log(console[j]);
+    }
+    console.warn('这是我们自己打印的警告信息');
+    console.error('这是我们自己打印的错误信息');
+</script>
+</body>
+</html>

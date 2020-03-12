@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18、overflow</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #ff4f81;
+            overflow: auto;
+        }
+        .box2{
+            width: 100px;
+            height: 500px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+<!--        <div class="box2"></div>-->
+        子元素默认是存在于父元素的内容区中，理论上讲子元素的最大可以等于父元素内容区大小
+        如果子元素的大小超过了父元素的内容区，则超过的大小会在父元素以外的位置显示，超出父元素的内容，我们称为溢出的内容
+
+
+    </div>
+</body>
+</html>

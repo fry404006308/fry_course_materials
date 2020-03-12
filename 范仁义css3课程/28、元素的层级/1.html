@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素的层级</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: #605ca8;
+            position: relative;
+        }
+        .box2{
+            background-color: red;
+            position: absolute;
+            z-index: -1;
+            top: 100px;
+            left: 150px;
+        }
+        .box3{
+            background-color: #bfa;
+            position: relative;
+            z-index: 2;
+        }
+        .box_parent{
+            width: 300px;
+            position: relative;
+            background-color: lightgray;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+<!--
+z-index可以给定位元素设置元素的层级
+z-index的默认值是auto
+
+就是如果元素没有设置定位的话，z-index是没有作用的（在基础的css中这样的）
+完全了解：有一些css3一些属性也是支持z-index
+
+1、就是默认没有设置z-index的话（或者设置的z-index是一样的），那么就是后面元素就在上面
+2、如果给定位元素设置了z-index，那么就是谁大谁在上面
+3、父元素的层级再高，也不会盖住子元素
+
+z-index的值只能是整数
+z-index的值可以是负数，
+并且，z-index的默认值auto的值相当于是大于-1，其实我们可以把z-index的值看成0
+
+
+
+-->
+<div class="box_parent">
+    <div class="box box1">box1</div>
+
+    <div class="box box3">box3</div>
+</div>
+<div class="box box2">box2</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js代码书写位置</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        p{
+            background-color: orange;
+        }
+    </style>
+
+</head>
+<body>
+<p style="font-size: 40px;">我是一只英俊潇洒v587的p标签</p>
+<!--
+js代码可以写在标签的onclick属性上面
+-->
+<button onclick="alert('欢迎欢迎')">客官-点我</button>
+<p onclick="alert('这是p标签')">客官-不要</p>
+<!--
+js代码也可以写在a标签的href属性上面
+这种写法的话就是前面要加上javascript:，表示写的语句是javascript语言
+-->
+<a href="javascript:alert('这是写在a标签的href属性上面的js代码')">a标签</a>
+<!--
+在标签上面写js代码的方式不是很推荐，因为这样html代码就和js代码耦合
+耦合了的话，就不容易修改，也容易出错
+-->
+<!--
+javascript:; 是一个空的js语句
+-->
+<a href="javascript:;">一个点了不动的a标签</a>
+<a href="#">href="#"相当于让页面跑到本页面</a>
+
+
+
+</body>
+<!--
+外部式的js引入的话是通过script标签
+script标签的src属性上面就写上js文件的路径
+
+引入了外部式js代码的script标签，里面写的js代码会被浏览器自动忽略
+-->
+<script src="js.js">
+    //alert('这是引入了外部式js的script标签，我们在这个标签里面写了js代码，那么这个js代码会执行么');
+</script>
+<script>
+    /*
+    * css代码的引入的方式
+    * 内联式、嵌入式、外部式
+    *
+    *
+    * 1、js代码可以直接写在script标签里面
+    * js本身就是javascript的一个缩写
+    *
+    * 2、js内联式的写法
+    *
+    * 3、js外部式的写法
+    *
+    * */
+    alert('这是下面script标签里面的alert');
+</script>
+
+
+</html>

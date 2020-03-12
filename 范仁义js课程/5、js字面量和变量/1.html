@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js字面量和变量</title>
+</head>
+<body>
+<script>
+    /*
+    * 1
+    * 字面量  也就是常量：就是值不会发生改变的量
+    *
+    * 变量
+    * x，y   x1+y1=z1
+    * 变量就是可以变化的量
+    * 变量可以存储字面量
+    * 变量可以来描述字面量
+    * 变量是可以重复赋值的（变量的值可以改变）
+    *
+    * 变量如果只被声明，没有被赋值的话，初始值是 undefined
+    *
+    * 变量用的特别特别特别多
+    * 字面量一般不直接使用，一般配合变量来使用
+    *
+    * 在js中，我们使用var（variable）关键字来定义变量
+    * var width; 表示定义了一个变量（声明），这个变量的名字是width
+    * width=30; 就是给变量赋值，
+    *
+    * 赋值符号(=)
+    * width=30;  将30这个值赋值给width这个变量
+    * 编程语言中的等于好(==)
+    *
+    *
+    * */
+    var width; //变量的声明
+    console.log(width);
+    width=30; //变量的赋值
+    width=35;
+    // var width=30; //变量的声明和赋值写在一块
+    var height=2;
+    var area=width*height; //变量的使用
+    console.log(area);
+</script>
+</body>
+</html>

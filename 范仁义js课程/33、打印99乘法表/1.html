@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打印99乘法表</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 100px;
+            color: red;
+            border: 1px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+<!--
+嵌套循环
+
+二层的
+
+外层的循环表示行数 1-9
+内层的循环表示每一行式子的个数
+
+i表示行数
+j表示列数
+
+-->
+<script>
+//外层的循环表示行数
+//i表示行数
+for(var i=1;i<=9;i++){
+    //内层的循环表示每一行式子的个数
+    //j表示列数
+    for(var j=1;j<=i;j++){
+        document.write('<span>'+j+'*'+i+'='+i*j+'</span>');
+    }
+    document.write('<br>');
+}
+</script>
+</body>
+</html>

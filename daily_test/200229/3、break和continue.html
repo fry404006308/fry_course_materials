@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>break和continue</title>
+</head>
+<body>
+<script>
+    for1:
+    for (var i=1;i<=5;i++){
+        console.log('外层循环'+i);
+        for (var j=1;j<=5;j++){
+            console.log('    内层循环'+j);
+            if(j==2) continue for1;
+        }
+    }
+</script>
+</body>
+</html>

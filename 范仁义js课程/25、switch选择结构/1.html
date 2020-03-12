@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch选择结构</title>
+</head>
+<body>
+<!--
+switch选择结构
+
+1、每个case后面不要忘记写break
+2、default 相当于是if-else里面的else
+
+-->
+<script>
+    /*输入月份，返回每个月有多少天*/
+    var month=15;
+    switch (month) {
+        case 1:
+            console.log('一月有31天');
+            break;
+        case 2:
+            console.log('二月有28天');
+            break;
+        case 3:
+            console.log('三月有31天');
+            break;
+        case 4:
+            console.log('四月有30天');
+            break;
+        default:
+            console.log('其余情况');
+    }
+</script>
+</body>
+</html>

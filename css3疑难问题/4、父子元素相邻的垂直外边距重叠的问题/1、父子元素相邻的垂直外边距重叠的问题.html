@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父子元素相邻的垂直外边距重叠的问题</title>
+    <style>
+        .parent{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /*padding-top: 1px;*/
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            background-color: lightgoldenrodyellow;
+            margin-top: 100px;
+        }
+        /*.parent:before{*/
+        /*    content: '';*/
+        /*    display: table;*/
+        /*}*/
+        .box1{
+            border: 5px solid red;
+            width: 300px;
+            margin-top: 100px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+        .clearfix:after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .clearfix1:before,
+        .clearfix1:after{
+            content: '';
+            display: table;
+        }
+        .clearfix1:after{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<!--
+现象：父子元素相邻的垂直外边距重叠
+原因：子元素和父元素相邻的垂直外边距会发生重叠，子元素的外边距会传递给父元素
+思路：1、要么不用外边距   2、要么不让他们相邻
+解决：
+1、给父元素加一个内边距（padding-top: 1px;），这样改变了父元素可见区域的高，不推荐
+2、
+
+修改后的clearfix有两个作用
+1、解决父子元素相邻的垂直外边距重叠
+2、解决浮动高度坍塌
+
+-->
+<div class="parent clearfix1">
+<!--    <table></table>-->
+    <div class="child"></div>
+</div>
+
+<!--浮动导致的高度坍塌-->
+<div class="box1 clearfix1">
+    <div class="box2"></div>
+</div>
+</body>
+</html>

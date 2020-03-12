@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的基本操作</title>
+</head>
+<body>
+<!--
+创建对象
+对象名=new Object();
+
+对象的属性：对象中保存的值
+
+对象的属性的一个基本操作
+
+增删改查
+
+新增一个对象的属性：
+语法：
+对象名.属性名=属性值;
+比如
+human.name='张三';
+
+访问一个对象的属性：
+对象名.属性名
+
+修改一个对象的属性：
+语法：
+对象名.属性名=新属性值;
+
+删除一个对象的属性值：
+语法
+delete 对象名.属性名
+
+
+注意：
+访问对象没有的属性，不会报错，会直接返回undefined
+
+-->
+<script>
+    var human=new Object();
+    human.name='张三';
+    human.gender='男';
+    human.age=18;
+
+    human.age=19;
+
+    delete human.gender;
+
+    console.log(human);
+    console.log('human.name：'+human.name);
+    console.log('human.age：'+human.age);
+    console.log('human.gender：'+human.gender);
+
+    console.log(typeof human);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子（flex）介绍</title>
+    <style>
+        .flex_box{
+            /*width: 50px;*/
+            height: 300px;
+            background-color: lightblue;
+            display: flex;
+        }
+        .flex_box .item{
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+            /*float: left;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+弹性盒子可以做什么
+
+多列布局，
+功能强大
+使用简单 display: flex;
+
+前端兼容性的网站
+can i use
+
+浮动布局和flex做多列的区别
+浮动会换行
+flex默认不换行，默认是挤压子元素的宽度，挤压的最小的宽度就是子元素里面内容撑开的宽度
+如果父元素的宽度小于子元素内容撑开的宽度和，那么子元素会溢出
+
+
+
+-->
+<div class="flex_box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+</div>
+
+</body>
+</html>

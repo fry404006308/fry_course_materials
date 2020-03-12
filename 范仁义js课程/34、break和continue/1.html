@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>break和continue</title>
+</head>
+<body>
+<!--
+break：终止本轮循环
+continue：终止本次循环
+
+break是终止掉离他最近的循环
+continue 是跳过离他最近的那个循环的那一次循环
+
+可以用label来终止掉指定的循环
+格式
+label名:
+break时候的格式：
+break label名;
+
+相当于直接给for循环起了一个名字
+
+-->
+<script>
+    // for(var i=1;i<=5;i++){
+    //     //if(i==2) break;
+    //     if(i==2) continue;
+    //     console.log(i);
+    // }
+
+    // for(var i=1;i<=5;i++){
+    //     console.log('外层循环'+i);
+    //     for(var j=1;j<=5;j++){
+    //         //if(j==2) break;
+    //         if(j==2) continue;
+    //         console.log('   内层循环'+j);
+    //     }
+    // }
+
+    /*操作 掉指定的循环*/
+    for1:
+    for(var i=1;i<=5;i++){
+        console.log('外层循环'+i);
+        for(var j=1;j<=5;j++){
+            // if(j==2) break for1;
+            if(j==2) continue for1;
+            console.log('   内层循环'+j);
+        }
+    }
+
+</script>
+
+</body>
+</html>

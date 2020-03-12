@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数也是对象</title>
+</head>
+<body>
+<!--
+
+函数也是对象
+对象是容器，所以函数也有对象容器的特点
+
+直接打印函数，得到的是函数代码（函数体）
+
+函数这个对象，有一个默认的属性就是name，这个属性就表示函数名
+
+总结一下：
+函数就是对象，有对象的一切特点，
+只不过函数是功能更加强大的对象，函数里面可以封装代码
+
+
+我们能不能用创建对象的方式来创建函数
+var fun1=new Function("console.log('欢迎来到js的世界11111');");
+怎么调用：
+函数名()
+
+匿名函数
+
+用赋值表达式的方式来创建函数的时候，记得 在最后写上分号，因为本质上是一个赋值语句
+
+创建函数的三种方式
+    //1、用函数声明的方式来创建函数
+    function hello1() {
+        console.log('欢迎来到js的世界');
+    }
+    //2、用创建对象的方式来创建函数
+    var fun1=new Function("console.log('欢迎来到js的世界11111');");
+    //3、用赋值表达式的方式来创建函数
+    var fun2=function () {
+        console.log('欢迎来到js的世界33333');
+    };
+
+-->
+<script>
+    //1、用函数声明的方式来创建函数
+    function hello1() {
+        console.log('欢迎来到js的世界');
+    }
+    hello1.name1='林黛玉';
+    hello1.age=13;
+    console.log(hello1.name1);
+    console.log(hello1.age);
+    console.log(hello1.name);
+    console.log(hello1);
+    hello1();
+
+    //2、用创建对象的方式来创建函数
+    var fun1=new Function("console.log('欢迎来到js的世界11111');");
+    fun1();
+    fun1.name22='贾宝玉';
+    console.log(fun1.name22);
+
+    //3、用赋值表达式的方式来创建函数
+    var fun2=function () {
+        console.log('欢迎来到js的世界33333');
+    };
+    fun2();
+
+</script>
+</body>
+</html>

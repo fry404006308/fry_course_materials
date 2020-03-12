@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询小实例</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f8f9fa;
+        }
+        .box_card{
+            box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, .1);
+            text-align: center;
+            padding: 15px;
+            background-color: #fff;
+            /*margin: 30px;*/
+            margin-bottom: 30px;
+        }
+        .fry_card_icon{
+            color: #ff4f81;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .fry_card_title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .fry_card_content {
+            font-size: 15px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        @media only all and (min-width: 1200px) {
+            .column{
+                width: 25%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .fry_lg_3{
+                width: 25%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        @media only all and (max-width: 1200px) {
+            .column{
+                width: 33.33333333%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .fry_md_4{
+                width: 33.33333333%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        @media only all and (max-width: 768px) {
+            .column{
+                width: 50%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .fry_sm_6{
+                width: 50%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        @media only all and (max-width: 400px) {
+            .column{
+                width: 100%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+我的网站的页面是用bootstrap框架的栅格系统来做的
+bootstrap栅格系统的 核心也是使用 媒体查询
+
+-->
+
+    <div class="column fry_sm_6 fry_lg_3 fry_md_4">
+        <div class="box_card">
+            <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+            <div class="fry_card_title" style="">课程</div>
+            <p class="fry_card_content" style="">大量精品编程课程</p>
+        </div>
+    </div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+<div class="column fry_sm_6 fry_lg_3 fry_md_4">
+    <div class="box_card">
+        <span class="fa fa-building fa-fw fry_card_icon" style=""></span>
+        <div class="fry_card_title" style="">课程</div>
+        <p class="fry_card_content" style="">大量精品编程课程</p>
+    </div>
+</div>
+
+
+
+</body>
+</html>

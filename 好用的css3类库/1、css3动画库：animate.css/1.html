@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3动画库：animate.css</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<!--    <div class="box1 animated flash infinite delay-2s">-->
+
+<!--    </div>-->
+<div id="box1" class="box1">
+
+</div>
+<button id="btn1">增加动画效果</button>
+<button id="btn2">移除动画效果</button>
+<script>
+    let box1=document.getElementById('box1');
+    let btn1=document.getElementById('btn1');
+    let btn2=document.getElementById('btn2');
+    btn1.onclick=function () {
+        box1.classList.add('animated','slideInRight','infinite','faster');
+    };
+    btn2.onclick=function () {
+        box1.classList.remove('animated');
+    }
+</script>
+</body>
+</html>

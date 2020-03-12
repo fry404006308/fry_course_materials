@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js运算符优先级</title>
+</head>
+<body>
+<!--
+
+改变优先级，可以加上括号
+
+-->
+<script>
+    // var ans=1+2*3/4-5;
+    // var ans=(1+2)*3/4-5;
+
+    /*
+    * 如果||的优先级高，结果是5
+    * 如果&&的优先级高，结果是1
+    * 如果优先级一样，结果是5
+    * */
+    var ans=1||(2&&5);
+    console.log(ans);
+</script>
+</body>
+</html>

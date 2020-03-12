@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: #605ca8;
+        }
+        .box2{
+            background-color: red;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        .box3{
+            background-color: #bfa;
+        }
+        .span1{
+            width: 100px;
+            height: 100px;
+            background-color: #ffff22;
+            position: relative;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--Emmet-->
+<!--div.box.box${box$}*3-->
+
+<!--
+当开启了元素的定位（position属性值是一个非static的值）时，可以通过left right top bottom四个属性来设置元素的偏移量
+
+left：元素相对于其定位位置的左侧偏移量
+right：元素相对于其定位位置的右侧偏移量
+top：元素相对于其定位位置的上边的偏移量
+bottom：元素相对于其定位位置下边的偏移量
+-->
+
+<!--
+相对定位的特点
+1、就是我们只设置position: relative;之后，元素时不会动的，我们必须通过left right top bottom四个属性来设置偏移才能使它动
+2、相对定位不会脱离文档流
+3、相对定位是相对于它原来的位置（它原来在文档流中的位置）进行定位
+4、相对定位会提升元素的一个层级，所以会比其它在文档流中的元素要高
+5、相对定位不仅可以作用于块级元素，内联元素也可以，相对定位因为没有脱离文档流，所以不能够改变盒子的属性，也就是块状元素还是块状，内联元素还是内联，下一节课里面的绝对定位会改变盒子的性质
+-->
+
+<div class="box box1">box1</div>
+<div class="box box2">box2</div>
+<div class="box box3">box3</div>
+<span class="span1">span1</span>
+</body>
+</html>

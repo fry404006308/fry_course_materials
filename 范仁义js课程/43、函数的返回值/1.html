@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的返回值</title>
+</head>
+<body>
+<!--
+
+函数只有在调用函数的时候才会被执行
+
+如何在函数里面向函数外面返回值
+return 表达式或者变量;
+
+怎么接收函数里面返回的值
+可以直接赋值给一个变量
+
+注意点：
+return后面的语句是不会被执行的
+return 后面如果不接值，会返回undefined
+函数里面不写return语句，也是默认会返回undefined
+-->
+<script>
+    //需求：写一个打印两个数和的函数
+    //需求：写一个返回两个数和的函数
+    console.log('我是程序的开头');
+    function sum(a,b) {
+        console.log(a+b);
+        var aa=a+b;
+        return aa;
+        //return a+b;
+        //console.log('我是return后面的语句');
+        //return ;
+    }
+    var m=sum(3,5);
+    console.log('m= '+m);
+    console.log(sum(5,67)+23);
+
+</script>
+</body>
+</html>

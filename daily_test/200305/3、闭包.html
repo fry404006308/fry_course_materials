@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+<script>
+    // function fn1() {
+    //     var a=2;
+    //     console.log(++a);
+    // }
+    // fn1();
+    // console.log('函数调用之间');
+    // fn1();
+
+    function fn1() {
+        var a=2;
+        function fn2(){
+            console.log(++a);
+        }
+        return fn2;
+    }
+    var fn3=fn1();
+    console.log(fn1());
+    fn3();
+    console.log('函数调用之间');
+    fn3();
+
+</script>
+</body>
+</html>

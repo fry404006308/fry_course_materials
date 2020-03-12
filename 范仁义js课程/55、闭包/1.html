@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+<!--
+1、
+闭包是什么
+闭包就是能够读取其他函数内部变量的函数。
+例如在javascript中，只有函数内部的子函数才能读取局部变量，
+所以闭包可以理解成“定义在一个函数内部的函数“。
+在本质上，闭包是将函数内部和函数外部连接起来的桥梁。
+
+2、
+闭包的特点
+1、我们在函数外部操作了函数内部的值
+2、闭包对应的函数中的变量是常驻内存
+
+
+闭包产生的条件
+1、函数嵌套
+2、子函数要使用函数内部的变量
+
+
+
+-->
+<script>
+    // function fn1() {
+    //     var a=10;
+    //     console.log(++a);
+    // }
+    // fn1();
+    // console.log('两次函数执行之间');
+    // fn1();
+
+    function fn1() {
+        var a=10;
+        function fn2(){
+            console.log(++a);
+        }
+        return fn2;
+    }
+    var fn3=fn1();
+    console.log(fn3);
+    fn3();
+    //console.log(fn1()());
+    //fn1();
+    console.log('两次函数执行之间');
+    fn3();
+    fn3();
+    //fn1();
+</script>
+</body>
+</html>

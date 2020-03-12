@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+            float: left;
+        }
+        .box2{
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            float: right;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+        .span1{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<!--
+特点：
+1、会脱离文档流，
+但是不会脱离文字流（脱离文档流就是不占着文档流的位置，
+不脱离文字流就是还占着文字的位置，
+这和float最初的目的相关，最初就是做图文混排的）
+2、浮动元素的宽高是由内容撑开，不管是行级还是块级元素，
+如果设置了浮动属性，该元素就变成了具有inline-block属性的元素
+（设置的宽高就可以生效了）
+3、如果浮动元素上边是一个没有浮动的块元素，
+则浮动元素不会超过这个块元素（像一堵墙）
+4、多个元素设置浮动，宽度足够的话，会排在一行
+5、文字环绕图片的效果
+
+-->
+<div class="box1">
+box1
+</div>
+<div class="box2">
+box2
+</div>
+<div class="box3">
+box3
+</div>
+<span class="span1">
+span1
+</span>
+</body>
+</html>

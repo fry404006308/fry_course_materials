@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用bfc解决float高度塌陷</title>
+    <style>
+        .box1{
+            border: 5px solid red;
+            width: 300px;
+            overflow: auto;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+            float: left;
+        }
+        .box4{
+            position: relative;
+            left: 5px;
+            top:150px;
+        }
+    </style>
+</head>
+<body>
+<!--利用bfc解决float高度塌陷-->
+<!--原理：计算BFC的高度时，浮动元素也参与计算。-->
+<div class="box1">
+    <div class="box2">
+
+    </div>
+    <div class="box3">
+
+    </div>
+    <div class="box4">
+        计算BFC的高度时，浮动元素也参与计算
+    </div>
+</div>
+</body>
+</html>
