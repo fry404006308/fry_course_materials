@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let应用小实例</title>
+</head>
+<body>
+
+<!--按钮循环遍历加监听实例-->
+<!--需求：
+点击按钮0，弹出'按钮0'，
+点击按钮1，弹出'按钮1'，
+点击按钮2，弹出'按钮2'
+-->
+<button>按钮0</button>
+<button>按钮1</button>
+<button>按钮2</button>
+<script>
+    var btns = document.getElementsByTagName('button');
+    for(let i = 0;i<btns.length;i++){
+        // (function (i) {
+        //     btns[i].onclick = function () {
+        //         alert('按钮'+i);
+        //     };
+        // })(i);
+        btns[i].onclick = function () {
+            alert('按钮'+i);
+        };
+    }
+    console.log(btns[0].onclick);
+    console.log(btns[1].onclick);
+    console.log(btns[2].onclick);
+</script>
+</body>
+</html>

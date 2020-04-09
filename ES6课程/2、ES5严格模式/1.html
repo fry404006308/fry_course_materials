@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES5严格模式</title>
+</head>
+<body>
+<!--
+严格模式介绍
+a、除了正常运行模式(混杂模式)，ES5添加了第二种运行模式："严格模式"（strict mode），这种模式使得Javascript在更严格的语法条件下运行
+b、使用就是script标签的最前面部分加句话'use strict';
+
+严格模式 的作用
+*、消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为
+*、消除代码运行的一些不安全之处，为代码的安全运行保驾护航
+*、为未来新版本的Javascript做好铺垫
+
+严格模式 如何使用
+1、在全局或函数的第一条语句定义为: 'use strict';
+2、如果浏览器不支持, 只解析为一条简单的语句, 没有任何副作用
+
+
+严格模式 对js语法和行为的 具体改变
+*、必须用var声明变量
+*、禁止自定义的函数中的this指向window
+*、创建eval作用域（eval现在用的很少了）
+*、对象不能有重名的属性
+
+
+-->
+<script>
+    'use strict';
+
+    //1、严格模式必须用var声明变量
+    // var name1 = '林黛玉';
+    //name1 = '林黛玉';
+    // console.log(name1);
+    // console.log(window);
+
+    //name2='薛宝钗';
+    //var name2='薛宝钗';
+
+    //2、严格模式禁止自定义的函数中的this指向window
+    // function People(name,age) {
+    //     console.log(this);
+    //     this.name=name;
+    //     this.age=age;
+    // }
+    // var p1=new People('aa',23);
+    // console.log(p1);
+    // var p2=People('aa',23);
+    // console.log(p2);
+
+    //3、严格模式创建eval作用域（eval现在用的很少了）
+    // var str='bb';
+    // eval('var str="林黛玉";console.log(str);');
+    // console.log(str);
+    //console.log('alert(str)');
+
+    //4、严格模式对象不能有重名的属性
+    var obj1={
+      name:'324',
+      name: '4343'
+    };
+    console.log(obj1);
+
+
+</script>
+</body>
+</html>

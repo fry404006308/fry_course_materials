@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用构造函数创建对象</title>
+</head>
+<body>
+<!--
+
+构造函数：
+构造函数也是一个函数，只不过是一个特殊的函数
+
+构造函数的特殊之处：
+1、构造函数在创建时候的特点：函数名的首字母大写
+2、构造函数在使用时候的特点：必须使用new关键字，并且函数名的首字母大写
+
+构造函数里面怎么增加属性和方法：
+使用的this关键字
+
+使用构造函数创建对象的好处：
+可以标注对象
+
+在构造函数创建对象的时候，如果没有用new关键字，那么这个构造函数就是用普通函数的方式来调用的
+
+在使用构造函数创建对象时，如果使用new关键字创建对象 的时候的特点：
+说明new关键字给我们隐式的创建了一个对象，和返回了一个对象
+
+构造函数中this的指向问题：
+在构造函数中，this指向的是后面通过构造函数创建的实例，
+也是满足 谁调用函数（方法），this就指向谁 的特点的
+
+使用构造函数创建对象和使用工厂模式创建对象的区别
+1、使用构造函数创建对象：函数在定义的时候，首字母大写，使用函数的时候，要用new关键字
+2、使用构造函数创建对象：我们没有显式的创建对象，也没有显式的返回对象，new关键字给我们做了
+
+
+面向对象编程
+使用构造函数创建对象的时候，构造函数就相当于一个类，利用构造函数创建的对象就是类的实例
+
+怎么来判断一个对象是不是一个类的实例
+instanceof
+
+
+
+
+-->
+<script>
+    function People(name,age) {
+        this.name=name;
+        this.age=age;
+        this.say=function () {
+          console.log('我是天底下最靓的仔，我是'+this.name+'，我今年'+this.age+'岁。');
+        };
+    }
+    var zhuBaJie=new People('猪八戒',4);
+    console.log(zhuBaJie);
+    zhuBaJie.say();
+    var tangSen=new People('唐僧',15);
+    console.log(tangSen);
+    tangSen.say();
+
+    //造狗
+    function Dog(name,age) {
+        this.name=name;
+        this.age=age;
+        this.say=function () {
+            console.log('我是'+this.name+'，我今年'+this.age+'岁。');
+        };
+    }
+    var xiaoTianDog=new Dog('哮天犬',99);
+    console.log(xiaoTianDog);
+    xiaoTianDog.say();
+
+
+    //不使用new关键字会返回undefined
+    // var wangCai=Dog('旺财',9);
+    // console.log(wangCai);//不使用new关键字会返回undefined
+    // wangCai.say();
+
+    var wangCai=new Dog('旺财',9);
+    console.log(wangCai);
+    wangCai.say();
+
+    //怎么来判断一个对象是不是一个类的实例
+    console.log(zhuBaJie instanceof People);
+    console.log(wangCai instanceof People);
+    console.log(wangCai instanceof Dog);
+
+</script>
+</body>
+</html>

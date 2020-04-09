@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10162218-9bbb-40e7-9802-0d3053f44047" name="Default Changelist" comment="" />
+    <list default="true" id="10162218-9bbb-40e7-9802-0d3053f44047" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7、实现元素水平垂直居中/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8、纯css实现三角形/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/10、call和apply/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/11、回调函数/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/12、函数节流/1、demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/12、函数节流/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/13、函数防抖/1、demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/13、函数防抖/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../好用的js插件/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../好用的js插件/2、延时加载库echo.js/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法疑难(js实现)/.idea/算法疑难(js实现).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法疑难(js实现)/1、快速排序/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/61、数组简介/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/62、数组基本操作/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/63、数组的长度/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/64、多维数组/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/65、栈的方法/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/66、队列的方法/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/67、数组的遍历/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/68、数组的遍历的练习/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/69、forEach/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/70、sort/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javascript疑难问题/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javascript疑难问题/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../好用的js插件/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../好用的js插件/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../范仁义css3课程/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../范仁义css3课程/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../范仁义js课程/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../范仁义js课程/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +46,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1Vzf7D9beuDCW9SbZ1aBX46YOnb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,10 +87,25 @@
       <workItem from="1581336192401" duration="2667000" />
       <workItem from="1581786599370" duration="1672000" />
       <workItem from="1581944317461" duration="174000" />
+      <workItem from="1584609677789" duration="5447000" />
+      <workItem from="1584654484505" duration="5621000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

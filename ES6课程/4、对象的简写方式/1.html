@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的简写方式</title>
+</head>
+<body>
+<!--
+
+在es6中，在对象中，如果属性名和属性值是一样的，
+es6提供一种简写方式：
+同名的属性可以省略不写
+
+在es6中，对对象中的 方法也提供了一种简写方式：
+就是可以省略掉方法中的冒号和function
+
+-->
+<script>
+    let name="林黛玉";
+    let age=14;
+    let linDaiYu={
+        //name:name,
+        name,
+        //age:age
+        age,
+        // say:function () {
+        //     console.log('我是'+this.name);
+        // }
+        say() {
+            console.log('我是'+this.name);
+        }
+    };
+    console.log(linDaiYu);
+    linDaiYu.say();
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栈的方法</title>
+</head>
+<body>
+<!--
+1、
+栈
+特点：
+先进后出
+
+2、
+栈的两个方法：
+入栈和出栈
+
+3、用数组模拟栈
+如果把栈顶看成数组的结尾，把栈底看成数组的开头
+那么入栈和出栈操作就相当于是在数组的结尾添加或者删除元素
+
+4、
+入栈：数组的结尾添加元素
+push()	向数组的末尾添加一个或更多元素，并返回新的长度。
+
+出栈：数组的结尾删除元素
+pop()	删除数组的最后一个元素并返回删除的元素。
+
+5、
+学习一个方法（函数）的注意点
+push()
+1、作用：向数组的末尾添加一个或更多元素，并返回新的长度
+2、参数：array.push(item1, item2, ..., itemX)：要添加到数组的元素。
+3、返回值：返回数组新的长度
+
+-->
+<script>
+    var stack_1=['猪八戒','白骨精'];
+    console.log(stack_1);
+    //入栈操作
+    // var length_new=stack_1.push('孙悟空','狐狸精','琵琶精');
+    // console.log(stack_1);
+    // console.log(length_new);
+
+    //出栈操作
+    stack_1.pop();
+    var a=stack_1.pop();
+    console.log(a);
+    console.log(stack_1);
+
+</script>
+</body>
+</html>

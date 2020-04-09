@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1、使用工厂模式创建对象</title>
+</head>
+<body>
+<!--
+
+函数的作用：封装代码，方便对代码进行复用
+
+使用工厂模式创建对象 本质： 利用函数封装代码（创建对象的代码），方便对代码进行复用
+
+-->
+<script>
+    //创建对象
+    // var sunWuKong=new Object();
+    // sunWuKong.name='孙悟空';
+    // sunWuKong.age='999';
+    // sunWuKong.say=function () {
+    //     console.log('我叫'+this.name+', 今年'+this.age+'岁。');
+    // };
+    // console.log(sunWuKong);
+    // sunWuKong.say();
+
+    //js字面量方式创建对象，
+    // var zhuBaJie={
+    //     name:'猪八戒',
+    //     age:3,
+    //     say:function () {
+    //         console.log('我叫'+this.name+', 今年'+this.age+'岁。');
+    //     }
+    // };
+    // console.log(zhuBaJie);
+    // zhuBaJie.say();
+
+
+    //需求：要创建一个沙和尚的对象
+    // var shaHeShang=new Object();
+    // shaHeShang.name='沙和尚';
+    // shaHeShang.age='9';
+    // shaHeShang.say=function () {
+    //     console.log('我叫'+this.name+', 今年'+this.age+'岁。');
+    // };
+    // console.log(shaHeShang);
+    // shaHeShang.say();
+
+    function createPeople(name,age) {
+        // var people=new Object();
+        // people.name=name;
+        // people.age=age;
+        // people.say=function () {
+        //     console.log('我叫'+this.name+', 今年'+this.age+'岁。');
+        // };
+        // return people;
+
+        //创建字面量的方式
+        var people={
+            name:name,
+            age:age,
+            say:function () {
+                console.log('我叫'+this.name+', 今年'+this.age+'岁。');
+            }
+        };
+        return people;
+
+    }
+    // var shaHeShang=createPeople();
+    // console.log(shaHeShang);
+    // shaHeShang.say();
+
+    var shaHeShang=createPeople('沙和尚',15);
+    console.log(shaHeShang);
+    shaHeShang.say();
+
+    var xiaoBaiLong=createPeople('小白龙',13);
+    console.log(xiaoBaiLong);
+    xiaoBaiLong.say();
+</script>
+</body>
+</html>

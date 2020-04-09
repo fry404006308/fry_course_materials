@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>形参默认值</title>
+</head>
+<body>
+<!--
+
+-->
+<script>
+    //定义一个点的坐标的构造函数
+    function Point(x=0,y=0) {
+        this.x=x;
+        this.y=y;
+    }
+    let point=new Point(12,23);
+    console.log(point);
+    let point1=new Point();
+    console.log(point1);
+
+</script>
+</body>
+</html>

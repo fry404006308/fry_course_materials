@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>
+        Lazyload测试
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        ul,
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        img {
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<!--
+
+懒加载：
+懒加载其实就是延时加载，即当资源需要用到的时候再去加载。
+
+懒加载的好处：
+加快页面的响应速度，降低服务器的负载
+
+
+注意：
+自己测试
+1、图片带上宽高，不然懒加载可能不生效
+2、img还要设置成block
+
+项目中的话：
+记得src不能为空
+
+-->
+<body>
+<div id="results1" class="results">
+    <ul>
+        <li>
+            <a href="#/it/donna/stivaletti_cod44721746jj.html"
+            ><img
+                    alt="Stivaletti"
+                    src="https://via.placeholder.com/440x560?text=Img+01"
+                    width="220"
+                    height="280"
+            /></a>
+        </li>
+
+        <li>
+            <a href="#/it/donna/open-toe_cod44740806jx.html"
+            ><img
+                    alt="Open toe"
+                    src="https://via.placeholder.com/440x560?text=Img+02"
+                    width="220"
+                    height="280"
+            /></a>
+        </li>
+        <li>
+            <a href="#/it/donna/sneakers-tennis-shoes-basse_cod44735977gr.html"
+            ><img
+                    alt="Sneakers &amp; Tennis"
+                    class="lazy"
+                    data-src="https://via.placeholder.com/440x560?text=Img+03"
+                    width="220"
+                    height="280"
+            /></a>
+        </li>
+        <li>
+            <a href="#/it/donna/sneakers-tennis-shoes-basse_cod44738717am.html"
+            ><img
+                    alt="Sneakers &amp; Tennis shoes basse"
+                    class="lazy"
+                    data-src="https://via.placeholder.com/440x560?text=Img+04"
+                    width="220"
+                    height="280"
+            /></a>
+        </li>
+        <li>
+            <a href="#/it/donna/sneakers-tennis-shoes-alte_cod44739940cb.html"
+            ><img
+                    alt="Sneakers &amp; Tennis shoes alte"
+                    class="lazy"
+                    data-src="https://via.placeholder.com/440x560?text=Img+05"
+                    width="220"
+                    height="280"
+            /></a>
+        </li>
+        <li>
+            <a href="#/it/donna/sneakers-tennis-shoes-alte_cod44740860xg.html"
+            ><img
+                    alt="Sneakers &amp; Tennis shoes alte"
+                    class="lazy"
+                    data-src="https://via.placeholder.com/440x560?text=Img+06"
+                    width="220"
+                    height="280"
+            /></a>
+        </li>
+        <li>
+            <a href="#/it/donna/sneakers-tennis-shoes-basse_cod44738719vn.html"
+            ><img
+                    alt="Sneakers &amp; Tennis shoes basse"
+                    class="lazy"
+                    data-src="https://via.placeholder.com/440x560?text=Img+07"
+                    width="220"
+                    height="280"
+            /></a>
+        </li>
+        <li>
+            <a href="#/it/donna/sneakers-tennis-shoes-basse_cod44739938wk.html"
+            ><img style="width: 100%"
+                  alt="Sneakers &amp; Tennis shoes basse"
+                  class="lazy"
+                  data-src="../imgs/前端性能优化_350.jpg"
+            /></a>
+        </li>
+        <li>
+            <a href="#/it/donna/sneakers-tennis-shoes-basse_cod44739938wk.html"
+            >
+                <img src="" alt="" class="lazy"
+                     data-src="../imgs/VUE源码解析_350.jpg"
+                     data-srcset="../imgs/VUE源码解析_350.jpg 350w, ../imgs/VUE源码解析_700.jpg 700w, ../imgs/VUE源码解析_1000.jpg 1000w"
+                >
+            </a>
+        </li>
+
+    </ul>
+</div>
+<script src="lazyload.min.js"></script>
+<script>
+    var ll = new LazyLoad({
+        elements_selector: ".lazy",
+    });
+</script>
+</body>
+</html>

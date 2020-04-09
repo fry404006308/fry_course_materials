@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forEach</title>
+</head>
+<body>
+<!--
+作用：用于遍历数组的每个元素
+参数：回调函数：function(currentValue, index, arr)
+返回值：
+
+回调函数的参数
+第一个参数：数组对应位置的值
+第二个参数：对应的值在数组中的位置(索引)
+第三个参数：当前数组
+
+forEach里面的回调函数会执行，也就是数组有几个元素就执行几次
+
+回调函数：
+由我们创建，但是我们没有直接调用，但是函数在某个时候或者某种条件执行了的
+
+-->
+<script>
+    var arr = ["贾宝玉","林黛玉","薛宝钗","袭人","晴雯"];
+
+    arr.forEach(function (val,index,arr) {
+        console.log('我是forEcha的参数，我是一个回调函数');
+        console.log('val: '+val);
+        console.log('index: '+index);
+        console.log('arr: '+arr);
+        //console.log(window.arr == arr);
+    });
+
+    //回调函数小例子
+    // setInterval(function () {
+    //     console.log('我是回调函数，我由用户创建，但是用户 没有直接调用我，但是我执行了，');
+    // },2000);
+</script>
+</body>
+</html>

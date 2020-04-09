@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纯css实现三角形</title>
+    <style>
+        body{
+            /*background-color: blueviolet;*/
+        }
+        .box{
+            width: 0;
+            height: 0;
+
+            border: 200px solid;
+            border-left-color: transparent;
+            border-right-color: green;
+            border-top-color: green;
+            border-bottom-color: transparent;
+        }
+    </style>
+</head>
+<!--
+将内容区的宽高设置为0，然后将需要的部分设置为真实的颜色，
+不需要的部分设置为透明色transparent
+
+-->
+<body>
+<div class="box"></div>
+</body>
+</html>

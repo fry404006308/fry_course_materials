@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速排序</title>
+</head>
+<body>
+<!--
+快速排序的思路：
+1、先从数列中取出一个数作为基准数
+2、将比这个数小的全放到它的左边，大于或等于它的数全放到它的右边
+3、再对左右区间重复第二步，直到各区间只有一个数
+4、将有序的区间合并起来，这样整个数列就有序了
+
+let arr=[31,23,34,2,13,234];
+
+第一步：比如取第一个数为基准数，比31小的都放31左边，比31大的都放到31的右边
+
+23,2,13,  31  ,34,234
+
+第二步：对31 左右两边的数组都做同样的操作：选基准数，比基准数小的放左边，比基准数大的放右边
+左边：[23,2,13]：选23为基准：2,13,  23
+
+右边：[34,234]：选34为基准：34,  234
+2,13,23,31,34,234
+
+-->
+<script>
+    let arr=[31,23,34,2,13,234,31,43,343,65,23,43,13,2];
+
+    function quickSort(arr) {
+        //1、找基准数，并且将比基准数小的全部放到左边（左数组），
+        // 大于等于基准数的全部放到右边（右数组）
+        let base_num=arr[0];//基准数
+        let left_arr=[];//左数组
+        let right_arr=[];//右数组
+        for (let i=1;i<arr.length;i++){
+            //比基准数小的都放在左数组，否则放在右数组
+            if(arr[i]<base_num){
+                left_arr.push(arr[i]);
+            }else{
+                right_arr.push(arr[i]);
+            }
+        }
+
+
+        //2、对左右数组分别进行快排，返回排序好的左右数组
+        // （条件：就是数组中的元素要大于等于2个）
+        if(left_arr.length>=2) left_arr=quickSort(left_arr);
+        if(right_arr.length>=2) right_arr=quickSort(right_arr);
+        //快排之后的left_arr和right_arr 都是有序
+
+
+        //3、合并排序好之后的左数组、基准数、排序好的右数组，并且返回
+        return left_arr.concat(base_num,right_arr);
+
+    }
+    let ans=quickSort(arr);
+    console.log(ans);
+</script>
+</body>
+</html>

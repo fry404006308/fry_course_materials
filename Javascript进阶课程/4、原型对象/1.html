@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型对象</title>
+</head>
+<body>
+<!--
+1、函数有prototype属性
+每一个函数在被创建的时候，解析器都会向函数中添加一个prototype属性
+并且这个prototype属性对应的值是一个对象，这个对象就是我们所说的原型对象
+
+并且每一个函数对应的原型对象都是不一样，
+
+2、调用
+当一个函数作为普通函数调用的时候，prototype属性是没有作用的
+当一个函数作为构造函数形式调用的时候，这个构造函数所创建的每一个对象里面都有一个隐含的属性
+来指向这个原型对象，
+
+
+-->
+<script>
+    //构造函数
+    function People(name) {
+        this.name=name
+    }
+    console.log(People.prototype);
+
+    //普通函数也有prototype属性
+    // function f1() {
+    //
+    // }
+    // console.log(f1.prototype);
+    // console.log(People.prototype == f1.prototype);
+
+    var p1=new People('p1');
+    console.log(p1);
+
+
+</script>
+</body>
+</html>

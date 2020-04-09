@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数防抖</title>
+</head>
+<body>
+<!--
+1、
+防抖函数：
+一个会频繁触发的函数，在规定的时间内，只让最后一次生效，前面的不生效
+
+在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+
+2、
+作用：
+防止用户的重复（手抖）操作
+
+3、
+适用场景：
+用户点击事件，比如做题按钮提交
+
+4、
+函数防抖在实际项目中的应用
+
+5、
+思考：
+如果用户一直点的话，这个函数是不会执行的，大象想想为什么
+
+
+
+-->
+<button id="btn">btn</button>
+<script>
+
+    //在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+    //计时器 setTimeOut
+    /**
+     * 1、函数防抖
+     * @param fn 要执行的回调函数
+     * @param delay 时间延迟
+     */
+    function debounce(fn,delay) {
+        //定义一个计时器
+        var timer=null;
+        return function(){
+            clearTimeout(timer);
+            timer=setTimeout(function () {
+                //fn();
+                fn.call(this);
+            },delay);
+        };
+    }
+    document.getElementById('btn').onclick=debounce(function () {
+        console.log('btn按钮被点击了： '+Date.now());
+    },1500);
+</script>
+</body>
+</html>

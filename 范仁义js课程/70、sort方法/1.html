@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的sort方法</title>
+</head>
+<body>
+<!--
+sort：对数组进行排序
+
+作用：对数组进行排序
+参数：函数
+返回值：排序好了的数组
+
+注意：sort方法是会改变原数组的
+
+-->
+<script>
+    /*
+    * sort不传参数的情况下
+    * 使用：直接数组名.sort()
+    * 默认是升序
+    * 排序的排序规则是根据unicode编码表，
+    * */
+    // var arr=['f','b','aa','d','c','m','n'];
+    // var ans=arr.sort();
+    // console.log(ans);
+    // console.log(arr);
+
+    /*
+    * 这是因为就算对数组，sort方法也是根据unicode编码一位一位的进行比较的
+    * 如果我们想安装我们的需求排序，我们可以对数组指定一个排序规则
+    * */
+    // var arr=[6,4,8,11,3,5];
+    // var ans=arr.sort();
+    // console.log(ans);
+
+    /*
+    * sort方法可以指定一个回调函数作为参数，来指定排序的规则
+    * 这个函数有 两个参数，这两个形参就是为了在排序的时候来接收数组传递过来的实参
+    * 虽然各个浏览器采用的排序算法不一样，但是有一点是一样的，
+    * 如果这个回调函数的返回值是a-b，则是升序排序
+    * 如果这个回调函数的返回值是b-a，则是降序排列
+    * */
+    var arr=[6,4,8,15,7];
+    var ans=arr.sort(function (a,b) {
+        //console.log('a= '+a);
+        //console.log('b= '+b);
+        //升序排序
+        //return a-b;
+        //降序排列
+        return b-a;
+    });
+    console.log(ans);
+</script>
+</body>
+</html>

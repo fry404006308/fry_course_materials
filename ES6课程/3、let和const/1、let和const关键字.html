@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let和const关键字</title>
+</head>
+<body>
+<!--
+var关键字定义变量的不足
+1、var关键字可以重复声明变量
+2、var关键字无法限制修改（var关键字无法定义常量）
+PI=3.1415926
+3、var关键字没有块级作用域
+块级作用域的好处：避免污染全局环境
+
+let关键字：不能重复声明，用来声明变量，块级作用域
+const关键字：不能重复声明，用来定义常量，块级作用域
+
+let关键字最常见的应用
+循环给按钮添加点击事件
+
+
+
+
+
+-->
+<script>
+    // var a=10;
+    // var a=12;
+    // console.log(a);
+
+    //用立即执行的匿名函数来模拟块级作用域
+    // (function () {
+    //     //块级作用域
+    // })();
+
+    // let a=10;
+    // let a=12;
+    // console.log(a);
+
+    // const aa=11;
+    // const aa=13;
+    // console.log(aa);
+
+    // let a=10;
+    // a=12;
+    // console.log(a);
+
+    // const aa=11;
+    // aa=13;
+    // console.log(aa);
+
+    //什么是代码块
+    {
+        //let a=10;
+        //const aa=11;
+        //var aaa=13;
+        // console.log(a);
+        //console.log(aa);
+    }
+    //console.log(a);
+    //console.log(aa);
+    //console.log(aaa);
+
+    //选择结构中的代码块
+    // if(true){
+    //     let a=10;
+    //     //console.log(a);
+    // }
+    // console.log(a);
+
+    //循环结构中的代码块
+    // for(let i=0;i<=5;i++){
+    //     let b=10;
+    //     //console.log(b);
+    //     //console.log('i='+i);
+    // }
+    // //console.log(b);
+    // console.log('i='+i);
+
+</script>
+</body>
+</html>

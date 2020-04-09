@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45ee1d04-c7a2-453b-a60c-3bd0219d8e8c" name="Default Changelist" comment="" />
+    <list default="true" id="45ee1d04-c7a2-453b-a60c-3bd0219d8e8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../css3疑难问题/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css3疑难问题/7、实现元素水平垂直居中/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css3疑难问题/8、纯css实现三角形/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/10、call和apply/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/11、回调函数/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/12、函数节流/1、demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/12、函数节流/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/13、函数防抖/1、demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/13、函数防抖/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../好用的js插件/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../好用的js插件/2、延时加载库echo.js/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法疑难(js实现)/.idea/算法疑难(js实现).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法疑难(js实现)/1、快速排序/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/61、数组简介/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/62、数组基本操作/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/63、数组的长度/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/64、多维数组/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/65、栈的方法/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/66、队列的方法/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/67、数组的遍历/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/68、数组的遍历的练习/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/69、forEach/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/70、sort方法/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css3疑难问题/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../css3疑难问题/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javascript疑难问题/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javascript疑难问题/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../好用的js插件/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../好用的js插件/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../范仁义css3课程/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../范仁义css3课程/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,21 +48,27 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1Xqip1bGiNsGCX6b4Cbn9DfDZNa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/54、匿名函数在框架中的应用" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/68、数组的遍历的练习" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Fan Renyi\WebstormProjects\范仁义js课程\54、匿名函数在框架中的应用" />
-      <recent name="C:\Users\Fan Renyi\WebstormProjects\范仁义js课程\24、条件运算符" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Fan Renyi\WebstormProjects\范仁义js课程\40、对象的小实例" />
       <recent name="C:\Users\Fan Renyi\WebstormProjects\范仁义js课程\26、循环结构（while循环）" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\78_自己录播课\001_录播课github资料\fry_course_materials\范仁义js课程\68、数组的遍历的练习" />
+      <recent name="C:\Users\Fan Renyi\WebstormProjects\范仁义js课程\54、匿名函数在框架中的应用" />
+      <recent name="C:\Users\Fan Renyi\WebstormProjects\范仁义js课程\24、条件运算符" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -99,10 +136,33 @@
       <workItem from="1583756334383" duration="14000" />
       <workItem from="1583760915595" duration="9481000" />
       <workItem from="1583780465720" duration="29000" />
+      <workItem from="1584231531006" duration="32491000" />
+      <workItem from="1584334573010" duration="22000" />
+      <workItem from="1584338171364" duration="2298000" />
+      <workItem from="1584479492880" duration="2933000" />
+      <workItem from="1584490272899" duration="13033000" />
+      <workItem from="1584508759781" duration="16000" />
+      <workItem from="1584514309735" duration="717000" />
+      <workItem from="1584563114731" duration="88000" />
+      <workItem from="1584604440175" duration="4307000" />
+      <workItem from="1584684013432" duration="3777000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

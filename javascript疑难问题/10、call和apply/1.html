@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call和apply</title>
+</head>
+<body>
+<!--
+1、
+this的指向问题：
+就是谁调用函数（方法），函数（方法）里面的this就指向谁
+
+执行函数：函数名()
+call和apply 也可以执行函数
+
+
+
+2、
+call和apply方法 不仅可以执行函数（方法），更重要的是他们在执行函数（方法）的时候可以改变函数（方法）里面this的指向
+
+3、
+函数名() 执行函数 和 call和apply 方法 执行函数的区别是什么
+call和apply 方法 执行函数 的时候，可以改变this的指向
+
+4、
+call方法和apply方法的区别
+call方法和apply方法一样都可以执行函数和改变函数的this的指向，唯一区别在于：
+传递参数的时候，如果使用的是call方法，那么参数在改变的this的指向的对象后面是依次传递
+如果使用的是apply方法，那么参数在改变的this的指向的对象后面是要放到一个数组里面统一传递的
+
+-->
+<script>
+    function readThis(a,b,c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(this);
+    }
+    //readThis();
+    //readThis(1,2,3);
+    //readThis.call();
+    //readThis.apply();
+
+    var zhuBaJie={
+        name:'猪八戒',
+        fun1:readThis
+    };
+    //zhuBaJie.fun1();
+    //zhuBaJie.fun1(4,5,6);
+    //readThis.call(zhuBaJie);
+    //readThis.apply(zhuBaJie);
+    //readThis.call(zhuBaJie,7,8,9);
+    readThis.apply(zhuBaJie,[10,11,12]);
+
+</script>
+</body>
+</html>

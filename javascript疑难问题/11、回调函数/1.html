@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回调函数</title>
+</head>
+<body>
+<!--
+1. 什么函数才是回调函数?
+  * 你定义的
+  * 你没有直接调用
+  * 但最终它执行了(在特定条件或时刻)
+2. 常见的回调函数?
+  * DOM事件函数
+  * 定时器函数
+  * ajax回调函数
+  等等
+-->
+
+
+<!--1、 DOM事件函数-->
+<!--<button id="btn">btn1</button>-->
+<!--<script>-->
+<!--    var btn = document.getElementById('btn')-->
+<!--    btn.onclick = function () {-->
+<!--        alert(this.innerHTML)-->
+<!--    };-->
+
+<!--    // (function () {-->
+<!--    //     alert('this.innerHTML')-->
+<!--    // })();-->
+<!--</script>-->
+
+<!--2、jquery事件-->
+<!--<button id="btn2">btn2</button>-->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+<!--<script>-->
+<!--    //注意到click方法中是一个函数而不是一个变量-->
+<!--    //它就是回调函数-->
+<!--    $("#btn2").click(function() {-->
+<!--        alert("Btn2 Clicked");-->
+<!--    });-->
+<!--</script>-->
+
+<!--3、arr.forEach-->
+<!--<script>-->
+<!--    var arr = ["孙悟空","猪八戒","沙和尚","唐僧","白骨精"];-->
+<!--    arr.forEach(function(value , index , arr){-->
+<!--        console.log(index+' . '+value);-->
+<!--        //console.log('回调函数被执行了');-->
+<!--    });-->
+<!--</script>-->
+
+<!--4、定时器函数-->
+<!--<script>-->
+<!--    setInterval(function () {-->
+<!--        console.log('到点啦!')-->
+<!--    }, 2000);-->
+<!--</script>-->
+
+<!--5、ajax函数-->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+<!--<script>-->
+<!--    $.ajax({-->
+<!--        url: "test.html",-->
+<!--        context: document.body,-->
+<!--        success: function(){-->
+<!--            alert('调用成功');-->
+<!--        },-->
+<!--        error:function () {-->
+<!--            alert('调用失败');-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+
+<!--6、排序函数-->
+<!--<script>-->
+<!--    arr = [5,4,2,11,3,6,8,7];-->
+<!--    //arr.sort();-->
+<!--    //-->
+<!--    arr.sort(function(a,b){-->
+<!--        //升序排列-->
+<!--        return a - b;-->
+
+<!--        //降序排列-->
+<!--        //return b - a;-->
+<!--    });-->
+<!--    console.log(arr);-->
+<!--</script>-->
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现元素水平垂直居中</title>
+    <style>
+        /*第一种方式：子元素绝对定位+margin: auto
+        父元素设置为相对定位，子元素设置为绝对定位，并且子元素的上下左右的偏移都是0，
+        子元素的margin设置为auto
+        */
+        /*.parent_box{*/
+        /*    width: 400px;*/
+        /*    height: 400px;*/
+        /*    background-color: lightseagreen;*/
+        /*    position: relative;*/
+        /*}*/
+        /*.child_box{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: red;*/
+        /*    position: absolute;*/
+        /*    top: 0;*/
+        /*    bottom: 0;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    margin: auto;*/
+        /*}*/
+
+        /*第二种方式：子元素绝对定位+margin左上负偏移自身的一半
+        父元素设置为相对定位，子元素设置为绝对定位，并且子元素的上左的偏移都是50%，
+        再将子元素的margin-left和margin-top负偏移为自身的一半
+        */
+        /*.parent_box{*/
+        /*    width: 400px;*/
+        /*    height: 400px;*/
+        /*    background-color: lightseagreen;*/
+        /*    position: relative;*/
+        /*}*/
+        /*.child_box{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: red;*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    margin-left: -100px;*/
+        /*    margin-top: -100px;*/
+        /*}*/
+
+        /*第三种方式：子元素绝对定位+transform:translate左上负偏移自身的一半
+        父元素设置为相对定位，子元素设置为绝对定位，并且子元素的上左的偏移都是50%，
+        然后设置transform: translate(-50%,-50%) 来左上负偏移自身的一半
+        */
+        /*.parent_box{*/
+        /*    width: 400px;*/
+        /*    height: 400px;*/
+        /*    background-color: lightseagreen;*/
+        /*    position: relative;*/
+        /*}*/
+        /*.child_box{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: red;*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    transform: translate(-50%,-50%);*/
+        /*}*/
+
+        /*第四种方式：弹性盒子
+        将父元素设置成弹性盒子，然后将弹性盒子的水平排列方式（justify-content）和垂直排列方式（align-items）都设置为center即可
+        */
+        .parent_box{
+            width: 400px;
+            height: 400px;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child_box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="parent_box">
+    <div class="child_box"></div>
+</div>
+</body>
+</html>

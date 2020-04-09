@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce5ace12-d0f1-4273-9853-8aed7881ad5d" name="Default Changelist" comment="" />
+    <list default="true" id="ce5ace12-d0f1-4273-9853-8aed7881ad5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ES6课程/.idea/ES6课程.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES6课程/1、ES6介绍/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript进阶课程/.idea/Javascript进阶课程.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript进阶课程/1、使用工厂模式创建对象/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Javascript进阶课程/2、构造函数/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css3疑难问题/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css3疑难问题/7、实现元素水平垂直居中/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../css3疑难问题/8、纯css实现三角形/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../daily_test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../daily_test/2003/02_JSON对象.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../daily_test/2003/04_Array扩展.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../daily_test/2003/04_深度克隆.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../daily_test/2003/05_Function扩展.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../daily_test/2003/6、构造函数.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/10、call和apply/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/11、回调函数/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/12、函数节流/1、demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/12、函数节流/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/13、函数防抖/1、demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javascript疑难问题/13、函数防抖/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2、懒加载库lazyload/1、image_basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2、懒加载库lazyload/2、图片要带上宽高.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2、懒加载库lazyload/lazyload.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/ES6课程_350.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/VUE源码解析_1000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/VUE源码解析_350.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/VUE源码解析_700.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/前端性能优化_350.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法疑难(js实现)/.idea/算法疑难(js实现).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法疑难(js实现)/1、快速排序/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/61、数组简介/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/62、数组基本操作/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/63、数组的长度/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/64、多维数组/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/65、栈的方法/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/66、队列的方法/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/67、数组的遍历/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/68、数组的遍历的练习/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/69、forEach/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../范仁义js课程/70、sort方法/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css3疑难问题/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../css3疑难问题/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../daily_test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200224/1、媒体查询介绍.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200224/2、css3媒体查询.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200224/3、媒体属性.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200224/4、媒体查询逻辑连接符.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200224/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200227/1、unicode编码.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200227/2、NaN的相等性判断.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200229/1、switch语句.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200229/2、求1-100里面的质数.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200229/3、break和continue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200302/1、对象操作.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200302/2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200305/1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200305/1、声明提前.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200305/3、闭包.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200305/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200305/require.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daily_test/200305/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javascript疑难问题/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javascript疑难问题/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../范仁义css3课程/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../范仁义css3课程/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../范仁义js课程/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../范仁义js课程/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +83,25 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WWF5LGh0JiBudxuLQMKYjve52K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/1、sweetalert2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2、延时加载库lazyload" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\78_自己录播课\001_录播课github资料\fry_course_materials\好用的js插件\2、延时加载库lazyload" />
+      <recent name="E:\78_自己录播课\001_录播课github资料\fry_course_materials\好用的js插件\imgs" />
       <recent name="C:\Users\Fan Renyi\WebstormProjects\好用的js插件\1、sweetalert2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\78_自己录播课\001_录播课github资料\fry_course_materials\好用的js插件\imgs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -51,10 +129,32 @@
       <workItem from="1579257262295" duration="3091000" />
       <workItem from="1580343121952" duration="56000" />
       <workItem from="1582032809230" duration="3000" />
+      <workItem from="1584618135831" duration="683000" />
+      <workItem from="1584654423688" duration="42000" />
+      <workItem from="1584712682740" duration="2137000" />
+      <workItem from="1584798952559" duration="11671000" />
+      <workItem from="1584854658842" duration="1518000" />
+      <workItem from="1584922161093" duration="11396000" />
+      <workItem from="1585015104430" duration="1834000" />
+      <workItem from="1585408802723" duration="189000" />
+      <workItem from="1585459383612" duration="4541000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>构造函数创建对象的不足</title>
+</head>
+<body>
+<!--
+不足：浪费资源
+我们使用构造函数来创建对象的过程中，构造函数里面的方法（比如说这里的say方法）也会被创建，
+所以如果我们创建10000个对象，那么这里的say方法也被创建了10000次，而每个say方法都是一样的，
+所以这样就造成了资源的浪费
+
+思路：
+让构造函数中的方法共享，比如说这里 让这个say方法来共享
+
+具体如何达到思路里面说到的目的：
+方法一：就是把构造函数中的方法放到全局，比如这里的say方法
+有一个非常致命的缺陷：会污染全局的方法
+
+方法二：用原型
+
+
+-->
+<script>
+    function say() {
+        console.log('我是天底下最靓的仔，我是'+this.name+'，我今年'+this.age+'岁。');
+    }
+    function People(name,age) {
+        this.name=name;
+        this.age=age;
+        // this.say=function () {
+        //     console.log('我是天底下最靓的仔，我是'+this.name+'，我今年'+this.age+'岁。');
+        // };
+        this.say=say;
+    }
+    var zhuBaJie=new People('猪八戒',4);
+    console.log(zhuBaJie);
+    zhuBaJie.say();
+    var tangSen=new People('唐僧',15);
+    console.log(tangSen);
+    tangSen.say();
+</script>
+</body>
+</html>

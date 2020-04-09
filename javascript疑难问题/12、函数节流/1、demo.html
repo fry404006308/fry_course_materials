@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数节流</title>
+    <style>
+        html,body{
+            height: 500%;
+        }
+    </style>
+</head>
+<body>
+<!--
+1、
+函数节流：
+一个函数执行一次后，只有大于设定的执行周期后，才会执行第二次
+
+2、
+作用：性能优化
+比如有个需要频繁触发的函数，出于优化性能角度，在规定时间内，
+只让函数触发的第一次生效，后面不生效
+
+通过节流函数，可以极大的极少函数执行的次数，从而节约性能
+
+3、
+常见的函数节流应用：
+oninput,onkeypress,onscroll,resize等触发频率非常高的事件
+
+4、
+函数节流在实际项目中的应用
+
+
+-->
+<script>
+    /**
+     *
+     * @param fn 要被节流的函数
+     * @param delay 规定的时间
+     */
+    function throttle(fn,delay){
+        //记录上一次函数触发的时间
+        var lastTime = 0;
+
+        return function () {
+            //记录当前函数的触发时间
+            var nowTime = Date.now();
+            if(nowTime - lastTime > delay){
+                //修正this指向的问题
+                fn.call(this);
+                //同步时间
+                lastTime = nowTime;
+            }
+        };
+    }
+
+    //用函数节流
+    document.onscroll=throttle(function () {
+        console.log('scroll事件被触发了！'+Date.now());
+    },200);
+
+    //不使用函数节流
+    // document.onscroll=function () {
+    //     console.log('scroll事件被触发了！'+Date.now());
+    // };
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的字面量对象和JSON的区别</title>
+</head>
+<body>
+<!--
+
+json 键值对中的键 都要带上双引号
+json 键值对中的值 只支持四种基本类型：数值，字符串，bool值，null
+不支持函数和undefined
+
+-->
+<script>
+    var zhuBaJie={
+        name:'猪八戒',
+        age:3,
+        say:function () {
+            console.log(this.name+' '+this.age);
+        }
+    };
+    console.log(zhuBaJie);
+    zhuBaJie.say();
+
+    console.log(JSON.stringify(zhuBaJie));
+    console.log(JSON.parse(JSON.stringify(zhuBaJie)));
+</script>
+</body>
+</html>

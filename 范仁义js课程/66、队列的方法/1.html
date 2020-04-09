@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>队列的方法</title>
+</head>
+<body>
+<!--
+队列
+特点：
+先进先出
+
+两个方法：
+入队和出队
+
+如果把队列的开头看成数组的开头，那么出队操作就是在数组的开头删除元素
+如果把队列的末尾看成数组的末尾，那么入队操作就是在数组的末尾添加元素
+
+入队：在数组的末尾添加元素
+push()	向数组的末尾添加一个或更多元素，并返回新的长度。
+出队：在数组的开头删除元素
+shift()	删除并返回数组的第一个元素。
+
+
+
+
+unshift()	向数组的开头添加一个或更多元素，并返回新的长度。
+unshift和push方法很像，unshift是在数组前面添加元素，push方法是在数组后面添加
+
+-->
+<script>
+    //var queue_1=['猪八戒','白骨精','嫦娥'];
+    // console.log(queue_1);
+    // //入队操作
+    // queue_1.push('孙悟空','狐狸精');
+    // console.log(queue_1);
+    // //出队操作
+    // queue_1.shift();
+    // var a=queue_1.shift();
+    // console.log(queue_1);
+    // console.log(a);
+
+    //unshift操作
+    var arr=['猪八戒','白骨精','嫦娥'];
+    console.log(arr);
+    arr.unshift('孙悟空','狐狸精');
+    var new_length=arr.unshift('唐僧');
+    console.log(arr);
+    console.log(new_length);
+</script>
+</body>
+</html>

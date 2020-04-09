@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组基本操作</title>
+</head>
+<body>
+<!--
+1、数组也是对象
+typeof
+
+2、
+对象的分类
+内建对象：js语言内部自带的对象
+宿主对象：浏览器提供的对象，window，console等等
+自定义对象：
+
+
+数组的基本操作
+3、如何创建一个数组
+var arr1=[];//用json 的方式来创建数组
+var arr2=new Array();//以创建对象的方式来创建数组
+
+4、创建对象带初值
+var arr3=[89,99,79];
+用[]创建数组带初值，里面无论是多少个值，都是指定的数组的元素
+var arr5=new Array(12,13,14);
+指定多个值，就是指定数组里面元素是这多个值
+var arr6=new Array(6);
+new Array创建数组的方式，如果只指定一个值，表示指定数组的长度
+
+5、操作数组
+向数组中添加元素
+语法：数组名[索引]=值
+
+查看指定索引的元素
+数组名[索引]
+
+6、数组和对象的区别是什么
+a、对象内部是 属性:属性值 的形式，数组内部是 索引:值 的形式
+b、对象可以用.（点号）或者[]（中括号）的方式访问属性，数组的话只能用[]中括号
+
+
+-->
+<script>
+    var arr=[89,99,79];
+    //console.log(arr);
+    //console.log(typeof arr);
+
+    //数组的基本操作
+    //1、如何创建一个数组
+    var arr1=[];//用json 的方式来创建数组
+    //console.log(arr1);
+
+    //var obj=new Object();
+    //var obj1={};//json
+    var arr2=new Array();//以创建对象的方式来创建数组
+    //console.log(arr2);
+
+    //2、创建对象带初值
+    //用[]创建数组带初值，里面无论是多少个值，都是指定的数组的元素
+    var arr3=[89,99,79];
+    var arr4=[89];
+    //console.log(arr4);
+    var arr5=new Array(12,13,14);//指定多个值，就是指定数组里面元素是这多个值
+    //console.log(arr5);
+    var arr6=new Array(6);//new Array创建数组的方式，如果只指定一个值，表示指定数组的长度
+    //console.log(arr6);
+    var arr7=[,,,,,,];
+    //console.log(arr7);
+
+    //3、操作数组
+    //3.1、向数组中添加元素
+    //语法：数组名[索引]=值
+    var arr8=[];
+    arr8[0]=5;
+    arr8[1]=6;
+    arr8[2]=9;
+    console.log(arr8);
+    //3.2、查看指定索引的元素
+    //语法：数组名[索引]
+    console.log(arr8[0]);
+    console.log(arr8[1]);
+    console.log(arr8[2]);
+    //访问数组没有指定索引的位置，返回的值是undefined
+    console.log(arr8[10]);
+
+    //4、数组和对象的区别是什么
+    //a、对象是属性，数组是索引
+    //b、对象可以用.（点号）或者[]（中括号）的方式访问属性，数组的话只能用[]中括号
+    var obj2={name:'猪八戒',age:9};
+    console.log(obj2);
+    var arr9=[13,14];
+    console.log(arr9);
+
+</script>
+</body>
+</html>

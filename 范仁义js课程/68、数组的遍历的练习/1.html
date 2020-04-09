@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组遍历的练习</title>
+</head>
+<body>
+<!--
+写一个函数，将如下数组中得分不及格的对象提取出来，
+封装到一个数组中，然后返回
+
+    var arr=[
+        {name:'贾宝玉',score:58},
+        {name:'林黛玉',score:98},
+        {name:'薛宝钗',score:90},
+        {name:'贾环',score:45},
+        {name:'贾政',score:88},
+        {name:'袭人',score:59}
+    ];
+-->
+<script>
+    var arr=[
+        {name:'贾宝玉',score:58},
+        {name:'林黛玉',score:98},
+        {name:'薛宝钗',score:90},
+        {name:'贾环',score:45},
+        {name:'贾政',score:88},
+        {name:'袭人',score:59}
+    ];
+
+    function getPeople(arr) {
+        var new_arr=[];
+
+        //操作：将arr数组中得分不及格的对象提取出来，添加到new_arr数组中
+        //1、遍历arr数组
+        //i 是index
+        for (var i=0;i<arr.length;i++){
+            //2、将得分不及格的对象找出来
+            if(arr[i].score<60){
+                //3、将这个对象添加到new_arr数组中
+                new_arr.push(arr[i]);
+            }
+        }
+        return new_arr;
+    }
+    console.log(getPeople(arr));
+
+</script>
+</body>
+</html>
