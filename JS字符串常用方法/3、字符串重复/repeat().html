@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>repeat()</title>
+</head>
+<body>
+<!--
+repeat()
+作用：对字符串进行重复
+参数：count（重复次数）
+返回值：重复操作之后的字符串
+
+
+-->
+<script>
+    // console.log('abc'.repeat(0));
+    // console.log('abc'.repeat(1));
+    // console.log('abc'.repeat(2));//'abcabc'
+
+
+    //手写repeat方法
+    String.prototype.repeat_my = function(count){
+        let ans_str='';
+        console.log(this);
+        for(let i=0;i<count;i++){
+            ans_str+=this;
+        }
+        return ans_str;
+    };
+    console.log('abc'.repeat_my(4));
+    // 'abc'.repeat_my(2);
+
+</script>
+</body>
+</html>

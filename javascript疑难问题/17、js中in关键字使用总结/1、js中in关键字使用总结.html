@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1、js中in关键字使用总结</title>
+</head>
+<body>
+<!--
+
+1、判断索引或属性名是否在数组或对象中：
+注意在数组中是索引而不是元素，在对象中是属性名而不是属性值
+2、做循环遍历（遍历数组或者对象）
+3、in关键字在vue的v-for指令中做循环
+
+
+-->
+<script>
+    //一、判断索引或属性名是否在数组或对象中
+    //1、判断数组中是否有对应索引
+    // let arr=['a','b',100,200,false];
+    // console.log(arr);
+    // console.log('a' in arr);//false
+    // console.log(2 in arr);//true
+
+    //2、判断对象中是否有属性名
+    // let obj={name:'孙尚香',age:20};
+    // console.log(obj);
+    // console.log('孙尚香' in obj);//false
+    // console.log(name in obj);//false
+    // console.log('name' in obj);//true
+
+    //二、做循环遍历
+    //遍历数组
+    // let arr=['a','b',100,200,false];
+    // for (let i in arr){
+    //     console.log(i,arr[i]);
+    // }
+
+    //遍历对象
+    // let obj={name:'孙尚香',age:20};
+    // for (let i in obj){
+    //     console.log(i,obj[i]);
+    // }
+</script>
+
+</body>
+</html>

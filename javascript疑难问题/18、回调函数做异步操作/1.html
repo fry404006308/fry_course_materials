@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回调函数做异步操作</title>
+</head>
+<body>
+<!--
+
+
+回调函数做异步操作可以通过回调函数来获取异步操作的返回值
+
+2、
+回调函数可以获取异步操作的返回值的原理是什么
+回调函数作为实参传递给了异步函数的形参，所以回调函数是在异步函数之内执行，
+那么回调函数自然可以获取异步操作的返回值
+
+3、
+什么是回调地狱
+当用回调函数来做异步操作的时候，
+如果需要实现一个异步操作之后再执行另外的异步操作，
+那么后一个异步操作需要嵌套在前一个异步操作的回调函数里面里面，
+当这样嵌套的层数多了，就变成回调地狱了
+
+
+-->
+<script>
+    //异步函数
+    // function async_fun(param){
+    //     setTimeout(function(){
+    //         console.log(222222);
+    //         return '异步操作：'+param;
+    //     },1000);
+    //     console.log(11111);
+    // }
+    // console.log(async_fun(1));
+
+
+    //用回调函数来解决这个问题
+    // function async_fun(param,callback){
+    //     //console.log(callback);
+    //     setTimeout(function(){
+    //         console.log(callback);
+    //         callback('异步操作：'+param);
+    //
+    //         // let callback2=function (a) {
+    //         //     console.log(a);
+    //         // };
+    //         // callback2('异步操作222222：'+param);
+    //         //return '异步操作：'+param;
+    //     },1000);
+    // }
+    // async_fun(1,function (a) {
+    //     console.log(a);
+    // });
+
+
+
+    //需求：
+    //异步操作1做完了再做异步操作2
+    //异步操作2做完了再做异步操作3
+    //异步操作3做完了再做异步操作4
+    function async_fun(param,callback){
+        setTimeout(function(){
+            callback('异步操作：'+param);
+        },1000);
+    }
+    async_fun(1,function (a) {
+        console.log(a);
+        async_fun(2,function (a) {
+            console.log(a);
+            async_fun(3,function (a) {
+                console.log(a);
+                async_fun(4,function (a) {
+                    console.log(a);
+                });
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

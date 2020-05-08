@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>push方法使用及原理</title>
+</head>
+<body>
+<!--
+
+push方法
+作用：向数组末尾添加一个或多个元素
+参数：element1, ..., elementN
+返回值：数组新的长度（length）
+是否影响原数组：肯定影响
+
+
+调用数组方法另外的形式（除了 arr.方法名 外）
+1、Array.prototype.push.apply(vegetables, moreVegs);
+2、[].push.call(this, elem);
+
+push方法的原理
+push方法的原理就是动态的获取传递给push方法的参数，然后依次循环遍历的加到原数组后面
+
+
+-->
+<script>
+    //1、push的基本使用
+    // let arr=[1,2,3];
+    // let new_length=arr.push(4);
+    // //arr.push(5,6,7);
+    // console.log(new_length);
+    // console.log(arr);
+
+    //2、合并两个数组
+    // var vegetables = ['parsnip', 'potato'];
+    // var moreVegs = ['celery', 'beetroot'];
+    //
+    // // 将第二个数组融合进第一个数组
+    // // 相当于 vegetables.push('celery', 'beetroot');
+    // Array.prototype.push.apply(vegetables, moreVegs);
+    //
+    // console.log(vegetables);
+    // // ['parsnip', 'potato', 'celery', 'beetroot']
+
+    //3、像数组一样使用对象
+    // var obj = {
+    //     length: 0,
+    //
+    //     addElem: function addElem (elem) {
+    //         // obj.length is automatically incremented
+    //         // every time an element is added.
+    //         [].push.call(this, elem);
+    //     }
+    // };
+    //
+    // // Let's add some empty objects just to illustrate.
+    // obj.addElem({});
+    // obj.addElem({});
+    // console.log(obj.length);
+    // // → 2
+    // console.log(obj);
+
+    //4、简单实现push方法
+    Array.prototype.push1=function () {
+        //console.log(this);
+        //console.log(arguments);
+        //通过遍历把参数加到原数组里面去
+        for (let i in arguments){
+            this[this.length]=arguments[i];
+            //如果this是对象的话，我们就手动的对这个对象的length属性加1
+            if(Object.prototype.toString.call(this).slice(8,-1)=='Object'){
+                this.length++;
+            }
+        }
+        //console.log(this);
+        return this.length;
+    };
+    // let arr=[1,2,3];
+    // let new_length=arr.push1(4,5,6);
+    // //arr.push1(7);
+    // console.log(new_length);
+    // console.log(arr);
+
+
+    //5、合并两个数组（使用我们自己创建的push方法）
+    // var vegetables = ['parsnip', 'potato'];
+    // var moreVegs = ['celery', 'beetroot'];
+    //
+    // // 将第二个数组融合进第一个数组
+    // // 相当于 vegetables.push('celery', 'beetroot');
+    // Array.prototype.push1.apply(vegetables, moreVegs);
+    //
+    // console.log(vegetables);
+    // // ['parsnip', 'potato', 'celery', 'beetroot']
+
+
+    //6、像数组一样使用对象（使用我们自己创建的push方法）
+    // var obj = {
+    //     length: 0,
+    //
+    //     addElem: function addElem (elem) {
+    //         // obj.length is automatically incremented
+    //         // every time an element is added.
+    //         [].push1.call(this, elem);
+    //     }
+    // };
+    //
+    // // Let's add some empty objects just to illustrate.
+    // obj.addElem({});
+    // obj.addElem({});
+    // console.log(obj.length);
+    // // → 2
+    // console.log(obj);
+
+</script>
+</body>
+</html>

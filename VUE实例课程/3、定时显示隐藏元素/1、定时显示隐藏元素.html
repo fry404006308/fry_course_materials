@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3、定时显示隐藏元素</title>
+</head>
+<body>
+<!--
+
+需求1：
+让元素隔1s自动显示和隐藏
+
+需求2：
+弄一个按钮关闭上述效果
+
+定时显示隐藏元素中，定时器函数可以写在mounted中，关闭显示隐藏效果可以用vue的$destroy()方法，可以在beforeDestroy中清除定时器避免内存泄漏
+
+
+-->
+<div id="app">
+    <p v-show="isShow">{{msg}}</p>
+    <button @click="destroyVue">关闭闪烁</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            isShow:false,
+            msg: '我有一只小毛驴，我永远也不骑'
+        },
+        mounted:function () {
+            console.log('mounted');
+            this.interval_id=setInterval(()=>{
+                console.log(this);
+                console.log(this.isShow);
+                this.isShow=!this.isShow;
+            },1000);
+        },
+        //解决内存泄漏
+        beforeDestroy:function(){
+            console.log('beforeDestroy');
+            clearInterval(this.interval_id);
+        },
+        methods:{
+            destroyVue:function () {
+                //直接destroy之后，定时器会造成内存泄漏
+                this.$destroy();
+            }
+        }
+    });
+    console.log(vm);
+</script>
+</body>
+</html>

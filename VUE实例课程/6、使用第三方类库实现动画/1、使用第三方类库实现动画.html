@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用第三方类库实现动画</title>
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--
+
+可以使用第三方类库实现动画，比如animate.css
+
+-->
+<div id="app">
+    <button @click="show = !show">
+        Toggle render
+    </button>
+    <!-- :duration="毫秒值" 可以设置进入和离开持续时间-->
+    <transition
+            enter-active-class="bounceIn"
+            leave-active-class="bounceOut"
+            :duration="{ enter: 200, leave: 400 }"
+    >
+
+        <!-- 可以直接把animated写在需要设置动画效果的标签上，比如p -->
+        <p v-if="show" class="animated">{{msg}}</p>
+    </transition>
+</div>
+<script src="../js/vue.js"></script>
+
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            show: true,
+            msg: '我有一只小毛驴，我永远也不骑'
+        }
+    });
+</script>
+</body>
+</html>

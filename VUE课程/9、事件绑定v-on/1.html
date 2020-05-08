@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定v-on</title>
+</head>
+<body>
+<!--
+
+vue的v-on指令的事件绑定的流程
+1、在视图的标签里面通过v-on指令来绑定事件
+2、在vue对象的配置对象的methods属性中定义了我们要使用的方法
+
+-->
+<div id="app">
+<!--    <button id="btn">点我有惊喜</button>-->
+    <!--在vue里面可以通过v-on事件绑定机制来给元素添加事件-->
+    <!--在视图里面能够使用的属性或者方法必须是在vue对象里面定义过的-->
+<!--    <button v-on:click="alert('我有一只小毛驴，我从来也不骑');">点我有惊喜</button>-->
+<!--    <button v-on:click="show">点我有惊喜</button>-->
+    <button v-on:mouseover="show">点我有惊喜</button>
+    <!--v-on指令可以简写为@-->
+    <button @mouseover="show">点我有惊喜</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界'
+        },
+        methods:{
+            show:function () {
+                alert('我有一只小毛驴，我从来也不骑');
+            }
+        }
+    });
+    // document.getElementById('btn').onclick=function () {
+    //     alert('我有一只小毛驴，我从来也不骑');
+    // };
+</script>
+</body>
+</html>

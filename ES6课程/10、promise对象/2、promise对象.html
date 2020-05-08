@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise对象</title>
+</head>
+<body>
+<!--
+promise
+英 /ˈprɒmɪs/  美 /ˈprɑːmɪs/
+n. 许诺，允诺；希望
+vt. 允诺，许诺；给人以…的指望或希望
+vi. 许诺；有指望，有前途
+
+Promise对象: 代表了未来某个将要发生的事件(通常是一个异步操作)
+
+promise对象
+将异步操作以同步的流程表达出来, 避免了层层嵌套的回调函数(俗称'回调地狱')
+本质是状态机，通过设定不同的状态来执行不同的操作
+
+promise对象使用操作流程
+ES6的Promise是一个构造函数, 用来生成promise实例
+
+a、创建promise对象
+    let promise = new Promise((resolve, reject) => {
+        //初始化promise状态为 pending
+      //执行异步操作
+      if(异步操作成功) {
+        resolve(value);//修改promise的状态为fullfilled
+      } else {
+        reject(errMsg);//修改promise的状态为rejected
+      }
+    })
+b、调用promise的then()
+    promise.then(function(
+      result => console.log(result),
+      errorMsg => alert(errorMsg)
+    ))
+
+
+promise对象的3个状态
+promise对象的本质是状态机，那么promise对象有哪些状态
+1、pending: 初始化状态
+2、fullfilled: 成功状态
+3、rejected: 失败状态
+
+promise中如何设置状态
+可以在promise的构造函数的参数对应的回调函数中设置，
+如果异步操作成功，可以通过resolve方法设置为成功状态（fullfilled）
+如果异步操作失败，可以通过rejected方法设置为失败状态（rejected）
+
+promise中如何接收设置的状态
+用promise.then()方法可以来接收成功或者失败的状态，
+promise.then()的参数是两个回调函数，
+一个是操作成功的回调函数，一个是操作失败的回调函数
+
+
+promise对象异步操作应用
+使用promise实现超时处理
+使用promise封装处理ajax请求
+
+
+-->
+<script>
+    //promise对象最核心的：
+    // 用同步的流程来解决异步的操作
+
+    //promise的本质：
+    //promise的本质是状态机，也就是通过设置不同的状态，
+    // 来告诉用户异步操作是执行成功了还是执行失败了
+
+    // function async_fun(param){
+    //     setTimeout(()=>{
+    //         return '异步操作：'+param;
+    //     },1000);
+    // }
+    //Promise是一个构造函数
+    //promise有一个参数，这个参数是回调函数
+    //这个回调函数有两个参数：resolve, reject
+    //resolve就是设置异步操作执行成功之后怎么做
+    //reject就是设置异步操作执行失败之后怎么做
+    //并且resolve和reject也是回调函数
+
+    //resolve回调函数就是将promise的状态从pending状态设置为了成功 的状态resolved
+    //resolve回调函数的另外一个作用就是向外面传递异步操作执行成功之后的数据
+
+    //reject回调函数就是将promise的状态从pending状态设置为了失败 的状态rejected
+    //reject回调函数的另外一个作用就是向外面传递异步操作执行失败之后的数据
+    let promise=new Promise(function (resolve, reject) {
+        setTimeout(()=>{
+            //return '异步操作：'+param;
+            //如果异步操作执行成功
+            //resolve({data:'这是resolve返回的数据'});
+            //如果异步操作执行失败
+            reject('异步操作执行失败111');
+        },1000);
+    });
+    console.log(promise);
+    //promise的then方法可以接受到resolve和reject传递过来的数据
+    //then方法里面有两个参数，这两个参数都是回调函数
+    promise.then((data)=>{
+        console.log(data);
+    },(error)=>{
+        console.log(error);
+    });
+
+
+    //promise的状态
+    //初始状态：pending
+    //异步操作执行成功状态：resolved
+    //异步操作执行失败状态：rejected
+
+
+
+
+</script>
+</body>
+</html>

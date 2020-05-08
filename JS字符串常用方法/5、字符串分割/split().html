@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>split()</title>
+</head>
+<body>
+<!--
+split(separator)
+作用：将字符串分割成数组
+参数：separator（分割符），分隔符是字符串，可以是多个字符
+返回值：分割成的数组
+
+split()方法参数separator（分割符）注意点
+split()方法的参数separator（分割符）是字符串，也就是可以是多个字符
+
+
+数组和字符串互转方法
+数组转字符串：join(separator)
+字符串转数组：split(separator)
+
+-->
+<script>
+    console.log('fry abc my so'.split(' '));
+    console.log('fry-abc-my-so'.split('-a'));
+
+    //自己写简略的split，separator是一个字符的情况
+    String.prototype.split_my=function(separator){
+        let start_index=0;
+        let ans_arr=[];
+
+        //遍历字符串数组找到分隔符
+        for (let i=0;i<this.length;i++){
+            if(this[i]==separator){
+                ans_arr.push(this.slice(start_index,i));
+                start_index=i+1;
+            }
+        }
+        return ans_arr;
+    };
+    console.log('fry-abc-my-so'.split_my('-'));
+</script>
+</body>
+</html>

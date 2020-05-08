@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性和方法的区别</title>
+</head>
+<body>
+<!--
+1、
+计算属性和方法的区别
+VUE中的方法和计算属性可以实现同样的功能，
+区别就是计算属性有基于响应式依赖的缓存，而方法没有，
+需要缓存的话就用计算属性。
+
+2、
+vue中计算属性为什么要有缓存
+假设我们有一个性能开销比较大的计算属性 A，它需要遍历一个巨大的数组并做大量的计算。然后我们可能有其他的计算属性依赖于 A。如果没有缓存，我们将不可避免的多次执行 A 的 getter！
+
+
+-->
+<div id="app">
+    <p>Original message: "{{ message }}"</p>
+    <hr>
+    <p>计算属性1: "{{ reversedMessage }}"</p>
+    <p>计算属性2: "{{ reversedMessage }}"</p>
+    <p>计算属性3: "{{ reversedMessage }}"</p>
+    <hr>
+    <p>方法1: "{{ reversedMessage2() }}"</p>
+    <p>方法2: "{{ reversedMessage2() }}"</p>
+    <p>方法3: "{{ reversedMessage2() }}"</p>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            message: '我有一只小毛驴，我永远也不骑'
+        },
+        computed: {
+            // 计算属性的 getter
+            reversedMessage: function () {
+                // `this` 指向 vm 实例
+                console.log('计算属性：reversedMessage');
+                for (let i=1;i<=100000;i++){
+
+                }
+                return this.message.split('').reverse().join('')+'：'+Date.now();
+            }
+        },
+        methods: {
+            //用方法实现同样功能
+            reversedMessage2: function () {
+                console.log('方法：reversedMessage2');
+                for (let i=1;i<=100000;i++){
+
+                }
+                return this.message.split('').reverse().join('')+'：'+Date.now();
+            }
+        }
+    });
+</script>
+</body>
+</html>

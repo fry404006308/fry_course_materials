@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>startsWith()</title>
+</head>
+<body>
+<!--
+startsWith(searchString,position)
+作用：判断当前字符串是否以另外一个给定的子字符串开头
+参数：必带的searchString（要搜索的子字符串），可选的position（搜索的位置）
+返回值：在字符串的开头找到了给定的字符则返回true;否则, 返回false.
+
+-->
+<script>
+    var str = "To be, or not to be, that is the question.";
+
+    console.log(str.startsWith("To be"));         // true
+    console.log(str.startsWith("not to be"));     // false
+    console.log(str.startsWith("not to be", 10)); // true
+</script>
+</body>
+</html>

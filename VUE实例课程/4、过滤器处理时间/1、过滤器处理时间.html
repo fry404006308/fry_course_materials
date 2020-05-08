@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1、过滤器处理时间</title>
+</head>
+<body>
+<!--
+
+vue中处理时间可以用过滤器，可以很方便的得到各种格式的时间数据。可以配合moment.js来处理时间更加方便。
+
+
+-->
+<div id="app">
+    <p>原始date模式：{{time}}</p>
+    <p>年月日 时分秒：{{time | formatDate}}</p>
+    <p>年月日：{{time | formatDate('YYYY-MM-DD')}}</p>
+    <p>时分秒：{{time | formatDate('HH:mm:ss')}}</p>
+</div>
+<script src="../js/vue.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.js"></script>
+<script>
+    Vue.filter('formatDate',function (dateStr,format='YYYY-MM-DD HH:mm:ss') {
+        return moment(dateStr).format(format);
+    });
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '我有一只小毛驴，我永远也不骑'
+        }
+    });
+</script>
+</body>
+</html>

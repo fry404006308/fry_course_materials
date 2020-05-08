@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12、面向对象</title>
+</head>
+<body>
+<!--
+
+ES6中面向对象的写法就是普通的后端语言面向对象的写法，定义类用class关键字，继承通过extends关键字
+
+
+类的定义和使用
+1、通过class定义类
+2、在类中通过constructor定义构造方法，构造方法来初始化类的属性
+3、通过new来创建类的实例
+
+
+类的继承意义何在
+子类继承父类之后可以获得父类的属性和方法
+
+
+类的继承具体语法
+1、通过extends来实现类的继承
+2、通过super调用父类的构造方法来初始化从父类继承过来的属性
+3、重写可以覆盖父类中继承的方法
+
+
+-->
+<script>
+    // class Person {
+    //     //调用类的构造方法
+    //     constructor(name, age){
+    //         this.name = name;
+    //         this.age = age;
+    //     }
+    //     //定义一般的方法
+    //     showName(){
+    //         console.log(this.name, this.age);
+    //     }
+    // }
+    // let person = new Person('林冲', 29);
+    // console.log(person);
+    // person.showName();
+
+
+    //定义一个子类
+    //继承的话会继承父类的属性和方法
+    // class Student extends Person{
+    //     constructor(name, age, stuNum){
+    //         super(name, age);//调用父类的构造方法
+    //         this.stuNum = stuNum;
+    //     }
+    //     showName(){//在子类自身定义方法
+    //         console.log(this.name, this.age, this.stuNum);
+    //     }
+    // }
+    // let student = new Student('夏雨', 10, 22201901);
+    // console.log(student);
+    // student.showName();
+</script>
+
+<script>
+    //需求
+    //创建Animal类（name属性，say方法）
+    //创建Animal类的子类Bird类（age属性，fly方法）
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        say() {
+            console.log('我是'+this.name);
+        }
+    }
+    class Bird extends Animal {
+        constructor(name, age) {
+            super(name);
+            this.age = age;
+        }
+        fly() {
+            console.log(`我是${this.name},${this.age}岁,我在自由自在的飞翔！`);
+        }
+    }
+    let animal1=new Animal('大动物');
+    animal1.say();
+    let monkey=new Bird('飞猴',15);
+    monkey.say();
+    monkey.fly();
+</script>
+</body>
+</html>

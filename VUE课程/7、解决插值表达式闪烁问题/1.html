@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决插值表达式闪烁问题</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--
+插值表达式闪烁 的原因
+在vue.js没有被成功加载之前，new的vue对象肯定是new不出来的，
+那么vue对象控制的区域肯定也是控制不了的，
+那么视图的这块区域就会用标签默认的解析方式，
+那么插值表达式肯定就被显示出来了
+
+解决插值表达式闪烁问题的思路
+1、在vue.js没有被成功加载之前，我们把视图隐藏，这样用户就看不到视图，
+自然也看不到插值表达式，自然也不会有插值表达式闪烁的问题，
+2、而在vue.js被加载成功之后，我们再把视图显示，这样用户就可以看到正常的内容了
+
+-->
+<div v-cloak id="app">
+    {{msg}}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界'
+        }
+    });
+</script>
+</body>
+</html>

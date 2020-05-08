@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>padStart()和padEnd()</title>
+</head>
+<body>
+<!--
+padStart() 方法用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。填充从当前字符串的开始(左侧)应用的。
+padEnd()  方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。
+
+作用：方法用另一个字符串填充当前字符串，以便产生的字符串达到给定的长度
+参数：必带参数targetLength（目标长度）、可选参数padString（填充字符串）
+返回值：填充之后给定长度的字符串
+
+
+-->
+<script>
+    // console.log('abc'.padStart(20));
+    // console.log('abc'.padStart(20,'fry'));
+
+    // 'abc'.padStart(10);         // "       abc"
+    // 'abc'.padStart(10, "foo");  // "foofoofabc"
+    // 'abc'.padStart(6,"123465"); // "123abc"
+    // 'abc'.padStart(8, "0");     // "00000abc"
+    // 'abc'.padStart(1);          // "abc"
+
+    // console.log('abc'.padEnd(20));
+    // console.log('abc'.padEnd(20,'fry'));
+
+    console.log('abc'.length);
+    console.log('abc');
+    console.log('abc'[0]);
+
+    //自己简略写padStart函数：
+    function padStart_my(str,targetLength,padString) {
+        let ans_str='';//结果字符串
+        let length=str.length;//字符串长度
+        let pad_str_length=padString.length;//填充字符串长度
+        let left_length=targetLength-length;//剩余的长度
+        //处理能整个装下padString
+        while(left_length>=pad_str_length){
+            ans_str+=padString;
+            left_length-=pad_str_length;
+        }
+        //处理能部分装下padString
+        for(let i=0;i<left_length;i++){
+            ans_str+=padString[i];
+        }
+        //加上原字符串
+        ans_str+=str;
+        return ans_str;
+    }
+    console.log(padStart_my('abc',20,'fry'));
+</script>
+</body>
+</html>

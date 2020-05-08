@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取变量的类型</title>
+</head>
+<body>
+<!--
+
+获取变量的类型我们主要是通过 调用对象的原型上的toString方法
+
+
+-->
+<script>
+
+    //需求，写一个函数，传进来各种类型的变量，返回这个变量对应的类型的字符串
+    //比如说传进去数组，返回Array
+    //比如说传进去对象，返回Object
+    //比如说传进去null，返回Null
+    //等等
+
+    // console.log({});
+    // console.log({}.toString());
+    //
+    // console.log([]);
+    // console.log([1,2].toString());
+    //
+    // Object.prototype.toString();
+    // Object.prototype.toString.call([]);
+    // console.log(Object.prototype.toString.call([]));
+    //
+    // console.log(Object.prototype.toString.call(''));
+    // console.log(Object.prototype.toString.call(null));
+    // console.log(Object.prototype.toString.call(undefined));
+    // console.log(Object.prototype.toString.call(true));
+    //
+    // console.log(Object.prototype.toString.call(true).slice(8,-1));
+    // console.log(Object.prototype.toString.call('11').slice(8,-1));
+
+    function type_name(a) {
+        return Object.prototype.toString.call(a).slice(8,-1);
+    }
+
+    console.log(type_name([]));
+    console.log(type_name({}));
+
+</script>
+</body>
+</html>

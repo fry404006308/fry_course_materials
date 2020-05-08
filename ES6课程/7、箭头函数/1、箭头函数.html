@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+<!--
+
+箭头函数是ES6中对函数的一种简写方式，可以把let add=function (a,b) {return a+b;} 写成 let add=(a,b)=>a+b; 适用于非方法函数。
+
+let add=function (a,b) {
+    return a+b;
+};
+let add=(a,b)=>a+b;
+
+一、箭头函数语法的特点
+1、如果只有一个参数，参数的()可以省
+2、如果函数体只有一个return语句，函数体的{}和return可以省：
+
+二、箭头函数的this
+箭头函数没有自己的this，
+箭头函数的this不是调用的时候决定的，
+而是在定义的时候决定
+
+箭头函数不会创建自己的this,它只会从自己的作用域链的上一层继承this
+
+三、箭头函数注意点
+a、箭头函数不能用作构造器，和 new一起用会抛出错误。
+b、箭头函数没有prototype属性。
+
+四、箭头函数使用场景
+箭头函数表达式对非方法函数是最合适的，比如回调函数等等，方法函数不适合箭头函数
+
+
+-->
+<script>
+    //1、
+    //函数普通写法
+    // let people=function (name,age) {
+    //     console.log(name,age);
+    // };
+    // people('林黛玉',15);
+
+    //箭头函数写法
+    //普通函数怎么转换成箭头函数：
+    // 去掉function，在函数的形参和函数体的大括号中间加一个箭头=>
+    // let people=(name,age)=>{
+    //     console.log(name,age);
+    // };
+    // people('林黛玉1',151);
+
+    //箭头函数简写形式
+    //1、箭头函数如果只有一个形参，那么小括号可以省略
+    // let people=function (name) {
+    //     console.log(name);
+    // };
+    // people('薛宝钗');
+
+    // let people=(name)=>{
+    //     console.log(name);
+    // };
+    // people('薛宝钗111');
+
+    // let people=name=>{
+    //     console.log(name);
+    // };
+    // people('薛宝钗222');
+
+    //2、箭头函数的函数体中，如果只有一个返回语句，那么函数体的return和大括号都可以省略
+    // let people=function (name) {
+    //     return '名字是'+name;
+    // };
+    // console.log(people('贾母'));
+
+    // let people=(name)=>{
+    //     return '名字是'+name;
+    // };
+    // console.log(people('贾母111'));
+
+    // let people=(name)=> '名字是'+name;
+    // console.log(people('贾母222'));
+
+    // let people=name=> '名字是'+name;
+    // console.log(people('贾母333'));
+
+    // let people=(name)=>{
+    //     let str='名字是'+name;
+    //     return str;
+    // };
+    // console.log(people('贾母111'));
+
+
+</script>
+
+
+</body>
+</html>

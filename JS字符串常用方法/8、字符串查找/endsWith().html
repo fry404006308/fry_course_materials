@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>endsWith()</title>
+</head>
+<body>
+<!--
+
+endsWith(searchString,length)
+作用：判断当前字符串是否是以另外一个给定的子字符串“结尾”的
+参数：必带的searchString（要搜索的子字符串），可选的length（字符串的长度）
+返回值：true或者false
+
+startsWith()方法和endsWith()方法的第二个参数的区别是什么
+startsWith()方法的第二个参数表示要查找的位置，endsWith()方法的第二个参数表示指定字符串搜索的长度。
+
+
+
+
+
+
+-->
+<script>
+    var str = "To be, or not to be, that is the question.";
+
+    console.log( str.endsWith("question.") );  // true
+    console.log( str.endsWith("to be") );      // false
+    console.log( str.endsWith("to be", 19) );  // true
+</script>
+</body>
+</html>

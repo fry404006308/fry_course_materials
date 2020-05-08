@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性绑定v-bind</title>
+</head>
+<body>
+<!--
+
+属性绑定指令v-bind
+可以用标签里面的属性绑定vue里面的数据
+
+v-bind指令可以简写为:（冒号）
+
+-->
+<div id="app">
+    <p v-bind:title="myTitle">{{msg}}</p>
+    <!--v-bind指令可以简写为:（冒号）-->
+    <p :title="myTitle+'aaaaa'">{{msg}}</p>
+
+    <a :href="myHref">让学过的东西不再忘记</a>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界',
+            myTitle:'这是p标签的title属性',
+            myHref:'https://fanrenyi.com'
+        }
+    });
+</script>
+</body>
+</html>

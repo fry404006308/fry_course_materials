@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise对象实例</title>
+</head>
+<body>
+<!--
+
+promise使用的时候将异步函数（比如ajax）放在Promise对应的构造函数中，
+并且通过resolve和reject回调函数设置promise状态并且传递异步操作数据，
+可以用promise的实例的then方法来接收resolve和reject回调函数传递过来的异步数据
+
+
+2、
+如果想在异步操作1后接着做异步操作2，用promise如何做
+在异步操作1的then方法的回调函数中执行异步操作2，
+这样即可通过链式的调用then方法来达到以同步的方式来书写异步操作
+
+
+//测试api
+获取新闻的url：http://api.com/api/news
+获取新闻评论的url：http://api.com/api/news_comment/1
+
+-->
+<button id="btn">获取新闻</button>
+<div id="news"></div>
+
+<script>
+    //将原生的ajax函数用promise对象封装一下
+    function ajax_fun(url){
+        //获取ajax数据，并且设置promise状态
+        let promise=new Promise(function (resolve, reject) {
+            //启动异步任务
+            let request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if(request.readyState === 4){
+                    if(request.status === 200){
+                        //ajax请求数据成功
+                        let data = request.response;
+                        resolve(data);
+                    }else{
+                        //ajax请求数据失败
+                        reject('请求失败了。。。');
+                    }
+                }
+            };
+            request.responseType = 'json';//设置返回的数据类型
+            request.open("GET", url);//规定请求的方法，创建链接
+            request.send();//发送
+        });
+        return promise;
+    }
+
+    document.getElementById('btn').onclick=()=>{
+        ajax_fun('http://api.com/api/news')
+            .then((data)=>{
+            console.log(data);
+
+            let news=data['news'];
+            console.log(news);
+
+            let str='';
+            news.forEach(function (value) {
+                //console.log(value);
+                str+=`<div style="font-weight: 600;font-size: 18px;margin-top: 30px;">${value['title']}</div>`;
+                str+=`<div>${value['content']}</div>`;
+            });
+
+            document.getElementById('news').innerHTML=str;
+
+            //获取新闻的评论数据
+            //获取第一条评论的id
+            let first_id=news[0]['id'];
+            console.log(first_id);
+            return ajax_fun('http://api.com/api/news_comment/'+first_id);
+
+        },(error)=>{
+            alert(error);
+        })
+            .then(function (data) {
+                console.log(data);
+
+            },function () {
+
+            });
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类数组对象</title>
+</head>
+<body>
+<!--
+
+类数组对象就是和数组一样是通过数字下标来访问元素，也有length属性，
+但是没有数组的那些方法
+
+2、
+常见的伪数组对象有哪些
+比如函数中的arguments
+比如dom操作的时候getElementsByTagName等获取的节点列表
+
+3、
+伪数组对象的特点
+具有：指向对象元素的数字索引下标以及 length 属性告诉我们对象的元素个数；
+不具有：诸如 forEach、indexOf 等数组对象具有的方法；
+
+-->
+
+<!--1、类数组实例1-->
+<!--<ul>-->
+<!--    <li>1</li>-->
+<!--    <li>2</li>-->
+<!--    <li>3</li>-->
+<!--</ul>-->
+<!--<script>-->
+<!--    let lis=document.getElementsByTagName('li');-->
+<!--    console.log(lis);-->
+<!--    console.log(lis[0]);-->
+<!--    console.log(lis.length);-->
+<!--    console.log(lis instanceof Array);-->
+<!--    console.log(lis instanceof Object);-->
+
+<!--    // lis.forEach(function (val) {-->
+<!--    //     console.log(val);-->
+<!--    // });-->
+
+<!--    console.log([]);-->
+<!--    console.log([1,2]);-->
+<!--    [1,2].forEach(function (val) {-->
+<!--        console.log(val);-->
+<!--    });-->
+<!--</script>-->
+
+<!--2、类数组实例2-->
+<script>
+    function f1() {
+        console.log(arguments);
+        console.log(arguments instanceof Array);
+        console.log(arguments instanceof Object);
+    }
+    f1(1,32,43,4);
+</script>
+</body>
+</html>

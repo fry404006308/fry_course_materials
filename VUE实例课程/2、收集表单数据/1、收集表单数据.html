@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收集表单数据</title>
+    <style>
+        div{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--
+vue绑定表单数据比较方便，绑定了表单数据之后，可以很方便的用ajax把数据发送到后端
+
+vue做表单数据绑定的时候如何设置checkbox和radio的默认值
+在vue的实例中指定默认值，指定的值就是我们想要选中的input中的value
+
+下拉列表select做双向绑定的时候，绑定是在select上还是在select的option上
+在select上，例如<select v-model="cityId"></select>
+
+-->
+<div id="app">
+    <form action="" @submit.prevent="handleSubmit">
+        <div>
+            <label for="">用户名</label>
+            <input type="text" v-model="username">
+        </div>
+
+        <div>
+            <label for="">密码</label>
+            <input type="password" v-model="password">
+        </div>
+        <div>
+            <label for="">性别</label>
+            <input type="radio" value="male" v-model="sex">男
+            <input type="radio" value="female" v-model="sex">女
+        </div>
+        <div>
+            <label for="">爱好</label>
+            <input type="checkbox" value="football" v-model="hobby">足球
+            <input type="checkbox" value="basketball" v-model="hobby">篮球
+            <input type="checkbox" value="game" v-model="hobby">游戏
+            <input type="checkbox" value="read" v-model="hobby">看书
+        </div>
+        <div>
+            <label for="">城市</label>
+            <select name="" id="" v-model="cityId">
+                <option value="0">未选择</option>
+                <option v-for="item in cities" :value="item.id">{{item.name}}</option>
+            </select>
+        </div>
+        <div>
+            <label for="">描述</label>
+            <textarea cols="30" rows="3" v-model="description"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            username:'',
+            password:'',
+            sex:'female',//设置默认值，设置的值和value里的一样
+            hobby:['game','read'],//数组
+            cities:[
+                {id:'1',name:'新疆'},
+                {id:'2',name:'西藏'},
+                {id:'3',name:'内蒙古'},
+                {id:'4',name:'黑龙江'},
+            ],
+            cityId:0,
+            description:''
+        },
+        methods:{
+            handleSubmit:function () {
+                console.log('handleSubmit');
+            }
+        }
+    });
+</script>
+</body>
+</html>

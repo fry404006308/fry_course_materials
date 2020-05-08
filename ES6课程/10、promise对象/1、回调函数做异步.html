@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1、回调函数做异步</title>
+</head>
+<body>
+<!--
+
+需求：
+异步操作1做完了再做异步操作2，
+异步操作2做完了再做异步操作3
+
+-->
+<script>
+    // function async_fun(param){
+    //     setTimeout(()=>{
+    //        return '异步操作：'+param;
+    //     },1000);
+    // }
+    // console.log(async_fun(1));
+
+    //想要接受到参数可以用回调函数
+    // function async_fun(param,callback){
+    //     setTimeout(()=>{
+    //         callback('异步操作：'+param);
+    //         //return '异步操作：'+param;
+    //     },1000);
+    // }
+    //
+    // async_fun(1,function (a) {
+    //     console.log(a);
+    // });
+
+
+    //异步操作1做完了再做异步操作2
+    //异步操作2做完了再做异步操作3
+
+    // function async_fun(param,callback){
+    //     setTimeout(()=>{
+    //         callback('异步操作：'+param);
+    //     },1000);
+    // }
+
+    //异步的流程来做异步的操作
+    // async_fun(1,function (a) {
+    //     console.log(a);
+    //     async_fun(2,function (a) {
+    //         console.log(a);
+    //         async_fun(3,function (a) {
+    //             console.log(a);
+    //             async_fun(4,function (a) {
+    //                 console.log(a);
+    //             });
+    //         });
+    //     });
+    // });
+
+    //同步的流程来做异步的操作
+    // async_fun(1,function (a) {
+    //     console.log(a);
+    // });
+    // async_fun(2,function (a) {
+    //     console.log(a);
+    // });
+    // async_fun(3,function (a) {
+    //     console.log(a);
+    // });
+    // async_fun(4,function (a) {
+    //     console.log(a);
+    // });
+
+</script>
+</body>
+</html>

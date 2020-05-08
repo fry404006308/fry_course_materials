@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pop方法使用及原理</title>
+</head>
+<body>
+<!--
+
+pop方法
+作用：删除数组最后一个元素，并返回该元素的值
+参数：没有参数
+返回值：删除的元素的值
+是否影响原数组：肯定影响
+
+
+数组的push方法结合pop方法，可以用数组来模拟栈操作
+入栈操作就是push，出栈操作就是pop
+
+
+pop方法删除数组最后面1个元素的原理是什么
+直接把数组的length减1即可
+
+-->
+<script>
+    // let arr=[1,2,3,4];
+    // let val=arr.pop();
+    // arr.pop();
+    // console.log(arr);
+    // console.log(val);
+
+    //2、简单的实现pop方法
+    // Array.prototype.pop1=function () {
+    //     //a、返回数组的最后一个值
+    //     let val=this[this.length-1];
+    //     //b、删除数组里面最后的元素
+    //     this.length--;
+    //     return val;
+    // };
+    // let arr=[1,2,3,4];
+    // let val=arr.pop1();
+    // arr.pop1();
+    // console.log(arr);
+    // console.log(val);
+
+    //3、push方法加pop方法用数组来模拟栈
+    //入栈 push  出栈pop
+    let stack=[1,2,3,4];
+    stack.push(5);
+    stack.push(6);
+    stack.pop();
+    stack.pop();
+    stack.pop();
+    console.log(stack);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVVM原理</title>
+</head>
+<body>
+<!--
+
+后端的MVC
+m（model）：从数据库里面拿数据并且处理数据
+v（view）：视图
+c（controller）：进行业务逻辑的控制
+
+
+vue的mvvm原理？
+第一个m是Model，数据模型，就是用来获取数据的
+第二个v是View，也就是视图，数据肯定是要在视图里面展示的
+第三个vm是ViewModel，也就是视图模型，也就是vue实例的部分，
+也就是做dom监听和数据绑定
+
+
+
+mvvm中的vm层的意义？
+a、【实现view层和model层的解耦】：vm层分割了m（model）层和v（view）层，
+每当view层需要获取或者保存数据的时候，
+都需要vm做中间的处理
+b、【数据的双向绑定】：vm层（ViewModel）（vue实例）帮我们做了数据的双向绑定（具体dom监听和数据绑定），
+可以帮我们节约很多代码
+
+-->
+<div id="app">
+    <input type="text" v-model="msg2">
+    <div>{{msg2}}</div>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            msg:'欢迎来到vue的世界1111111111111',
+            msg2:'这是vue的双向数据绑定的实例'
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表动画</title>
+    <style>
+        li {
+            border: 1px dashed #999;
+            margin: 5px;
+            line-height: 35px;
+            padding-left: 5px;
+            font-size: 12px;
+            width: 100%;
+        }
+
+        li:hover {
+            background-color: hotpink;
+            transition: all 0.8s ease;
+        }
+
+
+
+        .v-enter,
+        .v-leave-to {
+            opacity: 0;
+            transform: translateY(80px);
+        }
+
+        .v-enter-active,
+        .v-leave-active {
+            transition: all 0.6s ease;
+        }
+
+        /* 下面的 .v-move 和 .v-leave-active 配合使用，能够实现列表后续的元素，渐渐地漂上来的效果 */
+        .v-move {
+            transition: all 0.6s ease;
+        }
+        .v-leave-active{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<!--
+
+
+
+-->
+<div id="app">
+
+    <div>
+        <label>
+            Id:
+            <input type="text" v-model="id">
+        </label>
+
+        <label>
+            Name:
+            <input type="text" v-model="name">
+        </label>
+
+        <input type="button" value="添加" @click="add">
+    </div>
+
+    <!-- <ul> -->
+    <!-- 在实现列表过渡的时候，如果需要过渡的元素，是通过 v-for 循环渲染出来的，不能使用 transition 包裹，需要使用 transitionGroup -->
+    <!-- 如果要为 v-for 循环创建的元素设置动画，必须为每一个 元素 设置 :key 属性 -->
+    <!-- 给 transition-group 添加 appear 属性，实现页面刚展示出来时候，入场时候的效果 -->
+    <!-- 通过 为 transition-group 元素，设置 tag 属性，指定 transition-group 渲染为指定的元素，如果不指定 tag 属性，默认，渲染为 span 标签 -->
+    <transition-group appear tag="ul">
+        <li v-for="(item, i) in list" :key="item.id" @click="del(i)">
+            {{item.id}} --- {{item.name}}
+        </li>
+    </transition-group>
+    <!-- </ul> -->
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    // 创建 Vue 实例，得到 ViewModel
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            id: '',
+            name: '',
+            list: [
+                { id: 1, name: '熊猫' },
+                { id: 2, name: '兔子' },
+                { id: 3, name: '老虎' },
+                { id: 4, name: '海豚' }
+            ]
+        },
+        methods: {
+            add() {
+                this.list.push({ id: this.id, name: this.name })
+                this.id = this.name = ''
+            },
+            del(i) {
+                this.list.splice(i, 1)
+            }
+        }
+    });
+</script>
+</body>
+</html>

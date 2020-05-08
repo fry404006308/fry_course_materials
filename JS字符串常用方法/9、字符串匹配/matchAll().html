@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>matchAll()</title>
+</head>
+<body>
+<!--
+matchAll(regexp)
+作用：matchAll() 方法返回一个包含所有匹配正则表达式的结果及分组捕获组的迭代器
+参数：regexp（正则表达式）
+返回值：返回匹配的结果
+
+match()和matchAll()的区别
+matchAll()方法返回的是一个迭代器，match()方法返回的是一个数组
+
+
+-->
+<script>
+    let regexp = /t(e)(st(\d?))/g;
+    let str = 'test1test2';
+    let ans=str.matchAll(regexp);
+    console.log(ans);//RegExp String Iterator
+
+    // for (let val of  ans){
+    //     console.log(val);
+    // }
+
+    let array = [...str.matchAll(regexp)];
+
+    console.log(array[0]);
+    // expected output: Array ["test1", "e", "st1", "1"]
+
+    console.log(array[1]);
+    // expected output: Array ["test2", "e", "st2", "2"]
+
+</script>
+</body>
+</html>

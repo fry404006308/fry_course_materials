@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解构赋值</title>
+</head>
+<body>
+<!--
+1、理解:
+    解构赋值就是对数组或者对象的批量赋值
+
+  * 从对象或数组中提取数据, 并赋值给变量(多个)
+  * 左右的结构是一样的
+2、对象的解构赋值
+  let {n, a} = {n:'fry', a:12}
+3、数组的解构赋值
+  let [a,b] = [1, 'fry'];
+4、用途
+  * 给多个形参赋值
+-->
+<script>
+    //一、对象的结构赋值
+    //1、普通的对象写法
+    // let obj = {name : '牛魔王', age : 39};
+    // let name=obj.name;
+    // let age=obj.age;
+    // console.log(name,age);
+
+    //2、对象的解构赋值
+    //解构赋值左右两边的结构要保证一样
+    // let {name,age} = {name : '铁扇公主', age : 35};
+    // console.log(name,age);
+
+    //3、解构赋值的部分传值
+    // let {age} = {name : '铁扇公主', age : 35};
+    // console.log(age);
+    //变量名不对的情况
+    // let {age1} = {name : '铁扇公主', age : 35};
+    // console.log(age1);
+
+    //在对象的结构赋值中，接收的变量的名字要和属性的名字一样
+
+    //二、数组的解构赋值
+    //数组在结构赋值的时候值是按照位置一一传递
+    // let arr = ['abc', 23, true];
+    // let [a, b, c, d] = arr;
+    // console.log(a, b, c, d);
+
+    // let [a, b, c, d] = ['abc', 23, true];
+    // console.log(a, b, c, d);
+
+
+    //结构数组的时候不按顺序拿值
+    // let arr = ['abc', 23, true];
+    // let [,,a] = arr;
+
+    //在数组的解构赋值中 ，我们想拿到随便位置的元素，我们可以用逗号来占位
+    // let [,,a] = ['abc', 23, true];
+    // console.log(a);
+
+
+    //三、解构赋值应用
+    //不用解构赋值
+    // let obj = {name : '牛魔王', age : 39};
+    // function person(name,age) {//不用解构赋值
+    //     console.log(name, age);
+    // }
+    // person(obj.name,obj.age);
+    //用解构赋值
+    // let obj = {name : '牛魔王', age : 41};
+    // function person({name, age}) {//不用解构赋值
+    //     console.log(name, age);
+    // }
+    // person(obj);
+
+</script>
+</body>
+</html>

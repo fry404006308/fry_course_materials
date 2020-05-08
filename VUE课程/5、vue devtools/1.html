@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue devtools</title>
+</head>
+<body>
+<!--
+
+vue devtools使用注意
+vue devtools在vue的开发环境（vue.js）中才可以用，生产环境（vue.min.js）中不可用
+
+-->
+<div id="app">
+    <input type="text" v-model="msg2">
+    <div>{{msg2}}</div>
+</div>
+<!--<script src="../js/vue.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'欢迎来到vue的世界1111111111111',
+            msg2:'这是vue的双向数据绑定的实例'
+        }
+    });
+</script>
+
+</body>
+</html>

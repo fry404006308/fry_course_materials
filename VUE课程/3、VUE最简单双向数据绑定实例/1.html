@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE最简单双向数据绑定实例</title>
+</head>
+<body>
+<!--
+
+双向绑定
+v-model指令：<input type="text" v-model="msg">
+
+单向数据绑定：
+通过vue对象==>视图的显示
+
+
+双向数据绑定：
+通过vue对象<==>视图的显示
+
+
+input和div能同步变化的原因
+1、input里面内容改变的时候，vue对象里面的data的msg2也同步发生了变化
+2、vue对象里面的data的msg2发生变化的时候，<div>{{msg2}}</div> 也同步发生变化
+
+用原生的js或者jquery如何来实现双向数据绑定
+1、监听到input的变化
+2、input发生变化的时候，我们去同步改变msg2的内容
+3、msg2改变的时候，去更新视图里面的<div>{{msg2}}</div>的内容
+
+
+-->
+<div id="app">
+    <input type="text" v-model="msg2">
+    <div>{{msg2}}</div>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'欢迎来到vue的世界1111111111111',
+            msg2:'这是vue的双向数据绑定的实例'
+        }
+    });
+</script>
+</body>
+</html>

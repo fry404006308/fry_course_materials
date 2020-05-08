@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>match()</title>
+</head>
+<body>
+<!--
+
+match(regexp)
+作用：用正则表达式匹配字符串
+参数：regexp（正则表达式）
+返回值：返回匹配的结果
+
+-->
+<script>
+    //match基本使用
+    // var str = 'For more information, see Chapter 3.4.5.1';
+    // var re = /see (chapter \d+(\.\d)*)/i;
+    // var found = str.match(re);
+    //
+    // console.log(found);
+
+    // logs [ 'see Chapter 3.4.5.1',
+    //        'Chapter 3.4.5.1',
+    //        '.1',
+    //        index: 22,
+    //        input: 'For more information, see Chapter 3.4.5.1' ]
+
+    // 'see Chapter 3.4.5.1' 是整个匹配。
+    // 'Chapter 3.4.5.1' 被'(chapter \d+(\.\d)*)'捕获。
+    // '.1' 是被'(\.\d)'捕获的最后一个值。
+    // 'index' 属性(22) 是整个匹配从零开始的索引。
+    // 'input' 属性是被解析的原始字符串。
+
+    //match 使用全局（global）和忽略大小写（ignore case）标志
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var regexp = /[A-E]/gi;
+    var matches_array = str.match(regexp);
+
+    console.log(matches_array);// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE最简单实例</title>
+</head>
+<body>
+<!--
+VUE基本使用
+1、引入Vue.js
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+2、创建Vue对象
+    el : 指定根element(选择器)
+    data : 初始化数据(页面可以访问)
+
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    message: 'Hello Vue!'
+	  }
+	})
+
+3、在模板中使用数据
+    模板语法：双大括号：{{ message }}
+
+	<div id="app">
+	  {{ message }}
+	</div>
+
+-->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<div id="app">
+    {{msg}}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界'
+        }
+    });
+</script>
+</body>
+</html>

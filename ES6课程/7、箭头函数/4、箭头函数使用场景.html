@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4、箭头函数使用场景</title>
+</head>
+<body>
+
+<script>
+    //四、箭头函数使用场景
+    //箭头函数表达式对非方法函数是最合适的
+    //箭头函数不适合方法函数，除此之外，其它情况下箭头函数都可以用
+    let obj = {
+        i: 10,
+        b: () => console.log(this.i, this),
+        c: function() {
+            console.log( this.i, this)
+        }
+    };
+    obj.b();// undefined, Window{...}
+    obj.c();// 10, Object {...}
+</script>
+
+</body>
+</html>

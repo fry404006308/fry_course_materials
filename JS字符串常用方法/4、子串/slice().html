@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slice()</title>
+</head>
+<body>
+<!--
+slice()
+作用：对字符串进行切片
+参数：必带beginIndex，可选endIndex
+返回值：返回一个从原字符串中提取出来的新字符串
+
+string.slice(start, end)提取一个字符串中，start和end为负数是什么情况
+如果 start或end 是 -3，则表示strLength - 3，例如：console.log('The quick brown fox'.slice(-5,-1));//n fo
+
+-->
+<script>
+    console.log('The quick brown fox'.slice(1,5));//he q
+    console.log('The quick brown fox'.slice(-5,-1));//n fo
+
+    //自己写简略的slice函数
+    String.prototype.slice_my=function(beginIndex,endIndex){
+        let ans_str='';
+        endIndex=this.length>endIndex?endIndex:this.length;
+        for(let i=beginIndex;i<endIndex;i++){
+            ans_str+=this[i];
+        }
+        return ans_str;
+        //console.log(this);
+    };
+    //'The quick brown fox'.slice_my(1,5);
+    console.log('The quick brown fox'.slice_my(1,5));
+</script>
+</body>
+</html>

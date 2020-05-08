@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>includes()</title>
+</head>
+<body>
+<!--
+
+includes(searchString,position)
+作用：判断一个字符串是否包含在另一个字符串中
+参数：必带的searchString，可选的position（搜索的位置）
+返回值：true或者false
+
+-->
+<script>
+    var str = 'To be, or not to be, that is the question.';
+
+    console.log(str.includes('To be'));       // true
+    console.log(str.includes('question'));    // true
+    console.log(str.includes('nonexistent')); // false
+    console.log(str.includes('To be', 1));    // false
+    console.log(str.includes('TO BE'));       // false
+</script>
+</body>
+</html>

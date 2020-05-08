@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Move Transitions Sudoku Example</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 238px;
+            margin-top: 10px;
+        }
+        .cell {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #aaa;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+        .cell:nth-child(3n) {
+            margin-right: 0;
+        }
+        .cell:nth-child(27n) {
+            margin-bottom: 0;
+        }
+        .cell-move {
+            transition: transform 1s;
+        }
+    </style>
+</head>
+<body>
+<!--
+
+
+vue网格动画可以用<transition-group> 组件、v-move属性、lodash.js来做。
+原理就是对元素移动的先后位置加动画。
+
+<transition-group> 组件还有一个特殊之处。不仅可以进入和离开动画，还可以改变定位。要使用这个新功能只需了解新增的 v-move attribute，它会在元素的改变定位的过程中应用。像之前的类名一样，可以通过 name 属性来自定义前缀，也可以通过 move-class 属性手动设置。
+
+-->
+<div id="sudoku-demo" class="demo">
+    <h1>Lazy Sudoku</h1>
+    <p>Keep hitting the shuffle button until you win.</p>
+
+    <button @click="shuffle">
+        Shuffle
+    </button>
+    <transition-group name="cell" tag="div" class="container">
+        <div v-for="cell in cells" :key="cell.id" class="cell">
+            {{ cell.number }}
+        </div>
+    </transition-group>
+</div>
+
+<script>
+    new Vue({
+        el: "#sudoku-demo",
+        data: {
+            cells: Array.apply(null, { length: 81 }).map(function(_, index) {
+                return {
+                    id: index,
+                    number: (index % 9) + 1
+                };
+            })
+        },
+        methods: {
+            shuffle: function() {
+                this.cells = _.shuffle(this.cells);
+            }
+        }
+    });
+</script>
+</body>
+</html>

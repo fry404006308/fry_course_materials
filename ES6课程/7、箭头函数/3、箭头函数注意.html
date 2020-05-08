@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3、箭头函数注意</title>
+</head>
+<body>
+
+<script>
+    //箭头函数注意
+    //a、箭头函数不能用作构造器，和 new一起用会抛出错误。
+
+    // function Foo() {
+    //
+    // }
+    // let Foo=function () {
+    //
+    // }
+
+    //let Foo=()=>{}
+
+    // var Foo = () => {};
+    // var foo = new Foo(); // TypeError: Foo is not a constructor
+
+    //b、箭头函数没有prototype属性。
+    // var Foo = () => {};
+    // console.log(Foo.prototype); // undefined
+    // console.log(Foo);
+</script>
+
+</body>
+</html>

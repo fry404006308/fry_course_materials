@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2、箭头函数this实例</title>
+</head>
+<body>
+
+
+<script>
+    //4、箭头函数的this
+    // function Person(name){
+    //     this.name=name;
+    //     this.age = 0;
+    //     console.log('Person');
+    //     console.log(this);
+    //
+    //     let _this=this;
+    //
+    //     setTimeout(function () {
+    //         _this.age++;
+    //         console.log('setTimeout');
+    //         console.log(this);
+    //         console.log(_this);
+    //     }, 1000);
+    // }
+    // let p = new Person('p');
+
+
+    //箭头函数
+    // function Person(name){
+    //     this.name=name;
+    //     this.age = 0;
+    //     console.log('Person');
+    //     console.log(this);
+    //
+    //     setTimeout(()=>{
+    //         this.age++;
+    //         console.log('setTimeout');
+    //         console.log(this);
+    //     }, 1000);
+    // }
+    // let p = new Person('p');
+
+
+    //5、
+    // function Person(name) {
+    //     this.name=name;
+    //     this.obj = {
+    //         showThis : () => {
+    //             console.log(this);
+    //         },
+    //         showThis2 :function () {
+    //             console.log(this);
+    //         }
+    //     }
+    // }
+    // let p1= new Person('p1');
+    // p1.obj.showThis();
+    // p1.obj.showThis2();
+</script>
+
+<!--<button id="btn">按钮btn</button>-->
+<!--<script>-->
+<!--    let btn = document.getElementById('btn');-->
+<!--    // btn.onclick = function () {-->
+<!--    //     console.log(this);-->
+<!--    // };-->
+<!--    btn.onclick = ()=>{-->
+<!--        console.log(this);-->
+<!--    };-->
+<!--</script>-->
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画钩子函数</title>
+    <style>
+        .ball {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+
+动画钩子函数也就是用函数（用js控制css）来操作动画，动画钩子函数中可以更加方便的操作动画，比如只实现半场动画，像物品添加到购物车的动画
+
+
+-->
+<div id="app">
+    <button @click="isShow=!isShow">添加到购物车</button>
+    <!-- 1. 使用 transition 元素把 小球包裹起来 -->
+    <transition
+            @before-enter="beforeEnter"
+            @enter="enter"
+            @after-enter="afterEnter">
+        <div class="ball" v-show="isShow"></div>
+    </transition>
+    <br>
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            isShow:false
+        },
+        methods: {
+            // 注意： 动画钩子函数的第一个参数：el，表示 要执行动画的那个DOM元素，是个原生的 JS DOM对象
+            // 大家可以认为 ， el 是通过 document.getElementById('') 方式获取到的原生JS DOM对象
+            beforeEnter(el){
+                // beforeEnter 表示动画入场之前，此时，动画尚未开始，可以 在 beforeEnter 中，设置元素开始动画之前的起始样式
+                // 设置小球开始动画之前的，起始位置
+                el.style.transform = "translate(0, 0)";
+            },
+            enter(el, done){
+                // 这句话，没有实际的作用，但是，如果不写，出不来动画效果；
+                // 可以认为 el.offsetWidth 会强制动画刷新
+                el.offsetWidth;
+                // enter 表示动画 开始之后的样式，这里，可以设置小球完成动画之后的，结束状态
+                el.style.transform = "translate(150px, 450px)";
+                el.style.transition = 'all 1s ease';
+
+                // 这里的 done， 起始就是 afterEnter 这个函数，也就是说：done 是 afterEnter 函数的引用
+                done();
+            },
+            afterEnter(el){
+                // 动画完成之后，会调用 afterEnter
+                // console.log('ok')
+                // 只设置半场动画的关键，让isShow在这个半场中由false依旧变成false
+                //那么下次点击的时候依旧是从隐藏开始，依旧是进入的半场
+                this.isShow = !this.isShow;
+            }
+        }
+    });
+</script>
+</body>
+</html>

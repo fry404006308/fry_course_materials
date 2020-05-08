@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>substring()</title>
+</head>
+<body>
+<!--
+substring()
+作用：截取子串
+参数：必带的indexStart（截取开始索引），indexEnd（截取结束索引）
+返回值：截取的子串
+
+substring()方法截取子串的时候，关于参数indexStart和indexEnd的注意点是时候
+substring()方法留头不留尾，也就是截取的子串包含indexStart，不包含indexEnd
+
+js中截取子串函数slice和SubString的区别
+string.slice(start, end)提取一个字符串
+string.substring(start, end)提取一个字符串,end不支持负数
+
+-->
+<script>
+    var anyString = "Mozilla";
+    console.log(anyString.substring(1));
+    console.log(anyString.substring(1,3));//'oz'
+
+</script>
+</body>
+</html>

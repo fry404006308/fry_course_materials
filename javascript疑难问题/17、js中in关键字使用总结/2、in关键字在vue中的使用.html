@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2、in关键字在vue中的使用</title>
+</head>
+<body>
+<!--
+
+1、v-for循环数组：<p v-for="item in list">{{item}}</p>
+2、v-for循环对象：<p v-for="(val,key) in obj">val：{{val}}---key：{{key}}</p>
+3、v-for循环数字：<p v-for="count in 10">{{count}}</p>
+
+v-for循环数组的时候为什么item在index前面，例如v-for="(item,index) in list"
+作者在写方法的时候，肯定是最重要的、最常用的参数在前面，就像forEach中的回调函数的参数（val、index、arr）
+
+v-for遍历对象的时候，比如v-for="(val,key) in obj"，为什么有val、key，并且val为什么在key前面
+为什么有val、key：因为对象里面本身就是键值对，肯定是要有key和val
+val在key前面：因为val比key更常用，作者在写方法的时候，肯定是最重要的、最常用的参数在前面
+
+
+
+-->
+<div id="app">
+    <!--1、v-for循环数组-->
+<!--    <p v-for="item in list">{{item}}</p>-->
+<!--    <p v-for="(item,index) in list">{{item}}&#45;&#45;{{index}}</p>-->
+
+    <!--2、v-for循环对象-->
+<!--    <p v-for="val in obj">{{val}}</p>-->
+<!--    <p v-for="(val,key) in obj">val：{{val}}-&#45;&#45;key：{{key}}</p>-->
+    <!--接第三个参数index-->
+<!--    <p v-for="(val,key,index) in obj">val：{{val}}-&#45;&#45;key：{{key}}-&#45;&#45;index：{{index}}</p>-->
+
+    <!--3、v-for遍历数字-->
+<!--    <p v-for="count in 10">{{count}}</p>-->
+
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            list:[11,12,13,14,15,16],
+            obj:{name:'赵云',age:18}
+        }
+    });
+</script>
+</body>
+</html>

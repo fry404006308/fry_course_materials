@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>replace()</title>
+</head>
+<body>
+<!--
+
+replace(regexp,newSubStr)
+作用：用新的字符串替换原字符串中的内容
+参数：regexp（正则表达式），newSubStr（新的字符串）
+返回值：替换好之后的字符串
+
+-->
+<script>
+    //在 replace() 中使用正则表达式
+    // var str = 'Twas the night before Xmas...';
+    // var newstr = str.replace(/xmas/i, 'Christmas');
+    // console.log(newstr);  // Twas the night before Christmas...
+
+    //交换字符串中的两个单词
+    var re = /(\w+)\s(\w+)/;
+    var str = "John Smith";
+    var newstr = str.replace(re, "$2, $1");
+    console.log(newstr);// Smith, John
+
+</script>
+</body>
+</html>

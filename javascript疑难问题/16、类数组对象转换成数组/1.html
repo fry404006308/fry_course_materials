@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类数组对象转换成数组</title>
+</head>
+<body>
+<!--
+1、slice
+最经典的方法，使用Array的slice方法，
+此方法如果不传参数的话会返回原数组的一个拷贝，
+因此可以用此方法转换类数组到数组；
+
+2、Array.from()
+是ES6中的方法，用于将类数组转换为数组。
+只要有length属性的对象，都可以应用此方法转换成数组。
+
+3、扩展运算符...
+ES6中的扩展运算符...也能将某些数据结构转换成数组，
+这种数据结构必须有遍历器接口。
+
+4、jquery的$.makeArray()
+jQuery的此方法可以将类数组对象转化为真正的数组
+
+-->
+<script>
+    //1、slice方法
+    // function f1() {
+    //     console.log(arguments);
+    //     //console.log(arguments instanceof Array);
+    //     //console.log(arguments instanceof Object);
+    //
+    //     //console.log([]);
+    //     // let arr = Array.prototype.slice.call(arguments);
+    //     // console.log(arr);
+    //     let arr1 = [].slice.apply(arguments);
+    //     console.log(arr1);
+    // }
+    // f1(1,32,43,4);
+
+    //2、Array.from()
+    // function f1() {
+    //     console.log(arguments);
+    //
+    //     let arr = Array.from(arguments);
+    //     console.log(arr);
+    // }
+    // f1(1,32,43,4);
+
+    //3、扩展运算符...
+    // function f1() {
+    //     console.log(arguments);
+    //
+    //     //1,32,43,4
+    //     console.log(...arguments);
+    //     let arr = [...arguments];
+    //     console.log(arr);
+    // }
+    // f1(1,32,43,4);
+
+
+</script>
+
+<!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+<!--<script>-->
+<!--    //4、jquery的$.makeArray()-->
+<!--    function f1() {-->
+<!--        console.log(arguments);-->
+
+<!--        let arr = $.makeArray(arguments);-->
+<!--        console.log(arr);-->
+<!--    }-->
+<!--    f1(1,32,43,5);-->
+<!--</script>-->
+</body>
+</html>
