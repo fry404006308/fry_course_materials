@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+</head>
+<body>
+<!--
+
+方法和计算属性可以做一样的事，那么区别是什么
+计算属性有缓存，方法没有缓存，所以如果做计算量大的操作，可以用计算属性
+
+-->
+<div id="app">
+    <!--基本的插值表达式来做-->
+    <p>{{firstName+'·'+lastName}}</p>
+    <p>全名是：{{firstName+'·'+lastName}}</p>
+
+    <!--方法来做-->
+    <hr>
+    <h1>方法来做</h1>
+    <p>{{fullName()}}</p>
+    <p>全名是：{{fullName()}}</p>
+
+    <!--计算属性来做-->
+    <hr>
+    <h1>计算属性来做</h1>
+    <p>{{fullName1}}</p>
+    <p>全名是：{{fullName1}}</p>
+
+    <hr>
+    <h1>计算属性get和set都带上</h1>
+    <p>{{fullName2}}</p>
+    <p>全名是：{{fullName2}}</p>
+    <input type="text" v-model="fullName2">
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            firstName:'尼古拉斯',
+            lastName:'诸葛亮'
+        },
+        methods:{
+            fullName(){
+                return this.firstName+'·'+this.lastName;
+            }
+        },
+        computed:{
+            //相当于fullName1属性的get方法，在调用fullName1是自动调用
+            fullName1() {
+                return this.firstName+'·'+this.lastName;
+            },
+            //给它一个对象
+            fullName2:{
+                //在使用fullName2的时候自动调用get方法
+                get:function () {
+                    return this.firstName+'·'+this.lastName;
+                },
+                //在设置（改变）fullName2的值的时候自动调用set方法
+                set:function (value) {
+                    //console.log('fullName2--set:function');
+                    // console.log(value);
+                    // console.log(value.split('·'));
+                    let nameArr=value.split('·');
+                    this.firstName=nameArr[0];
+                    this.lastName=nameArr[1];
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

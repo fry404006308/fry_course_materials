@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class类绑定</title>
+    <style>
+        .red{color: red}
+        .big{font-size: 30px}
+        .big-1{font-size: 40px}
+        .italic{font-style: italic}
+    </style>
+</head>
+<body>
+<!--
+
+注意点：
+在vue的指令中，如果没有带引号，那么会被当做变量来解析，
+就会去vue里面找，如果没有找到，就会报错
+如果带引号了，就会被直接当成字符串来解析
+
+-->
+<!--<p class="red" style="font-size: 30px"></p>-->
+<div id="app">
+    <!--1、用变量的方式-->
+<!--    <p v-bind:class="red">{{msg}}</p>-->
+
+    <!--2、用字符串的方式-->
+<!--    <p v-bind:class="'red big italic'">{{msg}}</p>-->
+
+    <!--3、数组的方式-->
+    <!--会依次将数组里面的元素解析到class属性里面-->
+
+    <!--在数组里面放字符串-->
+<!--    <p v-bind:class="['red','big']">{{msg}}</p>-->
+    <!--在数组里面放变量-->
+<!--    <p v-bind:class="[red1,'big']">{{msg}}</p>-->
+    <!--在数组里面放三元表达式-->
+<!--    <p v-bind:class="[red1,isBig?'big':'']">{{msg}}</p>-->
+    <!--在数组里面放对象-->
+<!--    <p v-bind:class="[red1,{'big':false}]">{{msg}}</p>-->
+
+    <!--4、对象的方式-->
+    <!--对象里面属性名对应的属性值为true的话，就把属性名绑定到class属性-->
+<!--    <p v-bind:class="{big:true}">{{msg}}</p>-->
+<!--    <p v-bind:class="{'big-1':true}">{{msg}}</p>-->
+<!--    <p v-bind:class="{'big':true,'red':true}">{{msg}}</p>-->
+<!--    <p v-bind:class="class2">{{msg}}</p>-->
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界',
+            red:'red',
+            red1:'red italic',
+            isBig:false,
+            class2:{'big':true,'red':true}
+        }
+    });
+</script>
+</body>
+</html>

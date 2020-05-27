@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10、使用v-model实现简单计算器</title>
+</head>
+<body>
+<!--
+
+使用v-model实现简单计算器也就是v-model做双向数据绑定，交互多的页面用vue做双向数据绑定会比较方便
+
+-->
+<div id="app">
+    <input type="text" v-model="n1" @change="calc">
+    <select v-model="opt" @click="calc">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" v-model="n2" @change="calc">
+    <input type="button" value="=" @click="calc">
+    <input type="text" v-model="result">
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            n1: 0,
+            n2: 0,
+            opt: '+',
+            result: 0
+        },
+        methods: {
+            calc:function () {
+                switch(this.opt){
+                    case "+":
+                        this.result=parseInt(this.n1)+parseInt(this.n2);
+                        break;
+                    case "-":
+                        this.result=parseInt(this.n1)-parseInt(this.n2);
+                        break;
+                    case "*":
+                        this.result=parseInt(this.n1)*parseInt(this.n2);
+                        break;
+                    case "/":
+                        this.result=parseInt(this.n1)/parseInt(this.n2);
+                        break;
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

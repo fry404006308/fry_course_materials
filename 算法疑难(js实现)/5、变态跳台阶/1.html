@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变态跳台阶</title>
+</head>
+<body>
+<!--
+需求：
+一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。
+求该青蛙跳上一个n级的台阶总共有多少种跳法。
+
+f(n)来表示青蛙跳上一个n级的台阶跳法种数
+
+f(n)
+
+多枚举几个例子，找规律，
+f(1)=1
+f(2)=2
+f(3)=f(2)+f(1)+1
+f(4)=f(3)+f(2)+f(1)+1
+f(5)=f(4)+f(3)+f(2)+f(1)+1
+...
+f(n)=f(n-1)+f(n-2)+...+f(2)+f(1)+1
+
+-->
+<script>
+    let cache=[,1,2];
+    function jumpFloor(n) {
+        if(cache[n]!==undefined) return cache[n];
+        //计算f(n)并返回
+        cache[n]=1;
+        for (let i=n-1;i>=1;i--){
+            cache[n]+=jumpFloor(i);
+        }
+        return cache[n];
+    }
+
+    console.log(jumpFloor(10));
+    console.log(cache);
+</script>
+</body>
+</html>

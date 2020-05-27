@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳台阶（记忆化递归）</title>
+</head>
+<body>
+<!--
+
+需求：
+一只青蛙一次可以跳上1级台阶，也可以跳上2级。
+求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。
+
+递归类型的题目
+
+一步直接跳到第n级台阶，有哪些方式
+1、在第n-1级台阶处跳1级
+2、在第n-2级台阶处跳2级
+
+f(n)表示青蛙跳上一个n级的台阶总共的跳法种数
+f(n)=f(n-1)+f(n-2)
+
+递归类型的题目的注意点：
+1、递归的终止条件（n==1,有一种跳法,n==2，2种跳法）
+2、递归对应的递推表达式
+
+-->
+<script>
+    //1、递归写法
+    function jumpFloor(n){
+        if(n==1) return 1;
+        else if(n==2) return 2;
+        return jumpFloor(n-1)+jumpFloor(n-2);
+    }
+    console.log(jumpFloor(3));
+    console.log(jumpFloor(4));
+    console.log(jumpFloor(5));
+    console.log(jumpFloor(10));
+
+    //2、记忆化递归（保存中间结果）
+    //对于cache数组，cache[n]就表示缓存的f(n)的结果
+    let cache=[,1,2];
+    function jumpFloor2(n){
+        //也就是我们在找f(n)的值的时候，如果缓存里面有，直接用缓存
+        if(cache[n]!==undefined){
+            //console.log(n,cache[n]);
+            return cache[n];
+        }
+        return cache[n]=jumpFloor2(n-1)+jumpFloor2(n-2);
+    }
+    console.log(jumpFloor2(10));
+    console.log(cache);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style样式绑定</title>
+</head>
+<body>
+<!--
+
+-->
+<div id="app">
+    <!--1、以字符串的方式-->
+    <p v-bind:style="'color: red;font-size: 30px;'">{{msg}}</p>
+
+
+    <!--2、以变量的方式-->
+    <p v-bind:style="style1">{{msg}}</p>
+
+
+    <!--3、对象语法-->
+    <!--
+    对象的语法的时候，style里面的每一个样式的样式名就对应对象键值对里面的键，
+    每一个样式的样式值就对应对象键值对里面的值
+    -->
+    <!--
+    对象的键值对都要是字符串，而键默认就是字符串，所以值也要被设置为字符串
+    -->
+    <!--
+    对象解析的时候，将键值对中的键解析成样式名，值解析成样式值
+    -->
+    <p v-bind:style="{color:'red','font-size':'30px'}">{{msg}}</p>
+    <p v-bind:style="style2">{{msg}}</p>
+
+    <!--4、数组语法-->
+    <p v-bind:style="[style2,style3]">{{msg}}</p>
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界',
+            style1:'color: red;font-size: 30px;',
+            style2:{color:'red','font-size':'30px'},
+            style3:{'font-style':'italic'}
+        }
+    });
+</script>
+</body>
+</html>

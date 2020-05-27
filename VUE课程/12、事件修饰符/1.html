@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件修饰符</title>
+    <style>
+        .parent {
+            width: 250px;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+
+        .grandParent {
+            width: 350px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<!--
+
+.stop 阻止事件冒泡
+.prevent 阻止元素的默认事件
+.capture 将js事件机制从默认的冒泡机制转换成捕获机制
+.self 只有自身才能触发事件（不能够被子元素触发）
+.once 事件只触发一次
+
+-->
+<div id="app">
+    <!--js默认的冒泡机制-->
+    <!--    <div class="parent" @click="parentClick">-->
+    <!--        <button @click="btnClick">有问题，先看文档先百度</button>-->
+    <!--    </div>-->
+
+    <!--.stop 阻止事件冒泡-->
+<!--    <div class="parent" @click="parentClick">-->
+<!--        <button @click.stop="btnClick">有问题，先看文档先百度</button>-->
+<!--    </div>-->
+
+    <!--.prevent 阻止元素的默认事件-->
+    <!--    <a href="https://fanrenyi.com" @click.prevent="aClick">让学过的东西不再忘记</a>-->
+
+    <!--.capture 将js事件机制从默认的冒泡机制转换成捕获机制-->
+    <!--    <div class="parent" @click.capture="parentClick">-->
+    <!--        <button @click="btnClick">有问题，先看文档先百度</button>-->
+    <!--    </div>-->
+
+    <!--.self 就是只有自身才能触发事件（不能够被子元素触发）-->
+    <!--    <div class="grandParent" @click.self="grandParentClick">-->
+    <!--        <div class="parent" @click.self="parentClick">-->
+    <!--            <button @click="btnClick">有问题，先看文档先百度</button>-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+    <!--.once 事件只被触发一次-->
+    <div class="grandParent" @click.self="grandParentClick">
+        <div class="parent" @click.self="parentClick">
+            <button @click.once="btnClick">有问题，先看文档先百度</button>
+        </div>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app', //element
+        data: {},
+        methods: {
+            btnClick: function () {
+                console.log('按钮被点击了');
+            },
+            parentClick() {
+                console.log('parent被点击了');
+            },
+            aClick: function () {
+                console.log('a标签被点击了');
+            },
+            grandParentClick() {
+                console.log('grandParent被点击了');
+            }
+        }
+    });
+</script>
+</body>
+</html>

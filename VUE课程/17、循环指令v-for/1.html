@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环指令v-for</title>
+</head>
+<body>
+<!--
+
+-->
+<div id="app">
+    <!--1、用v-for指令遍历普通数组-->
+    <!--这里的item代表数组中的元素-->
+<!--    <p v-for="item in list">{{item}}</p>-->
+    <!--不仅想访问到数组的元素，还想访问到元素对应的索引-->
+<!--    <p v-for="(item,index) in list">元素是：{{item}}-&#45;&#45;&#45;&#45;索引是：{{index}}</p>-->
+
+    <!--2、用v-for指令遍历对象数组-->
+<!--    <p v-for="(item) in list2">name是：{{item.name}}-&#45;&#45;&#45;&#45;age是：{{item.age}}</p>-->
+
+    <!--3、用v-for指令遍历对象-->
+<!--    <p v-for="value in obj">{{value}}</p>-->
+<!--    <p v-for="(value,key) in obj">值是：{{value}}-&#45;&#45;键是：{{key}}</p>-->
+<!--    <p v-for="(value,key,index) in obj">值是：{{value}}-&#45;&#45;键是：{{key}}-&#45;&#45;索引是：{{index}}</p>-->
+
+    <!--4、用v-for指令遍历数字-->
+    <!--item从1开始-->
+<!--    <p v-for="item in 10">{{item}}</p>-->
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            list:[1,2,3,4,5,6],
+            list2:[
+                {name:'赵云',age:18},
+                {name:'鲁班',age:8},
+                {name:'龙太子',age:33},
+                {name:'剑侠客',age:22}
+            ],
+            obj:{name:'赵云',age:18,gender:'male'}
+        }
+    });
+
+    //for...in做循环，循环数组和对象
+    // let arr=[true,2,3,4,5,6];
+    // console.log(true in arr);//false
+    // console.log(0 in arr);//true
+    //i代表的是数组中的索引
+    // for(let i in arr) console.log(i,arr[i]);
+
+    //for...in循环对象
+    // let obj={name:'赵云',age:18,gender:'male'};
+    // console.log('name' in obj);//true
+    // console.log('赵云' in obj);//false
+    // //i代表的是键值对中的键
+    // for(let i in obj) console.log(i,obj[i]);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉树的创建（先序遍历）</title>
+</head>
+<body>
+<!--
+需求：
+根据一个二叉树的先序遍历的结果，创建二叉树
+深度优先搜索（先序遍历）序列：
+['a','b','d','#','f','#','#','#','c','#','e','#','#']
+对应的二叉树：
+                a
+            b       c
+         d     #  #    e
+       #   f         #    #
+         #   #
+
+1、算法思路
+递归
+
+2、算法步骤：根据一个二叉树的先序遍历的结果，创建二叉树
+（1）拿到先序序列 的头部的值a
+（2）
+a、创建根节点（需要节点的值：就是值啊）
+b、递归的创建左子树
+c、递归的创建右子树
+
+
+3、先序遍历（根左右）
+a、访问根节点（得到节点的值）
+b、递归的访问左子树
+c、递归的访问右子树
+
+遇到的节点的顺序和数量是完全一样的
+
+a、创建根节点（需要节点的值）
+b、递归的创建左子树
+c、递归的创建右子树
+
+4、递归的注意事项
+a、递归的结束条件：叶子节点
+b、递归的递推表达式（节点之间的关系）：根左右
+c、递归的返回值：创建好的树或者子树
+
+-->
+<script>
+    function TreeNode(val){
+        this.val=val;
+        this.left=null;
+        this.right=null;
+    }
+
+    //根据一个二叉树的先序遍历的结果，创建二叉树
+    function createTree_preOrder(preOrderArr){
+        //a、递归的结束条件：叶子节点
+        //b、递归的递推表达式（节点之间的关系）：根左右
+        //c、递归的返回值：创建好的树或者子树
+        let root=null;
+        if(preOrderArr[0]!==undefined){
+            //（1）拿到先序序列 的头部的值a
+            let nodeVal=preOrderArr.shift();
+
+            //不是叶子节点，才有必要进行创建子树的操作
+            if(nodeVal!='#'){
+                //（2）
+                //a、创建根节点（需要节点的值：就是值啊）
+                root=new TreeNode(nodeVal);
+                //b、递归的创建左子树
+                root.left=createTree_preOrder(preOrderArr);
+                //c、递归的创建右子树
+                root.right=createTree_preOrder(preOrderArr);
+            }
+        }
+        return root;
+    }
+    let preOrderArr=['a','b','d','#','f','#','#','#','c','#','e','#','#'];
+    let tree=createTree_preOrder(preOrderArr);
+    console.log(tree);
+</script>
+</body>
+</html>

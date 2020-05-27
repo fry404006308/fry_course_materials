@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反转链表</title>
+</head>
+<body>
+<!--
+需求：
+写一个函数，输入一个链表，反转链表后，输出新链表的表头。
+
+-->
+<script>
+    //创建链表的节点：在js里面可以用构造函数来创建链表的节点
+    function Node(val){
+        this.val=val;
+        this.next=null;
+    }
+    //新建一个链表
+    function createList(arr){
+        let head=new Node(arr[0]);
+        let tail=head;
+        for(let i=1;i<=arr.length-1;i++){
+            tail.next=new Node(arr[i]);
+            tail=tail.next;
+        }
+        return head;
+    }
+    let list=createList([1,2,3,4,5]);
+    //console.log(list);
+
+    //反转链表
+    function reverseList(head){
+        //1、遍历链表，把链表里面的每个节点的值都拿下来，存在数组里面
+        //（在这里我们存的节点的值，而不是存的整个节点，这样是可以节约内存的）
+        let arr=[];//arr用于存储链表的节点的值
+        let p=head;//p用于遍历链表
+        while(p){
+            arr.push(p.val);
+            p=p.next;
+        }
+
+        //2、再次遍历链表，将数组里面的值倒序的赋值给每一个节点的val域就实现了链表的反转
+        //（我们没有考虑新建一个链表，而是用了原来的链表，可以节约创建新链表的时间和内存）
+        p=head;
+        while(p){
+            p.val=arr.pop();
+            p=p.next;
+        }
+        return head;
+    }
+
+    console.log(reverseList(list));
+
+
+</script>
+</body>
+</html>

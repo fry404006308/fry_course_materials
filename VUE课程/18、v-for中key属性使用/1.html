@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for中key属性使用</title>
+</head>
+<body>
+<!--
+1、key属性的作用
+用来标注v-for循环的每一项的唯一身份
+
+2、key属性的使用注意
+key属性值只能是数字或者字符串
+key属性必须用v-bind来绑定
+
+3、key属性的使用场景
+在组件或者一些直接v-for循环会有bug的场景
+推荐所有的v-for循环都带上key属性
+
+-->
+<div id="app">
+    <div>
+        id: <input type="text" v-model="id">
+        name: <input type="text" v-model="name">
+        <input type="button" value="提交" @click="add">
+    </div>
+    <!--
+    key属性值必须是字符串或者数字
+    -->
+    <p v-for="item in list" v-bind:key="item.id"><input type="checkbox">{{item.id}}---{{item.name}}</p>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app', //element
+        data:{
+            id:'',
+            name:'',
+            list:[
+                {id:1,name:'赵云'},
+                {id:2,name:'张飞'},
+                {id:3,name:'关羽'},
+                {id:4,name:'黄忠'},
+                {id:5,name:'马超'},
+            ]
+        },
+        methods:{
+            add(){
+                this.list.unshift({id:this.id,name:this.name});
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重建二叉树</title>
+</head>
+<body>
+<!--
+
+需求：
+输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
+假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
+例如输入前序遍历序列[1,2,4,7,3,5,6,8]和中序遍历序列[4,7,2,1,5,3,8,6]，
+则重建二叉树并返回。
+
+前序遍历序列：根左右：1,2,4,7,3,5,6,8
+中序遍历序列：左根右：4,7,2,1,5,3,8,6
+
+思路：
+1、找到根节点（前序序列的第一个元素一定是根节点）
+2、根据找到的根节点和中序序列，找到树的左子树和右子树
+3、让左子树和右子树进行1、2步的递归操作，来构建左子树和右子树
+
+根节点 为1
+左子树
+左子树的前序序列：根左右：2,4,7
+左子树的中序序列：左根右：4,7,2
+
+节点2的左子树
+左子树的前序序列：根左右：4,7
+左子树的中序序列：左根右：4,7
+
+
+右子树
+右子树的前序序列：根左右：3,5,6,8
+右子树的中序序列：左根右：5,3,8,6
+
+节点3的右子树
+右子树的前序序列：根左右：6,8
+右子树的中序序列：左根右：8,6
+
+算法思路：
+递归
+
+-->
+<script>
+    let qianXu=[1,2,4,7,3,5,6,8];
+    let zhongXu=[4,7,2,1,5,3,8,6];
+
+    //在js中创建树的节点可以用构造函数
+    function TreeNode(val){
+        this.val=val;
+        this.left=null;
+        this.right=null;
+    }
+
+    function rebuildTree(qianXu,zhongXu){
+        if(qianXu[0]){
+            //1、找到根节点（前序序列的第一个元素一定是根节点）
+            let rootVal=qianXu[0];//根节点的值
+
+            //2、根据找到的根节点和中序序列，找到树的左子树和右子树
+            //根节点在中序序列中的位置
+            let index=zhongXu.indexOf(rootVal);
+
+            //前序序列：左子树qianXu（1,index）,右子树qianXu（index+1,最后）
+            //中序序列：左子树zhongXu（0,index-1）,右子树zhongXu（index+1,最后）
+
+
+            //3、让左子树和右子树进行1、2步的递归操作，来构建左子树和右子树
+            let leftTree=rebuildTree(qianXu.slice(1,index+1),zhongXu.slice(0,index));
+            let rightTree=rebuildTree(qianXu.slice(index+1),zhongXu.slice(index+1));
+
+            let root=new TreeNode(rootVal);
+            root.left=leftTree;
+            root.right=rightTree;
+            return root;
+        }
+    }
+
+    //rebuildTree(qianXu,zhongXu);
+    console.log(rebuildTree(qianXu,zhongXu));
+
+
+
+
+</script>
+</body>
+</html>

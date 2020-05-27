@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑马灯效果示例</title>
+</head>
+<body>
+<!--
+
+-->
+<div id="app">
+    <p v-text="msg"></p>
+    <div>
+        <button @click="lang">浪起来</button>
+        <button @click="stop">stop</button>
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            msg:'猥琐发育，别浪，我们能赢。',
+            interval_id:null
+        },
+        methods:{
+            lang:function () {
+                //普通函数有this问题
+                // setInterval(function () {
+                //     console.log(this);
+                // },1000);
+                if(this.interval_id !=null) return;
+
+                //箭头函数没有this问题
+                this.interval_id=setInterval(()=>{
+                    //把字符串的开头字符拼接到结尾
+                    let start=this.msg.substring(0,1);//获取开头字符
+                    let end=this.msg.substring(1);//获取后面的字符
+                    this.msg=end+start;//拼接字符串
+                },400);
+            },
+            stop:function () {
+                //interval_id不是null的话就清空
+                if(this.interval_id !=null){
+                    clearTimeout(this.interval_id);
+                    this.interval_id = null;
+                }
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

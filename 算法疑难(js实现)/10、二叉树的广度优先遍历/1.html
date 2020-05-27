@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉树的广度优先遍历</title>
+</head>
+<body>
+<!--
+需求：
+以层次遍历的方式二叉树
+                a
+            b       c
+         d     #  #    e
+       #   f         #    #
+         #   #
+
+层次遍历序列结果：
+['a','b','c','d','#','#','e','#','f','#','#','#','#']
+
+算法：
+队列
+
+队列解决问题的算法模板
+while(队列不为空){
+    1、将队列队首的元素出队（树的根节点或者子树的根节点）
+    2、把和出队元素相关的元素加入到队列（根节点的左子树和右子树）
+}
+
+算法步骤：
+1、访问到根节点，并且把它加入到队列中
+2、循环的将队列队首的元素出队，把和出队元素相关的元素加入到队列（循环一直做到队列为空）
+
+注意点：
+叶子节点是不用被加到队列中来的
+
+-->
+<script>
+    function TreeNode(val){
+        this.val=val;
+        this.left=null;
+        this.right=null;
+    }
+
+    //根据一个二叉树的先序遍历的结果，创建二叉树
+    function createTree_preOrder(preOrderArr){
+        //a、递归的结束条件：叶子节点
+        //b、递归的递推表达式（节点之间的关系）：根左右
+        //c、递归的返回值：创建好的树或者子树
+        let root=null;
+        if(preOrderArr[0]!==undefined){
+            //（1）拿到先序序列 的头部的值a
+            let nodeVal=preOrderArr.shift();
+
+            //不是叶子节点，才有必要进行创建子树的操作
+            if(nodeVal!='#'){
+                //（2）
+                //a、创建根节点（需要节点的值：就是值啊）
+                root=new TreeNode(nodeVal);
+                //b、递归的创建左子树
+                root.left=createTree_preOrder(preOrderArr);
+                //c、递归的创建右子树
+                root.right=createTree_preOrder(preOrderArr);
+            }
+        }
+        return root;
+    }
+    let preOrderArr=['a','b','d','#','f','#','#','#','c','#','e','#','#'];
+    let tree=createTree_preOrder(preOrderArr);
+    console.log(tree);
+
+    //以层次遍历的方式二叉树
+    function levelOrderTraversal(tree,ans){
+        //注意点：
+        //叶子节点是不用被加到队列中来的
+        let queue=[];
+        //1、访问到根节点，并且把它加入到队列中
+        if(tree){
+            ans.push(tree.val);
+            //console.log(tree.val);
+            queue.push(tree);
+        }
+
+        //2、循环的将队列队首的元素出队，把和出队元素相关的元素加入到队列（循环一直做到队列为空）
+        //队列不为空
+        while(queue.length){
+            //1、将队列队首的元素出队（树的根节点或者子树的根节点）
+            let head=queue.shift();
+            //2、把和出队元素相关的元素加入到队列（根节点的左子树和右子树）
+            //a、将根节点的左子树加入到队列
+            let left=head.left;
+            //不是叶子节点，就访问它，并且将它加入到队列
+            if(left){
+                ans.push(left.val);
+                //console.log(left.val);
+                queue.push(left);
+            }else{
+                ans.push('#');
+                //console.log('#');
+            }
+
+            //b、将根节点的右子树加入到队列
+            let right=head.right;
+            //不是叶子节点，就访问它，并且将它加入到队列
+            if(right){
+                ans.push(right.val);
+                //console.log(right.val);
+                queue.push(right);
+            }else{
+                ans.push('#');
+                //console.log('#');
+            }
+        }
+    }
+    let ans=[];
+    levelOrderTraversal(tree,ans);
+    console.log(ans);
+</script>
+</body>
+</html>

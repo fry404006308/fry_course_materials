@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二叉树的创建（层次遍历）</title>
+</head>
+<body>
+<!--
+需求：
+根据二叉树的层次遍历的序列结果，创建二叉树
+例如
+层次遍历结果为：['a','b','c','d','#','#','e','#','f','#','#','#','#']
+对应的二叉树为
+                a
+            b       c
+         d     #  #    e
+       #   f         #    #
+         #   #
+
+算法思路
+用队列
+
+算法步骤：
+1、找到根节点，将根节点加入到队列（层次遍历结果序列的第一个一定是根节点）
+2、循环的将队列队首的元素出队，把和出队元素相关的元素加入到队列（循环中的元素为空，循环就运行完了）
+
+队列解决问题的算法模板
+while(队列不为空){
+    1、将队列队首的元素出队
+    2、把和出队元素相关的元素加入到队列
+}
+
+队列解决问题的算法模板（队列解决根据二叉树的层次遍历的序列结果，创建二叉树）
+while(队列不为空){
+    1、将队列队首的元素出队（要么是整棵树的根节点、要么是子树的根节点）
+    2、把和出队元素相关的元素加入到队列（根节点的左右孩子）
+}
+
+注意点：
+树的叶子节点不用加入到队列中
+
+在js中，用数组模拟队列特别方面
+shift方法（出队），push方法（入队）
+
+-->
+<script>
+    function TreeNode(val){
+        this.val=val;
+        this.left=null;
+        this.right=null;
+    }
+
+    //根据二叉树的层次遍历的序列结果，创建二叉树
+    function createTree_levelOrder(levelOrderArr) {
+        let queue=[];
+        let root=null;
+
+        if(levelOrderArr[0]!==undefined){
+            //1、找到根节点，将根节点加入到队列（层次遍历结果序列的第一个一定是根节点）
+            let nodeVal=levelOrderArr.shift();
+            root=new TreeNode(nodeVal);
+            queue.push(root);
+
+            //2、循环的将队列队首的元素出队，把和出队元素相关的元素加入到队列（循环中的元素为空，循环就运行完了）
+
+            //队列不为空
+            while(queue.length){
+                //1、将队列队首的元素出队（要么是整棵树的根节点、要么是子树的根节点）
+                let head= queue.shift();
+                //2、把和出队元素相关的元素加入到队列（先创建节点，根节点的左右孩子）
+                //a、创建左节点，将它加入到队列
+                nodeVal=levelOrderArr.shift();
+                if(nodeVal!='#'){
+                    head.left=new TreeNode(nodeVal);
+                    queue.push(head.left);
+                }
+
+                //b、创建右节点，将它加入到队列
+                nodeVal=levelOrderArr.shift();
+                if(nodeVal!='#'){
+                    head.right=new TreeNode(nodeVal);
+                    queue.push(head.right);
+                }
+            }
+        }
+
+        return root;
+    }
+    let levelOrderArr=['a','b','c','d','#','#','e','#','f','#','#','#','#'];
+    let tree=createTree_levelOrder(levelOrderArr);
+    console.log(tree);
+</script>
+</body>
+</html>

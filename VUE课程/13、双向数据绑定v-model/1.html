@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向数据绑定v-model</title>
+</head>
+<body>
+<!--
+
+双向绑定注意
+1、vue中能做双向绑定的指令只有一个v-model
+2、双向绑定指令v-model只能运用到表单元素上，例如input、textarea、select等
+
+-->
+<div id="app">
+    <input type="text" v-model="msg2">
+<!--    <input type="text" v-bind:value="msg2">-->
+    <div>{{msg2}}</div>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            msg2:'这是vue的双向数据绑定的实例'
+        }
+    });
+</script>
+
+</body>
+</html>

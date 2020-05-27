@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染v-if</title>
+</head>
+<body>
+<!--
+
+v-if指令用来做条件渲染，也就是满足条件就渲染元素，
+否则不渲染，后面可以接v-else-if、v-else等指令
+
+-->
+<div id="app">
+<!--    <p v-if="flag">{{msg}}</p>-->
+
+    <!--
+    如果用戶登录了，就显示播放视频
+    如果用户没登录，我们就提示用户登录
+    -->
+<!--    <p v-if="isLogin">播放视频</p>-->
+<!--    <p v-else>提示用户登录</p>-->
+
+    <!--
+    1 普通会员
+    2 超级会员
+    3 超级无敌无敌大会员
+    其他值都是普通用户
+    -->
+    <p v-if="vip==1">普通会员</p>
+    <p v-else-if="vip==2">超级会员</p>
+    <p v-else-if="vip==3">超级无敌无敌大会员</p>
+    <p v-else>普通用户</p>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界',
+            flag:false,
+            isLogin:true,
+            vip:0
+        }
+    });
+    console.log(vm);
+</script>
+</body>
+</html>

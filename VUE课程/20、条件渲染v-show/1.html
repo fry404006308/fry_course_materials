@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染v-show</title>
+</head>
+<body>
+<!--
+条件渲染指令除了v-if，还有v-show，v-show指令通过改变元素的display属性来控制元素的显示和隐藏
+
+条件渲染指令v-if和v-show的区别
+-、v-if是真正的条件渲染，v-if中对应的元素的状态为true的时候，元素才被渲染出来，否则不被渲染
+-、v-show只是简单的改变元素的display属性，v-show中对应的元素的状态为false时，元素的display属性变为none，所以不被显示
+
+条件渲染指令v-if和v-show的 性能消耗问题
+*、v-if指令性能消耗问题：每次元素改变状态，都要被重新渲染，所以元素的切换性能消耗比较大
+*、v-show指令性能消耗问题：v-show控制的元素最初都会被渲染出来，每次改变状态，只是改变元素的display属性的值，所以元素的初始性能消耗比较大
+
+条件渲染指令v-if和v-show的使用场景
+^、v-if使用场景：很少被切换状态的元素，或者可能永远都不被显示的元素
+^、v-show使用场景：经常切换状态的元素
+-->
+<div id="app">
+    <!--
+    v-if指令和v-show指令的区别
+    v-if指令通过状态来控制元素的显示和隐藏是直接通过操作dom来添加或者移除元素来实现的
+    v-if指令的初始消耗比较小，切换消耗比较大
+    适用场景：可能永远都不被显示的元素，或者很少切换状态的元素
+
+
+    v-show指令控制元素的显示和隐藏是通过改变元素的display属性
+    所以v-show控制的元素最开始就要被加载出来，所以这样v-show指令的初始消耗就比较大，
+    所以切换消耗比较小
+    适应的场景：切换状态比较频繁的元素
+    -->
+    <p v-if="flag">{{msg}}---v-if控制</p>
+    <p v-show="flag">{{msg}}---v-show控制</p>
+<!--    <button @click="toggle">toggle</button>-->
+    <button @click="flag=!flag">toggle</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app', //element
+        data:{
+            msg:'欢迎来到vue的世界',
+            flag:true
+        },
+        methods:{
+            toggle(){
+                this.flag=!this.flag;
+            }
+        }
+    });
+</script>
+</body>
+</html>

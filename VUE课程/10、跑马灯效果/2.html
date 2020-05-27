@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑马灯效果</title>
+</head>
+<body>
+<div id="app">
+    <p v-text="msg"></p>
+    <div>
+        <button @click="lang">浪起来</button>
+        <button @click="stop">stop</button>
+    </div>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            msg:'我有一只小毛驴，我从来也不骑，有一天我心血来潮骑着它去赶集。',
+            interval_id:null
+        },
+        methods:{
+            lang:function () {
+                //跑马灯效果的逻辑
+                //不断的将字符串的第一个字符挪到最后面来
+
+                //找到字符串
+                //console.log(this);
+                //console.log(this.msg);
+
+                //如果有定时器了，我们就不创建了
+                if(this.interval_id!==null) return;
+
+                //没有定时器，我们才创建定时器
+                this.interval_id=setInterval(()=>{
+                    //1、拿到字符串的第一个字符a
+                    let str_a=this.msg.slice(0,1);
+                    //2、拿到字符串剩下的字符（字符串b）
+                    let str_b=this.msg.slice(1);
+                    //3、将字符a拼接到字符串b的后面
+                    let new_str=str_b+str_a;
+                    //console.log(new_str);
+                    this.msg=new_str;
+                },400);
+            },
+            stop(){
+                //清除定时器
+                clearInterval(this.interval_id);
+                //清楚vue的interval_id的数据
+                this.interval_id=null;
+            }
+        }
+    });
+    //console.log(vm);
+</script>
+</body>
+</html>
