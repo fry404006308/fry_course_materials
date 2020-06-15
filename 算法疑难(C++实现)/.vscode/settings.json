@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "iterator": "cpp",
+        "memory": "cpp",
+        "xutility": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "xlocale": "cpp",
+        "xstring": "cpp",
+        "algorithm": "cpp"
+    }
+}
