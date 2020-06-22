@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+            say() {
+                console.log('我是'+this.name);
+            }
+        }
+        let animal1=new Animal('大动物');
+        animal1.say();
+
+        class Bird extends Animal {
+            constructor(name, age) {
+                super(name);
+                this.age = age;
+            }
+            say() {
+                console.log('我是'+this.name+','+this.age+'岁,我在自由自在的飞翔！');
+            }
+        }
+        let monkey=new Bird('大飞猴',15);
+        monkey.say();
+    </script>
+</body>
+</html>
+
+

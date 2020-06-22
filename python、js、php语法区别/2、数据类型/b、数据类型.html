@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js数据类型</title>
+</head>
+<body>
+    <script>
+        /*
+        1、数据类型
+        Number、String、Boolean、Null、undefined、object
+        
+        2、判断变量类型
+        console.log(typeof(a));
+
+        3、强制类型转换
+        方法很多，比如转成整形，可以用正号，可以parseInt，可以Number函数
+
+        */
+        //1、数据类型
+        let a=10;
+        console.log(a);
+        console.log(typeof(a));
+
+        a=10.1;
+        console.log(a);
+        console.log(typeof(a));
+
+        a="332432";
+        console.log(a);
+        console.log(typeof(a));
+
+        a=true;
+        console.log(a);
+        console.log(typeof(a));
+
+        a=null;
+        console.log(a);
+        console.log(typeof(a));
+
+        a=undefined;
+        console.log(a);
+        console.log(typeof(a));
+
+        a={name:'996',age:11};
+        console.log(a);
+        console.log(typeof(a));
+
+        a=function(){console.log('aa');}
+        console.log(a);
+        console.log(typeof(a));
+
+        //2、判断变量类型
+        
+
+        //3、强制类型转换
+        let b="2341";
+        console.log(typeof(b));
+        //let c=parseInt(b);
+        let c=Number(b);
+        console.log(c);
+        console.log(typeof(c));
+
+
+    </script>
+</body>
+</html>
+
