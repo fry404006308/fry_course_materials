@@ -2,14 +2,14 @@
 
 '''
 1、类型分类 
-数字（int、float、complex复数、bool）、
-字符串、
+数字（int、float、complex复数）、
+bool、字符串、
 复杂数据类型（列表、元组、字典、集合）
 
 2、查看变量类型：type(a)
 
 
-3、强制转换：int(input("请输入年龄"))
+3、强制转换：
 Python 提供了将变量或值从一种类型转换成另一种类型的内置函数
 int(x [,base ]) 将 x 转换为一个整数
 long(x [,base ]) 将 x 转换为一个长整数
@@ -29,25 +29,52 @@ oct(x ) 将一个整数转换为一个八进制字符串
 
 '''
 # 1、类型分类 
-a = 10
-a = 11.1
-a = True
-a = "nice"
-a = (1,2,3)
-a = [1,2,3]
-a = {'name':'hua','age':18}
-a = set('abracadabra')
-print(a)
-print(type(a))
+# a = 10
+# print(a)
+# print(type(a))
+
+# a = 11.1
+# print(a)
+# print(type(a))
+
+# a = 12 + 0.2j
+# print(a)
+# print(type(a))
+
+# a = True
+# print(a)
+# print(type(a))
+
+# a = "nice"
+# print(a)
+# print(type(a))
+
+# a = (1,2,3)
+# print(a)
+# print(type(a))
+
+# a = [1,2,3]
+# print(a)
+# print(type(a))
+
+# a = {'name':'hua','age':18}
+# print(a)
+# print(type(a))
+
+# a = set('abracadabra')
+# print(a)
+# print(type(a))
 
 # 2、查看变量类型：type(a)
 # a = 10;
 # print(type(a))
 
-# 3、强制转换：int(input("请输入年龄"))
+# 3、强制转换
 # age = input("请输入年龄")
 # print(type(age))
 # age = int(age)
 # print(type(age))
+
+
 
 

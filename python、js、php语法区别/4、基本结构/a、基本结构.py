@@ -11,7 +11,7 @@
 
 """
 # 1、选择结构
-# score=12;
+# score=72;
 # if(score>=80):
 #     print("优秀")
 #     pass
@@ -23,7 +23,7 @@
 
 # 2、三元运算符
 # a=155
-# b=20
+# b=200
 # max_num=a if a>=b else b
 # print(max_num)
 
@@ -44,24 +44,9 @@
 #     print("循环做完了")
 
 # 3.3、遍历列表
-# list1=[7,432,12,32,12,2];
+# list1=[2,9,7,2,7,2];
 # for i in list1:
-#     print(list1.index(i),i)
-
-# for i in range(len(list1)):
-#     print(i,list1[i])
-
-# enumerate() 函数用于将一个可遍历的数据对象
-# (如列表、元组或字符串)组合为一个索引序列，
-# 同时列出数据和数据下标，一般用在 for 循环当中。
-# seasons = ['Spring', 'Summer', 'Fall', 'Winter']
-# # [(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
-# list2=list(enumerate(seasons))
-# print(list2)
-
-# for i,val in enumerate(list1): 
-#     print(i,val)
-
+#     print(list1.index(i),i,id(i))
 
 
 # 3.4、遍历字符串

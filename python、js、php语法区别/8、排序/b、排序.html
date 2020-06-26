@@ -10,17 +10,18 @@
         /*
         1、对索引数组排序
         2、对关联数组排序
-        3、对对象排序
+        3、对对象数组排序
         */
         // 1、对索引数组排序
+        // sort方法默认是按照unicode编码进行排序，而不是按照数字进行排序
         // let arr=[34,511,1,3,64,8];
-        // console.log(arr);
-        // arr.sort();
+        // arr.sort(function(a,b){
+        //     return a-b;
+        // });
         // console.log(arr);
         
         // 1.2、倒序
         // let arr=[34,511,1,3,64,8];
-        // console.log(arr);
         // arr.sort(function(a,b){
         //     return b-a;
         // });
@@ -37,9 +38,9 @@
         // });
         // console.log(arr);
         // //[511, 64, 34, 8, 3, 1, a: 18, b: 29]
-        // //关联数组的位置排好了，索引数组的位置没有
+        // //索引数组的位置排好了，关联数组的位置没有
 
-        // 3、对对象排序
+        // 3、对对象数组排序，对对象里面的元素按照年纪排序
         // let objArr=[
         //     {name:'aaa',age:28},
         //     {name:'ccc',age:1},

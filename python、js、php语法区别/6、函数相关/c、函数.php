@@ -8,3 +8,4 @@ function sum1($a, $b)
 }
 echo sum1(3, 12);
 
+

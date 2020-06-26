@@ -9,19 +9,11 @@ javascript：前端逻辑，后台，桌面软件，
 PHP - 服务器端Web应用程序
 '''
 
-'''
-知识点：
-注释
+# 这是一个简单的python的例子
+# a = 10
+# print(a)
 
-'''
-
-# 这是一个简单的python例子
-a=10
-print(a)
-for i in range(5, 10):
-    print(i)
-
-
-
-
+list1=[34,5,23,123,543]
+for i in list1:
+    print(list1.index(i),i)
 

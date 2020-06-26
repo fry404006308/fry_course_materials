@@ -6,15 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-<div style="color: red;">
-    <?php
-    //php代码
-    echo "<h1>这是在vscode中打开的php</h1>";
-    
-    ?>
-</div>
+    <div style="color:red;">
+        <?php
+        $num=5;
+        for($i=1;$i<=5;$i++){
+            echo "<h1>这是第{$i}个h1标签</h1>";
+        }
+        ?>
+    </div>
 </body>
 </html>
+
+
+
+
 
 
 

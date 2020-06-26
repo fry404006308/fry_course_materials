@@ -16,22 +16,22 @@
 
 
 // // 删
-// unset($arr[10]);
+// unset($arr[1]);
 // print_r($arr);
 
 
 // // 改
-// $arr[1]=9;
+// $arr[2]=9;
 // print_r($arr);
 
 
 // // 查
-// echo $arr[3];
+// echo $arr[3]."\n";
 
 
 // // 循环
 // foreach($arr as $key=>$val){
-//     echo $key."  ".$val."<br>";
+//     echo $key."  ".$val."\n";
 // }
 
 
@@ -47,7 +47,7 @@
 
 // // 循环
 // foreach($arr as $key=>$val){
-//     echo $key."  ".$val."<br>";
+//     echo $key."  ".$val."\n";
 // }
 
 

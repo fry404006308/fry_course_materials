@@ -9,47 +9,62 @@
     <script>
         /*
         1、数据类型
-        Number、String、Boolean、Null、undefined、object
+        Number、String、Boolean、Null、Undefined、
+        object（包含普通对象，也包含数组和函数）
+
+        Null（空值）类型的值只有一个，就是null
+            null这个值专门用来表示一个为空的对象
+            使用typeof检查一个null值时，会返回object
+
+        Undefined（未定义）类型的值只有一个，就undefined
+            当声明一个变量，但是并不给变量赋值时，它的值就是undefined
+            使用typeof检查一个undefined时也会返回undefined
         
         2、判断变量类型
-        console.log(typeof(a));
+        typeof(a)
 
         3、强制类型转换
-        方法很多，比如转成整形，可以用正号，可以parseInt，可以Number函数
-
+        方法很多，比如转成整形，可以用运算符比如正号负号，可以parseInt，可以Number函数
+        
         */
+
+
         //1、数据类型
-        let a=10;
-        console.log(a);
-        console.log(typeof(a));
+        // let a=10;
+        // console.log(a);
+        // console.log(typeof(a));
 
-        a=10.1;
-        console.log(a);
-        console.log(typeof(a));
+        // a=10.1;
+        // console.log(a);
+        // console.log(typeof(a));
 
-        a="332432";
-        console.log(a);
-        console.log(typeof(a));
+        // a="332432";
+        // console.log(a);
+        // console.log(typeof(a));
 
-        a=true;
-        console.log(a);
-        console.log(typeof(a));
+        // a=true;
+        // console.log(a);
+        // console.log(typeof(a));
 
-        a=null;
-        console.log(a);
-        console.log(typeof(a));
+        // a=null;
+        // console.log(a);
+        // console.log(typeof(a));
 
-        a=undefined;
-        console.log(a);
-        console.log(typeof(a));
+        // a=undefined;
+        // console.log(a);
+        // console.log(typeof(a));
 
-        a={name:'996',age:11};
-        console.log(a);
-        console.log(typeof(a));
+        // a={name:'996',age:11};
+        // console.log(a);
+        // console.log(typeof(a));
 
-        a=function(){console.log('aa');}
-        console.log(a);
-        console.log(typeof(a));
+        // a=[1,2,3,4];
+        // console.log(a);
+        // console.log(typeof(a));
+
+        // a=function(){console.log('aa');}
+        // console.log(a);
+        // console.log(typeof(a));
 
         //2、判断变量类型
         
@@ -57,11 +72,20 @@
         //3、强制类型转换
         let b="2341";
         console.log(typeof(b));
-        //let c=parseInt(b);
-        let c=Number(b);
+
+        // //a、隐式转换
+        let c=--b;
         console.log(c);
         console.log(typeof(c));
 
+        // //b、显示转换
+        let d=Number(b);
+        console.log(d);
+        console.log(typeof(d));
+
+        let e=parseInt(b);
+        console.log(e);
+        console.log(typeof(e));  
 
     </script>
 </body>
