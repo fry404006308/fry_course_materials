@@ -9,7 +9,7 @@
 
 # 二、地址
 
-- 课程网站： https://fanrenyi.com 
+- 课程网站：【读书编程笔记】： https://fanrenyi.com 
 
 - b站课程地址：https://space.bilibili.com/45664489
 
