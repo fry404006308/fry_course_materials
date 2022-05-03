@@ -6,30 +6,12 @@
 
 都是完全免费的，没有任何套路
 
-
 # 二、地址
 
-- 课程网站：【读书编程笔记】： https://fanrenyi.com 
+- 课程网站：【读书编程笔记】： https://fanrenyi.com
+- b 站课程地址：https://space.bilibili.com/45664489
 
-- b站课程地址：https://space.bilibili.com/45664489
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> a07ef09a3743e8bbc3d90409733eb6c7967894fe
-# 三、联系
+# 三、联系方式
 
 - QQ：404006308
-
 - 微信：fan404006308
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> a07ef09a3743e8bbc3d90409733eb6c7967894fe
