@@ -1,4 +1,4 @@
-# 快速掌握 tensorboard
+# tensorboard几分钟精通课程
 
 日期: 周日- 2023-02-26 20:58:01
 
@@ -20,7 +20,17 @@ TODO:
 
 🍓
 
+# 课程
+
 🍊
+
+1、tensorboard最最最最最简单实例（vscode）
+
+2、pycharm中运行tensorboard
+
+3、tensorboard常见功能
+
+4、tensorboard常见使用实例
 
 🍒
 
@@ -108,6 +118,11 @@ writer.close()
 tensorboard --logdir=logs
 
 logs 是我们生成日志指定的目录
+
+
+指定端口
+
+tensorboard --logdir=logs --port=6007
 ```
 
 🌷
