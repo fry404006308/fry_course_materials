@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 matplotlib.use('Agg')
 
 
+
+
 ##### 1、add_scalar实例
 def add_scalar_demo():
 
@@ -23,7 +25,6 @@ def add_scalar_demo():
     # 关闭
     writer.close()
 add_scalar_demo()
-
 
 ##### 2、add_scalars 实例
 def add_scalars_demo():
@@ -54,6 +55,8 @@ add_text_demo()
 
 
 
+
+
 ##### 4、add_graph 实例
 def add_graph_demo():
     # 将信息写入logs文件夹，可以供TensorBoard消费，来可视化
@@ -68,6 +71,9 @@ def add_graph_demo():
 
 add_graph_demo()
 
+
+
+
 ##### 5、add_image 实例
 def add_image_demo():
 
@@ -77,10 +83,8 @@ def add_image_demo():
 
     img1 = np.random.randn(1, 100, 100)
     writer.add_image('add_image 实例：/imag1', img1)
-
     img2 = np.random.randn(100, 100, 3)
     writer.add_image('add_image 实例：/imag2', img2, dataformats='HWC')
-
     img = Image.open('../imgs/1.png')
     img_array = np.array(img)
     writer.add_image('add_image 实例：/cartoon', img_array, dataformats='HWC')
@@ -88,6 +92,7 @@ def add_image_demo():
     writer.close()
 
 add_image_demo()
+
 
 
 ##### 6、add_images 实例
@@ -98,15 +103,11 @@ def add_images_demo():
 
     imgs1 = np.random.randn(8, 100, 100, 1)
     writer.add_images('add_images 实例/imgs1', imgs1, dataformats='NHWC')
-
-
     imgs2 = np.zeros((16, 3, 100, 100))
     for i in range(16):
         imgs2[i, 0] = np.arange(0, 10000).reshape(100, 100) / 10000 / 16 * i
         imgs2[i, 1] = (1 - np.arange(0, 10000).reshape(100, 100) / 10000) / 16 * i
     writer.add_images('add_images 实例/imgs2', imgs2)  # Default is :math:`(N, 3, H, W)`
-
-
     img = Image.open('../imgs/1.jpg')
     img3 = np.array(img)
     imgs4= np.zeros((5, img3.shape[0], img3.shape[1], img3.shape[2]))
@@ -117,6 +118,7 @@ def add_images_demo():
     # 关闭
     writer.close()
 add_images_demo()
+
 
 ##### 7、add_figure 实例
 def add_figure_demo():
@@ -138,6 +140,7 @@ def add_figure_demo():
 
 add_figure_demo()
 
+
 ##### 8、add_pr_curve 实例
 def add_pr_curve_demo():
     # 将信息写入logs文件夹，可以供TensorBoard消费，来可视化
@@ -150,7 +153,6 @@ def add_pr_curve_demo():
     writer.close()
 
 add_pr_curve_demo()
-
 
 
 ##### 9、add_embedding 实例
