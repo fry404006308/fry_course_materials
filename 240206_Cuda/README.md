@@ -40,17 +40,16 @@
 
 📖
 
-## 01、cmake 构建 cuda 项目
-
-## 02、vs2022 构建 cuda 项目
-
-## 03、Cuda 编程对比 CPU 速度
-
-## 04、cuda 编程原理介绍
-
-## 05、Cuda 图片编程核心原理
+## 01、【cuda 编程 01】6 分钟学会 cmake 编译 cuda 项目
 
 🍧
+
+```
+
+【cuda编程01】6分钟学会cmake编译cuda项目_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1j2421A7hy/?spm_id_from=333.999.0.0&vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
 
 🍓
 
@@ -58,9 +57,13 @@
 
 🔧
 
+# 三、特别说明
+
 🌱
 
 🌺
+
+【课件及代码获取】：课件及代码点赞和评论后 b 站私信我【cuda 编程课件】即可获取，点赞 4%是 up 能否坚持的核心，如果希望 up 快速更新，请用你免费的赞催更。拜谢。
 
 🔥
 
