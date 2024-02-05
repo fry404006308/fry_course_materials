@@ -5,6 +5,10 @@
 # 忽略tensorboard的日志文件
 **/logs
 
+/build/
+/**/build/
+
+
 
 
 
