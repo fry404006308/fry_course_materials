@@ -104,6 +104,33 @@ https://www.bilibili.com/video/BV1JB421z79M/?vd_source=ee9434046a5f3d9b4205dabb3
 
 💮
 
+🍊
+
+## 05、【cuda 编程 05】4 分钟了解 cuda
+
+🍒
+
+```
+
+【cuda编程05】4分钟了解cuda
+
+【cuda编程05】4分钟了解Cuda_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV17t421p7jR/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
+
+🍌
+
+🍑
+
+🍍
+
+🍉
+
+🍇
+
+🍋
+
 🌸
 
 🍁
