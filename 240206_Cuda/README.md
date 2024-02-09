@@ -123,7 +123,21 @@ https://www.bilibili.com/video/BV17t421p7jR/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍑
 
+## 06、【cuda 编程 06】cuda 矩阵加法简单实例
+
 🍍
+
+```
+
+【cuda编程06】cuda矩阵加法原理详解
+
+【cuda编程06】cuda矩阵加法原理详解01_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV14B421r7k4/?spm_id_from=333.788&vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+【cuda编程06】cuda矩阵加法原理详解02_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV14H4y1h7nv/?spm_id_from=333.788&vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
 
 🍉
 
