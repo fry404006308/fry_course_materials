@@ -141,9 +141,45 @@ https://www.bilibili.com/video/BV14H4y1h7nv/?spm_id_from=333.788&vd_source=ee943
 
 🍉
 
+🍑
+
+🍍
+
+## 07、【cuda 编程 07】鸡蛋里挑骨头
+
+🍉
+
 🍇
 
+```
+
+【cuda编程07】鸡蛋里挑骨头
+
+【cuda编程07】鸡蛋里挑骨头_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1Sy421b79A/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
+
 🍋
+
+🍅
+
+🍐
+
+📖
+
+🍇
+
+## 08、【cuda 编程 08】cuda 内存模型简单介绍
+
+🍋
+
+```
+
+【cuda编程08】cuda内存模型简单介绍
+
+
+```
 
 🌸
 
@@ -159,7 +195,7 @@ https://www.bilibili.com/video/BV14H4y1h7nv/?spm_id_from=333.788&vd_source=ee943
 
 🌺
 
-【课件及代码获取】：课件及代码点赞和评论后 b 站私信我【cuda 编程课件】即可获取，点赞 4%是 up 能否坚持的核心，如果希望 up 快速更新，请用你免费的赞催更。拜谢。
+【课件及代码获取】：课件及代码点赞加评论后 b 站私信我【cuda 编程课件】即可获取，点赞 4%是 up 能否坚持的核心，如果希望 up 快速更新，请用你免费的赞催更。拜谢。
 
 🔥
 
