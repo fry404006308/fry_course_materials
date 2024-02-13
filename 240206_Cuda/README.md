@@ -208,6 +208,11 @@ https://www.bilibili.com/video/BV1Sy421b79A/?vd_source=ee9434046a5f3d9b4205dabb3
 
 【cuda编程10】cuda实例：复制彩色图片
 
+【cuda编程10】五分钟精通Cuda操作彩色图片
+
+【cuda编程10】五分钟精通Cuda操作彩色图片_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1gF4m177Vy/?vd_source=ee9434046a5f3d9b4205dabb343500a6#reply1200679862
+
 ```
 
 🍉
