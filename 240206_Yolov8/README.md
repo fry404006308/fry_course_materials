@@ -115,9 +115,21 @@ https://www.bilibili.com/video/BV1K6421M7rT/?spm_id_from=333.999.0.0&vd_source=e
 
 🍁
 
+## 04、yolov8 做实例分割
+
 🌳
 
 🌲
+
+```
+
+【yolov8-04】二分钟学会yolov8做实例分割
+
+【yolov8-04】二分钟学会yolov8做实例分割_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1E6421g7Lp/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+
+```
 
 🌴
 
