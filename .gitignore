@@ -1,5 +1,6 @@
 
 # 忽略一些编辑器的配置文件
+/.idea/
 **/.idea/
 
 # 忽略tensorboard的日志文件

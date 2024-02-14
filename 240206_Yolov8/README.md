@@ -83,10 +83,11 @@ https://www.bilibili.com/video/BV1uB421671y/?spm_id_from=333.999.0.0&vd_source=e
 
 ```
 
-【yolov8从入门到大神】02、安装环境
+【yolov8从入门到大神】02、安装yolov8环境
 
 
-
+【yolov8从入门到大神】02、安装yolov8环境_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV13H4y1a7qH/?spm_id_from=333.999.0.0&vd_source=ee9434046a5f3d9b4205dabb343500a6
 
 
 ```
@@ -95,9 +96,20 @@ https://www.bilibili.com/video/BV1uB421671y/?spm_id_from=333.999.0.0&vd_source=e
 
 🍄
 
+## 03、yolov8 做目标检测
+
 🌷
 
 💮
+
+```
+
+【yolov8-03】五分钟学会yolov8做目标检测
+
+【yolov8-03】五分钟学会yolov8做目标检测_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1K6421M7rT/?spm_id_from=333.999.0.0&vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
 
 🌸
 
