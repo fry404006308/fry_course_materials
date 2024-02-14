@@ -58,15 +58,38 @@ yolov8 代码结构
 
 🔧
 
+## 01、课程基本介绍
+
 🌱
+
+```
+
+【yolov8从入门到大神】01、课程基本介绍
+
+【yolov8从入门到大神】01、课程基本介绍_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1uB421671y/?spm_id_from=333.999.0.0&vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
 
 🌺
 
 🔥
 
+## 02、安装环境
+
 ✨
 
 🍹
+
+```
+
+【yolov8从入门到大神】02、安装环境
+
+
+
+
+
+```
 
 🧊
 
