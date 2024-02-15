@@ -137,9 +137,21 @@ https://www.bilibili.com/video/BV1E6421g7Lp/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍓
 
+## 05、yolov8 做分类
+
 🍊
 
 🍒
+
+```
+
+【yolov8-05】二分钟学会yolov8做分类
+
+【yolov8-05】二分钟学会yolov8做分类_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1sC411477S/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+
+```
 
 🍌
 
@@ -147,9 +159,20 @@ https://www.bilibili.com/video/BV1E6421g7Lp/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍍
 
+## 06、yolov8 做目标追踪
+
 🍉
 
 🍇
+
+```
+
+【yolov8-06】一分钟学会yolov8做目标追踪
+
+【yolov8-06】一分钟学会yolov8做目标追踪_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1sH4y1E7Fe/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
 
 🍋
 

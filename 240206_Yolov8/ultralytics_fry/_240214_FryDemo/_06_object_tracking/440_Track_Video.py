@@ -8,7 +8,7 @@ model_path = Path('../model').resolve()
 asset_path = Path('../assets').resolve()
 
 # Load a model
-model = YOLO(model_path / 'yolov8n.pt',task='detect')
+model = YOLO(model_path / 'yolov8n.pt')
 # model = YOLO('yolov8n-seg.pt')
 
 # Track with the model
