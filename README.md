@@ -8,8 +8,7 @@
 
 # 二、地址
 
-- 课程网站（已关闭）：【读书编程笔记】： https://fanrenyi.com
-- b 站课程地址：https://space.bilibili.com/45664489
+b 站课程地址：https://space.bilibili.com/45664489
 
 # 三、联系方式
 
