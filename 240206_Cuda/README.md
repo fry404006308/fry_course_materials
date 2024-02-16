@@ -229,6 +229,9 @@ https://www.bilibili.com/video/BV1gF4m177Vy/?vd_source=ee9434046a5f3d9b4205dabb3
 
 【cuda编程11】查看cuda设备信息
 
+【cuda编程11】查看cuda设备信息_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV11p421R7zo/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=ee9434046a5f3d9b4205dabb343500a6
+
 ```
 
 🍌

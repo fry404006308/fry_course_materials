@@ -180,9 +180,20 @@ https://www.bilibili.com/video/BV1sH4y1E7Fe/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍐
 
+## 07、yolov8 做姿态估计
+
 📖
 
 🍧
+
+```
+
+【yolov8-07】一分钟学会yolov8做姿态估计
+
+【yolov8-07】一分钟学会yolov8做姿态估计_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1ym411D7E7/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
 
 🍓
 
