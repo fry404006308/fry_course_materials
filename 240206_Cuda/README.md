@@ -221,7 +221,15 @@ https://www.bilibili.com/video/BV1gF4m177Vy/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🌳
 
+## 11、【cuda 编程 11】查看 cuda 设备信息
+
 🍒
+
+```
+
+【cuda编程11】查看cuda设备信息
+
+```
 
 🍌
 
@@ -245,7 +253,7 @@ https://www.bilibili.com/video/BV1gF4m177Vy/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🌺
 
-【课件及代码获取】：课件及代码点赞加评论后 b 站私信我【cuda 编程课件】即可获取，点赞 4%是 up 能否坚持的核心，如果希望 up 快速更新，请用你免费的赞催更。拜谢。
+【课件及代码获取】：课件及代码点赞加评论后 b 站私信我【cuda 编程课件】即可获取。
 
 🔥
 
