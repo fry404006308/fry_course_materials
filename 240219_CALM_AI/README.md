@@ -77,6 +77,9 @@ CALM: Conditional Adversarial Latent Models for Directable Virtual Characters
 【CALM-AI-01】生成50亿个人体动作
 
 
+【CALM-AI-01】生成50亿个人体动作_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV19F4m177Ph/?spm_id_from=333.999.0.0&vd_source=ee9434046a5f3d9b4205dabb343500a6
+
 ```
 
 ✨
