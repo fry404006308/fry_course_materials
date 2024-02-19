@@ -38,9 +38,6 @@ include_directories(${PROJECT_NAME} PRIVATE
 # =================== Opencv ===================
 
 
-# 输出警告信息
-message("TARGET_FILE_DIR:Fry02OpencvTest: $<TARGET_FILE_DIR:Fry02OpencvTest>")
-
 
 
 

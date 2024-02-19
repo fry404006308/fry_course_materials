@@ -72,6 +72,10 @@ TODO:
 Cmake配置cuda【Cmake常见库配置-01】
 
 
+Cmake配置cuda【Cmake常见库配置-01】_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1xv421k7rH/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+
 ```
 
 🔥
