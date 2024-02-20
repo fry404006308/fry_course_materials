@@ -41,7 +41,7 @@ int main()
              cv::LINE_8);
 
     // 在图片上添加文字
-    std::string text = "OpenCV with C++";
+    std::string text = "FRY OpenCV with C++";
     int fontFace = cv::FONT_HERSHEY_COMPLEX;
     double fontScale = 1.0;
     int thickness = 2;
@@ -56,7 +56,8 @@ int main()
     cv::putText(image, text, textOrg, fontFace, fontScale, cv::Scalar(255, 255, 255), thickness);
 
     // 保存图片
-    std::string filename = "output_image.jpg";
+    std::string saveDir = std::string(OUTPUT_IMAGE_DIR);
+    std::string filename = saveDir + "/output_image.jpg";
     cv::imwrite(filename, image);
 
     // 也可以展示图片

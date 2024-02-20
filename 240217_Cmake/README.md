@@ -84,6 +84,8 @@ https://www.bilibili.com/video/BV1xv421k7rH/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍹
 
+## 2、Cmake 配置 opencv
+
 🧊
 
 🍄
