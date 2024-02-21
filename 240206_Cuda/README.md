@@ -238,7 +238,18 @@ https://www.bilibili.com/video/BV11p421R7zo/?spm_id_from=333.1007.top_right_bar_
 
 🍑
 
+## 12、【cuda 编程 12】3 分钟讲清楚 GPU 的流多处理器
+
 🍍
+
+```
+
+【cuda编程12】3分钟讲清楚GPU的流多处理器
+
+【cuda编程12】3分钟讲清楚GPU的流多处理器_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1qH4y1E7TP/?vd_source=ee9434046a5f3d9b4205dabb343500a6
+
+```
 
 🍉
 
