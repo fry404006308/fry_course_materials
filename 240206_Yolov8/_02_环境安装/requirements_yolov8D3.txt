@@ -1,0 +1,61 @@
+
+说明：
+
+由于是 anaconda 安装的库，所以很多库都是本地安装的，所以会看到 file:/// 这样的字段
+
+
+Brotli @ file:///C:/Windows/Temp/abs_63l7912z0e/croots/recipe/brotli-split_1659616056886/work
+certifi @ file:///C:/b/abs_35d7n66oz9/croot/certifi_1707229248467/work/certifi
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+colorama==0.4.6
+contourpy==1.2.0
+cycler==0.12.1
+Cython==3.0.8
+filelock @ file:///C:/b/abs_f2gie28u58/croot/filelock_1700591233643/work
+fonttools==4.48.1
+fsspec==2024.2.0
+gmpy2 @ file:///C:/ci/gmpy2_1645438895476/work
+idna @ file:///C:/b/abs_bdhbebrioa/croot/idna_1666125572046/work
+Jinja2 @ file:///C:/b/abs_f7x5a8op2h/croot/jinja2_1706733672594/work
+kiwisolver==1.4.5
+lapx==0.5.5
+MarkupSafe @ file:///C:/b/abs_ecfdqh67b_/croot/markupsafe_1704206030535/work
+matplotlib==3.8.2
+mkl-fft @ file:///C:/b/abs_19i1y8ykas/croot/mkl_fft_1695058226480/work
+mkl-random @ file:///C:/b/abs_edwkj1_o69/croot/mkl_random_1695059866750/work
+mkl-service==2.4.0
+mpmath @ file:///C:/b/abs_7833jrbiox/croot/mpmath_1690848321154/work
+networkx @ file:///C:/b/abs_e6gi1go5op/croot/networkx_1690562046966/work
+numpy @ file:///C:/b/abs_16b2j7ad8n/croot/numpy_and_numpy_base_1704311752418/work/dist/numpy-1.26.3-cp310-cp310-win_amd64.whl#sha256=e84057072c37569bd0e11652dc2a75980d4d360f2391adf6a29a2fb1622d20ff
+opencv-python==4.9.0.80
+opencv-python-headless==4.9.0.80
+packaging==23.2
+pandas==2.2.0
+pillow @ file:///C:/b/abs_e22m71t0cb/croot/pillow_1707233126420/work
+psutil==5.9.8
+py-cpuinfo==9.0.0
+pyparsing==3.1.1
+PySocks @ file:///C:/ci_310/pysocks_1642089375450/work
+python-dateutil==2.8.2
+pytz==2024.1
+PyYAML @ file:///C:/b/abs_782o3mbw7z/croot/pyyaml_1698096085010/work
+requests @ file:///C:/b/abs_474vaa3x9e/croot/requests_1707355619957/work
+scipy==1.12.0
+seaborn==0.13.2
+six==1.16.0
+sympy @ file:///C:/b/abs_82njkonm7f/croot/sympy_1701397685028/work
+thop==0.1.1.post2209072238
+torch==2.1.2
+torchaudio==2.1.2
+torchvision==0.16.2
+tqdm==4.66.2
+typing_extensions @ file:///C:/b/abs_72cdotwc_6/croot/typing_extensions_1705599364138/work
+tzdata==2024.1
+ultralytics==8.1.13
+urllib3 @ file:///C:/b/abs_4etpfrkumr/croot/urllib3_1707770616184/work
+win-inet-pton @ file:///C:/ci_310/win_inet_pton_1642658466512/work
+
+
+
+
+
