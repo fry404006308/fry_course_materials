@@ -6,33 +6,11 @@
 
 ---
 
-🍓
-
-TODO:
-
----
-
-1😍4💜10😈 复习记忆 🚩 重点 ⭐
-
----
-
-🍎
-
-🍓
-
-🍊
-
-🍒
-
-🍌
-
-🍑
-
-🍍
-
 🍉
 
-Oriented Bounding Boxes Object Detection
+# Oriented Bounding Boxes Object Detection
+
+OBB 定向边界框
 
 🍇
 
@@ -50,7 +28,7 @@ Oriented Bounding Boxes Object Detection
 
 🍧
 
-Oriented Bounding Boxes (OBB) Object Detection 是计算机视觉中的一项技术，用于在图像或视频中检测并定位对象。与传统的轴对齐边界框（Axis-Aligned Bounding Boxes, AABB）不同，OBB 可以围绕对象的实际方向进行旋转，更准确地适应对象的形状。
+Oriented Bounding Boxes (OBB 定向边界框) Object Detection 是计算机视觉中的一项技术，用于在图像或视频中检测并定位对象。与传统的轴对齐边界框（Axis-Aligned Bounding Boxes, AABB）不同，OBB 可以围绕对象的实际方向进行旋转，更准确地适应对象的形状。
 
 ### AABB vs OBB：
 

@@ -13,7 +13,7 @@ asset_path = Path('../assets').resolve()
 model = YOLO(model_path / "yolov8n-obb.pt")
 # model = YOLO("yolov8n.pt") task参数也可以不填写，它会根据模型去识别相应任务类别
 # 检测图片
-results = model(asset_path / "zidane.jpg")
+results = model(asset_path / "P1053__1024__0___90.jpg")
 res = results[0].plot()
 cv2.imshow("YOLOv8 Inference", res)
 cv2.waitKey(0)
