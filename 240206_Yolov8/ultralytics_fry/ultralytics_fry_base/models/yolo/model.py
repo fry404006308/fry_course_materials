@@ -1,13 +1,13 @@
 # Ultralytics YOLO 🚀, AGPL-3.0 license
 
-from ultralytics.engine.model import Model
-from ultralytics.models import yolo
-from ultralytics.nn.tasks import ClassificationModel, DetectionModel, OBBModel, PoseModel, SegmentationModel
+# from ultralytics.engine.model import Model
+# from ultralytics.models import yolo
+# from ultralytics.nn.tasks import ClassificationModel, DetectionModel, OBBModel, PoseModel, SegmentationModel
 
 # _240319_2313_ fry修改
-# from ultralytics_fry.ultralytics_fry_base.engine.model import Model
-# from ultralytics_fry.ultralytics_fry_base.models import yolo
-# from ultralytics_fry.ultralytics_fry_base.nn.tasks import ClassificationModel, DetectionModel, OBBModel, PoseModel, SegmentationModel
+from ultralytics_fry.ultralytics_fry_base.engine.model import Model
+from ultralytics_fry.ultralytics_fry_base.models import yolo
+from ultralytics_fry.ultralytics_fry_base.nn.tasks import ClassificationModel, DetectionModel, OBBModel, PoseModel, SegmentationModel
 
 
 class YOLO(Model):
