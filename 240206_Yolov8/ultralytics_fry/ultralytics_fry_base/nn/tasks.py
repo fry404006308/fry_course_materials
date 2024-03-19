@@ -608,7 +608,7 @@ def temporary_modules(modules=None):
                 del sys.modules[old]
 
 
-def torch_safe_load(weight):
+def torch_safe_load_fryBackup(weight):
     """
     This function attempts to load a PyTorch model with the torch.load() function. If a ModuleNotFoundError is raised,
     it catches the error, logs a warning message, and attempts to install the missing module via the
@@ -632,6 +632,101 @@ def torch_safe_load(weight):
                 "ultralytics.yolo.data": "ultralytics.data",
             }
         ):  # for legacy 8.0 Classify and Pose models
+            ckpt = torch.load(file, map_location="cpu")
+
+    except ModuleNotFoundError as e:  # e.name is missing module name
+        if e.name == "models":
+            raise TypeError(
+                emojis(
+                    f"ERROR ❌️ {weight} appears to be an Ultralytics YOLOv5 model originally trained "
+                    f"with https://github.com/ultralytics/yolov5.\nThis model is NOT forwards compatible with "
+                    f"YOLOv8 at https://github.com/ultralytics/ultralytics."
+                    f"\nRecommend fixes are to train a new model using the latest 'ultralytics' package or to "
+                    f"run a command with an official YOLOv8 model, i.e. 'yolo predict model=yolov8n.pt'"
+                )
+            ) from e
+        LOGGER.warning(
+            f"WARNING ⚠️ {weight} appears to require '{e.name}', which is not in ultralytics requirements."
+            f"\nAutoInstall will run now for '{e.name}' but this feature will be removed in the future."
+            f"\nRecommend fixes are to train a new model using the latest 'ultralytics' package or to "
+            f"run a command with an official YOLOv8 model, i.e. 'yolo predict model=yolov8n.pt'"
+        )
+        check_requirements(e.name)  # install missing module
+        ckpt = torch.load(file, map_location="cpu")
+
+    if not isinstance(ckpt, dict):
+        # File is likely a YOLO instance saved with i.e. torch.save(model, "saved_model.pt")
+        LOGGER.warning(
+            f"WARNING ⚠️ The file '{weight}' appears to be improperly saved or formatted. "
+            f"For optimal results, use model.save('filename.pt') to correctly save YOLO models."
+        )
+        ckpt = {"model": ckpt.model}
+
+    return ckpt, file  # load
+
+
+def torch_safe_load(weight):
+    """
+    This function attempts to load a PyTorch model with the torch.load() function. If a ModuleNotFoundError is raised,
+    it catches the error, logs a warning message, and attempts to install the missing module via the
+    check_requirements() function. After installation, the function again attempts to load the model using torch.load().
+
+    Args:
+        weight (str): The file path of the PyTorch model.
+
+    Returns:
+        (dict): The loaded PyTorch model.
+    """
+    from ultralytics.utils.downloads import attempt_download_asset
+
+    check_suffix(file=weight, suffix=".pt")
+    file = attempt_download_asset(weight)  # search online if missing locally
+    try:
+        # with temporary_modules(
+        #     {
+        #         "ultralytics.yolo.utils": "ultralytics.utils",
+        #         "ultralytics.yolo.v8": "ultralytics.models.yolo",
+        #         "ultralytics.yolo.data": "ultralytics.data",
+        #     }
+        # ):  # for legacy 8.0 Classify and Pose models
+
+        with temporary_modules({
+
+            'ultralytics': 'ultralytics_fry',
+            'ultralytics.yolo.utils': 'ultralytics_fry.utils',
+            'ultralytics.yolo.v8': 'ultralytics_fry.models.yolo',
+            'ultralytics.yolo.data': 'ultralytics_fry.data',
+            #
+            'ultralytics_fry': 'ultralytics_fry',
+            'ultralytics_fry.yolo.utils': 'ultralytics_fry.utils',
+            'ultralytics_fry.yolo.v8': 'ultralytics_fry.models.yolo',
+            'ultralytics_fry.yolo.data': 'ultralytics_fry.data',
+            #
+            '240206_Yolov8.ultralytics_fry': 'ultralytics_fry',
+            '240206_Yolov8.ultralytics_fry.yolo.utils': 'ultralytics_fry.utils',
+            '240206_Yolov8.ultralytics_fry.yolo.v8': 'ultralytics_fry.models.yolo',
+            '240206_Yolov8.ultralytics_fry.yolo.data': 'ultralytics_fry.data',
+
+
+            # 分类的
+            # 'ultralytics.yolo.data.augment': 'labelme.SF_DL_Algo.base.ultralytics_fry.data.augment_imgStack',
+            # 'labelme.SF_DL_Algo.base.ultralytics.data.augment_imgStack': 'labelme.SF_DL_Algo.base.ultralytics_fry.data.augment_imgStack',
+
+            # 预训练模型中都是这个包
+            # 'ultralytics': 'SF_DL_Algo.base.ultralytics_fry',
+            # 'ultralytics.yolo.utils': 'SF_DL_Algo.base.ultralytics_fry.utils',
+            # 'ultralytics.yolo.v8': 'SF_DL_Algo.base.ultralytics_fry.models.yolo',
+            # 'ultralytics.yolo.data': 'SF_DL_Algo.base.ultralytics_fry.data',
+
+            # 我之前的包名
+            # 'SF_DL_Algo.base.ultralytics': 'SF_DL_Algo.base.ultralytics_fry',
+            # 'SF_DL_Algo.base.ultralytics.yolo.utils': 'SF_DL_Algo.base.ultralytics_fry.utils',
+            # 'SF_DL_Algo.base.ultralytics.yolo.v8': 'SF_DL_Algo.base.ultralytics_fry.models.yolo',
+            # 'SF_DL_Algo.base.ultralytics.yolo.data': 'SF_DL_Algo.base.ultralytics_fry.data',
+
+
+        }):  # for legacy 8.0 Classify and Pose models
+
             ckpt = torch.load(file, map_location="cpu")
 
     except ModuleNotFoundError as e:  # e.name is missing module name
