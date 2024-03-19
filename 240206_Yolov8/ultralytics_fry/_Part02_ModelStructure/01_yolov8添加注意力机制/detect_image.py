@@ -1,5 +1,5 @@
 # from ultralytics import YOLO
-from ultralytics_fry.ultralytics import YOLO
+from ultralytics_fry.ultralytics_fry_base import YOLO
 import cv2
 from pathlib import Path
 

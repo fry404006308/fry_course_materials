@@ -608,7 +608,7 @@ def temporary_modules(modules=None):
                 del sys.modules[old]
 
 
-def torch_safe_load_fryBackup(weight):
+def torch_safe_load(weight):
     """
     This function attempts to load a PyTorch model with the torch.load() function. If a ModuleNotFoundError is raised,
     it catches the error, logs a warning message, and attempts to install the missing module via the
@@ -665,7 +665,7 @@ def torch_safe_load_fryBackup(weight):
     return ckpt, file  # load
 
 
-def torch_safe_load(weight):
+def torch_safe_load_fryEdit(weight):
     """
     This function attempts to load a PyTorch model with the torch.load() function. If a ModuleNotFoundError is raised,
     it catches the error, logs a warning message, and attempts to install the missing module via the
