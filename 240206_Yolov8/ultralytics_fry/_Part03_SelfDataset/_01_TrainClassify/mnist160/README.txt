@@ -1,0 +1,1 @@
+MNIST160 Dataset. First 8 images of each MNIST category. Dataset contains 160 images total.

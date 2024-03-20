@@ -15,6 +15,7 @@ print(model_path)
 
 # 加载预训练模型
 model = YOLO(r"./yolov8n_CBAM.yaml")
+print(model)
 # model = YOLO(r".\ultralytics\cfg\models\v8\fry_config\yolov8_CBAM.yaml")
 
 # 检测图片
