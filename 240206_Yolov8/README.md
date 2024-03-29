@@ -278,11 +278,25 @@ https://www.bilibili.com/video/BV1SZ421q74G/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍉
 
-### 51、yolov8 自定义数据集训练检测
+### 51、yolov8 自定义数据集训练目标检测
 
 🍇
 
+```
+
+需要labelme的标注格式转成yolo的标注格式
+
+pip install labelme2yolo
+
+```
+
 🍋
+
+```
+
+【yolov8-51】三分钟学会自定义数据集训练目标检测
+
+```
 
 🍅
 

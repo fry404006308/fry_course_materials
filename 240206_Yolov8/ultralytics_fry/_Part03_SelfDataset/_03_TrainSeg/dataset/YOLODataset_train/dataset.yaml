@@ -1,0 +1,5 @@
+train: dataset\YOLODataset/images/train/
+val: dataset\YOLODataset/images/val/
+test: dataset\YOLODataset/images/test/
+nc: 2
+names: ['butterfly', 'squirrel']
