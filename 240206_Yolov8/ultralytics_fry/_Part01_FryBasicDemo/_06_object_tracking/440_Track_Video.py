@@ -1,6 +1,9 @@
 from ultralytics import YOLO
 from pathlib import Path
+import os
 
+# _240526_2159_ 解决可能出现的OMP错误 
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 # 模型路径
 model_path = Path('../model').resolve()
