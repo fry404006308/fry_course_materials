@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.23) 
+﻿cmake_minimum_required(VERSION 3.23)
 
 
 # 这句话要放到project指令前，否则不生效
@@ -23,7 +23,7 @@ project(fry10CopyImageC3 LANGUAGES CXX CUDA)
 # =================== Cuda ===================
 # 查找CUDA Toolkit
 find_package(CUDAToolkit REQUIRED)
-set(CUDA_TOOLKIT_ROOT_DIR "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8")
+set(CUDA_TOOLKIT_ROOT_DIR "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.5")
 # =================== End Cuda ===================
 
 # ================== 设置输出目录相关 ==================
