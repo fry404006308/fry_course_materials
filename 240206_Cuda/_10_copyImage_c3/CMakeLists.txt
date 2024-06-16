@@ -40,7 +40,7 @@ add_definitions(-DOUTPUT_IMAGE_DIR="${OUTPUT_IMAGE_DIR}")
 # =================== Opencv ===================
 # 寻找OpenCV库
 # 设置 OpenCV_DIR 为后面的find_package指定了opencv的查找路径
-set(OpenCV_DIR "D:/_200_software/code/_240613_Opencv470/opencv/build")
+set(OpenCV_DIR "D:/_200_software/code/_240617_Opencv4_10/opencv/build")
 # find_package(OpenCV REQUIRED)
 find_package(OpenCV REQUIRED COMPONENTS calib3d core features2d flann gapi highgui imgcodecs imgproc world)
 get_target_property(__dll_dbg opencv_world IMPORTED_LOCATION_DEBUG)
