@@ -320,6 +320,9 @@ cuda实现resize
 cuda实现各种函数
 cuda实现cvtColor
 cuda实现仿射变换
+
+cuda 优化进阶
+
 ```
 
 🍌
