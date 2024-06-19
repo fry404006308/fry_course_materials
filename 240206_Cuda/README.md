@@ -308,9 +308,18 @@ https://www.bilibili.com/video/BV1mm42137Us/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍓
 
+# 四、待做
+
 🍊
 
 🍒
+
+```
+cuda实现矩阵乘法
+cuda实现resize
+cuda实现各种函数
+cuda实现仿射变换
+```
 
 🍌
 
