@@ -3,7 +3,6 @@
 #include <opencv2/opencv.hpp>
 #include <cuda_runtime.h>
 
-
 // CUDA kernel for matrix multiplication
 // 用于矩阵乘法的 CUDA 内核函数
 // 参数:

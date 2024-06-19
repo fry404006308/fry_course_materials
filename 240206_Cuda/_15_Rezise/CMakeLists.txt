@@ -14,7 +14,7 @@ cmake_policy(SET CMP0144 NEW)
 
 
 # 表示支持 C++和cuda语言
-project(fry14MatrixMultiplication LANGUAGES CXX CUDA)
+project(fry15Resize LANGUAGES CXX CUDA)
 
 
 # ================== 设置输出目录相关 ==================
@@ -55,12 +55,12 @@ include_directories(${PROJECT_NAME} PRIVATE
 # aux_source_directory(./ SRC)
 file(GLOB SOURCE_CODE ${CMAKE_CURRENT_SOURCE_DIR}/*.c*)
 
-add_executable(fry14MatrixMultiplication ${SOURCE_CODE})
+add_executable(fry15Resize ${SOURCE_CODE})
 
 # target_link_libraries 可以链接动态库和静态库
 # 链接OpenCV库
 target_link_libraries(
-	fry14MatrixMultiplication
+	fry15Resize
 	${OpenCV_LIBS}
     ${OpenCV_LIBRARIES}
 )
