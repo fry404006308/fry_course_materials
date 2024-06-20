@@ -7,6 +7,18 @@
 #include "cuda_runtime_api.h"
 #include <nvtx3/nvToolsExt.h>
 
+#include <cassert>
+
+#include <stdio.h>
+
+inline int DivUp(int a, int b)
+{
+    assert(b > 0);
+    return static_cast<int>(ceil(static_cast<float>(a) / b));
+};
+
+
+
 // 定义一个宏，用于检查 CUDA 操作的返回状态。如果状态不为零（表示出现错误），则打印错误信息并终止程序
 #define CHECK(status)                                          \
     do                                                         \
@@ -48,8 +60,6 @@ void GpuResize(uint8_t *image,
                uint32_t out_width,
                uint32_t out_height,
                uint32_t channels); // 添加 channels 参数
-
-
 
 
 

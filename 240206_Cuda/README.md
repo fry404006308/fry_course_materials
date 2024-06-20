@@ -290,6 +290,37 @@ https://www.bilibili.com/video/BV1mm42137Us/?vd_source=ee9434046a5f3d9b4205dabb3
 
 🍅
 
+📒
+
+## 14、【cuda 编程 14】5 分钟精通 CUDA 矩阵乘法
+
+🔧
+
+```
+
+【cuda编程14】5分钟精通CUDA矩阵乘法
+
+```
+
+🌱
+
+🌺
+
+## 15、【cuda 编程 15】2 分钟精通 CUDA-Resize 操作
+
+🔥
+
+```
+
+【cuda编程15】2分钟精通CUDA-Resize操作
+
+
+```
+
+✨
+
+🍹
+
 🌲
 
 # 三、特别说明
@@ -315,7 +346,7 @@ https://www.bilibili.com/video/BV1mm42137Us/?vd_source=ee9434046a5f3d9b4205dabb3
 🍒
 
 ```
-cuda实现矩阵乘法
+
 cuda实现resize
 cuda实现各种函数
 cuda实现cvtColor

@@ -1,7 +1,13 @@
 ﻿// matrix_multiply.cu
 #include <iostream>
-#include <opencv2/opencv.hpp>
+// #include <opencv2/opencv.hpp>
 #include <cuda_runtime.h>
+
+// opencv
+#include <opencv2/opencv.hpp>
+#include <opencv2/dnn/dnn.hpp>
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/types_c.h"
 
 // CUDA kernel for matrix multiplication
 // 用于矩阵乘法的 CUDA 内核函数
@@ -15,10 +21,7 @@
 __global__ void matrixMultiplyKernel(float *A, float *B, float *C, int rowsA, int colsA, int colsB)
 {
     // 当前核函数是以结果矩阵C矩阵为基础来实现的
-    // 计算当前线程所处理的输出矩阵 C 的行索引和列索引
-    // blockIdx.y: 当前线程块在 Grid 中的 y 方向上的索引
-    // blockDim.y: 每个线程块在 y 方向上的线程数
-    // threadIdx.y: 当前线程在线程块中的 y 方向上的索引
+    // 相当于我们在结果矩阵上面找到要计算的元素
     int row = blockIdx.y * blockDim.y + threadIdx.y;
     int col = blockIdx.x * blockDim.x + threadIdx.x;
 
@@ -62,10 +65,9 @@ void matrixMultiplyCUDA(cv::Mat &A, cv::Mat &B, cv::Mat &C)
 
     // Define block and grid dimensions
     dim3 blockDim(16, 16);
-    // 对于AxB矩阵乘法而言，结果C矩阵的宽高分别为colsB和rowsA
-    // x 方向上的线程数为 colsB / blockDim.x
+    // 对于AxB矩阵乘法而言，结果C矩阵的宽高分别为colsB（B的列数）和rowsA（A的行数）
+    // A（3行2列）x B（2行4列）=C（3行4列）（B的列数colsB x A的行数rowsA）
     // x 方向 对象的是矩阵的列
-    // y 方向上的线程数为 rowsA / blockDim.y
     // y 方向 对象的是矩阵的行
     dim3 gridDim((colsB + blockDim.x - 1) / blockDim.x, (rowsA + blockDim.y - 1) / blockDim.y);
 

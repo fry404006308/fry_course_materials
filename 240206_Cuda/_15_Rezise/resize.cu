@@ -7,6 +7,13 @@
 #include "cuda_runtime_api.h"
 #include <nvtx3/nvToolsExt.h>
 
+#include <cassert>
+#include <stdio.h>
+
+#include "resize.cuh"
+
+
+
 __global__ void ResizeOperate_kernel(uint8_t *src, uint8_t *dst,
                                      float scale_x, float scale_y, int src_width,
                                      int src_height, int out_width, int out_height,
