@@ -16,6 +16,21 @@ model = YOLO(model_path / "yolov8n-obb.pt")
 # 检测图片
 results = model(asset_path / "P1053__1024__0___90.jpg")
 res = results[0].plot()
+
+def tensor2numpy(now_tensor):
+    now_numpy = now_tensor.squeeze().detach().cpu().numpy()
+    return now_numpy
+
+obb_ans = results[0].obb
+
+print("obb_ans.conf : \n",tensor2numpy(obb_ans.conf))
+print("obb_ans.xywhr : \n",tensor2numpy(obb_ans.xywhr))
+print("obb_ans.xyxy : \n",tensor2numpy(obb_ans.xyxy))
+print("obb_ans.xyxyxyxy : \n",tensor2numpy(obb_ans.xyxyxyxy))
+print("obb_ans.xyxyxyxyn : \n",tensor2numpy(obb_ans.xyxyxyxyn))
+
+
+
 cv2.imshow("YOLOv8 Inference", res)
 cv2.imwrite("_240621_1341_obb.jpg",res)
 cv2.waitKey(0)
