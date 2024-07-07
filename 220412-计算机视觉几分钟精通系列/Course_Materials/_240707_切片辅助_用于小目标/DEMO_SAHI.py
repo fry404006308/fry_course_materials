@@ -46,7 +46,7 @@ def create_random_image(width, height):
     cv2.fillConvexPoly(ans_img, triangle, (255, 255, 0))
 
     # 在图片中间写字
-    cv2.putText(ans_img, "Hello, OpenCV!", (width_1_5, height_1_5), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255),
+    cv2.putText(ans_img, "Hello, Fan Renyi!", (width_1_5, height_1_5), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255),
                 2)
 
     return ans_img
